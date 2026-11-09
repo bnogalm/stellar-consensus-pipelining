@@ -1,0 +1,236 @@
+{
+ "k-gain": {
+  "title": "Throughput relative to k = 1, mainnet apply cost",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "times k = 1",
+  "ySuffix": "×",
+  "series": [
+   {
+    "name": "7 validators, 300 tx",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "y": [
+     1.0,
+     1.9,
+     2.55,
+     2.79,
+     2.86
+    ],
+    "hover": [
+     "7 validators, 300 tx, k = 1: 273 tx/s (1.00×), interval 1,093 ms, consensus 713 ms, apply 375 ms, latency p50 1,304 ms (+0%), runs 3",
+     "7 validators, 300 tx, k = 2: 520 tx/s (1.90×), interval 572 ms, consensus 726 ms, apply 372 ms, latency p50 1,407 ms (+8%), runs 3",
+     "7 validators, 300 tx, k = 3: 697 tx/s (2.55×), interval 427 ms, consensus 768 ms, apply 373 ms, latency p50 1,536 ms (+18%), runs 3",
+     "7 validators, 300 tx, k = 4: 762 tx/s (2.79×), interval 390 ms, consensus 809 ms, apply 372 ms, latency p50 1,727 ms (+32%), runs 3",
+     "7 validators, 300 tx, k = 5: 782 tx/s (2.86×), interval 380 ms, consensus 844 ms, apply 372 ms, latency p50 1,930 ms (+48%), runs 3"
+    ]
+   },
+   {
+    "name": "7 validators, 600 tx (base: 300 tx, k = 1)",
+    "color": "--s2",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y": [
+     1.47,
+     2.62,
+     2.89
+    ],
+    "hover": [
+     "7 validators, 600 tx (base: 300 tx, k = 1), k = 1: 402 tx/s (1.47×), interval 1,486 ms, consensus 728 ms, apply 749 ms, latency p50 1,531 ms (+17%), runs 1",
+     "7 validators, 600 tx (base: 300 tx, k = 1), k = 2: 716 tx/s (2.62×), interval 831 ms, consensus 791 ms, apply 743 ms, latency p50 1,763 ms (+35%), runs 1",
+     "7 validators, 600 tx (base: 300 tx, k = 1), k = 3: 790 tx/s (2.89×), interval 746 ms, consensus 851 ms, apply 736 ms, latency p50 2,090 ms (+60%), runs 1"
+    ]
+   },
+   {
+    "name": "12 validators, 300 tx",
+    "color": "--s3",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y": [
+     1.0,
+     1.92,
+     2.66
+    ],
+    "hover": [
+     "12 validators, 300 tx, k = 1: 206 tx/s (1.00×), interval 1,449 ms, consensus 1,068 ms, apply 375 ms, latency p50 1,923 ms (+0%), runs 1",
+     "12 validators, 300 tx, k = 2: 396 tx/s (1.92×), interval 751 ms, consensus 1,073 ms, apply 371 ms, latency p50 2,010 ms (+5%), runs 1",
+     "12 validators, 300 tx, k = 3: 547 tx/s (2.66×), interval 542 ms, consensus 1,145 ms, apply 372 ms, latency p50 2,156 ms (+12%), runs 1"
+    ]
+   }
+  ]
+ },
+ "k-latency": {
+  "title": "Median transaction latency, mainnet apply cost",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "ms",
+  "ySuffix": " ms",
+  "series": [
+   {
+    "name": "7 validators, 300 tx",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "y": [
+     1304.0,
+     1407.0,
+     1536.0,
+     1727.0,
+     1930.0
+    ],
+    "hover": [
+     "7 validators, 300 tx, k = 1: 273 tx/s (1.00×), interval 1,093 ms, consensus 713 ms, apply 375 ms, latency p50 1,304 ms (+0%), runs 3",
+     "7 validators, 300 tx, k = 2: 520 tx/s (1.90×), interval 572 ms, consensus 726 ms, apply 372 ms, latency p50 1,407 ms (+8%), runs 3",
+     "7 validators, 300 tx, k = 3: 697 tx/s (2.55×), interval 427 ms, consensus 768 ms, apply 373 ms, latency p50 1,536 ms (+18%), runs 3",
+     "7 validators, 300 tx, k = 4: 762 tx/s (2.79×), interval 390 ms, consensus 809 ms, apply 372 ms, latency p50 1,727 ms (+32%), runs 3",
+     "7 validators, 300 tx, k = 5: 782 tx/s (2.86×), interval 380 ms, consensus 844 ms, apply 372 ms, latency p50 1,930 ms (+48%), runs 3"
+    ]
+   },
+   {
+    "name": "7 validators, 600 tx (base: 300 tx, k = 1)",
+    "color": "--s2",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y": [
+     1531.0,
+     1763.0,
+     2090.0
+    ],
+    "hover": [
+     "7 validators, 600 tx (base: 300 tx, k = 1), k = 1: 402 tx/s (1.47×), interval 1,486 ms, consensus 728 ms, apply 749 ms, latency p50 1,531 ms (+17%), runs 1",
+     "7 validators, 600 tx (base: 300 tx, k = 1), k = 2: 716 tx/s (2.62×), interval 831 ms, consensus 791 ms, apply 743 ms, latency p50 1,763 ms (+35%), runs 1",
+     "7 validators, 600 tx (base: 300 tx, k = 1), k = 3: 790 tx/s (2.89×), interval 746 ms, consensus 851 ms, apply 736 ms, latency p50 2,090 ms (+60%), runs 1"
+    ]
+   },
+   {
+    "name": "12 validators, 300 tx",
+    "color": "--s3",
+    "x": [
+     1,
+     2,
+     3
+    ],
+    "y": [
+     1923.0,
+     2010.0,
+     2156.0
+    ],
+    "hover": [
+     "12 validators, 300 tx, k = 1: 206 tx/s (1.00×), interval 1,449 ms, consensus 1,068 ms, apply 375 ms, latency p50 1,923 ms (+0%), runs 1",
+     "12 validators, 300 tx, k = 2: 396 tx/s (1.92×), interval 751 ms, consensus 1,073 ms, apply 371 ms, latency p50 2,010 ms (+5%), runs 1",
+     "12 validators, 300 tx, k = 3: 547 tx/s (2.66×), interval 542 ms, consensus 1,145 ms, apply 372 ms, latency p50 2,156 ms (+12%), runs 1"
+    ]
+   }
+  ]
+ },
+ "grid-gain": {
+  "title": "Throughput relative to k = 1 by target close time, 300 tx",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "times k = 1",
+  "ySuffix": "×",
+  "series": [
+   {
+    "name": "150 ms target",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "y": [
+     1.0,
+     1.85,
+     2.57,
+     2.75,
+     2.83,
+     2.88
+    ],
+    "hover": [
+     "150 ms target, k = 1: 275 tx/s (1.00×), interval 1,085 ms, consensus 705 ms, apply 375 ms, latency p50 1,286 ms (+0%), runs 1",
+     "150 ms target, k = 2: 508 tx/s (1.85×), interval 585 ms, consensus 744 ms, apply 372 ms, latency p50 1,459 ms (+13%), runs 1",
+     "150 ms target, k = 3: 707 tx/s (2.57×), interval 420 ms, consensus 752 ms, apply 372 ms, latency p50 1,512 ms (+18%), runs 1",
+     "150 ms target, k = 4: 756 tx/s (2.75×), interval 390 ms, consensus 805 ms, apply 370 ms, latency p50 1,725 ms (+34%), runs 1",
+     "150 ms target, k = 5: 779 tx/s (2.83×), interval 378 ms, consensus 857 ms, apply 369 ms, latency p50 1,943 ms (+51%), runs 1",
+     "150 ms target, k = 6: 793 tx/s (2.88×), interval 372 ms, consensus 850 ms, apply 370 ms, latency p50 2,127 ms (+65%), runs 1"
+    ]
+   },
+   {
+    "name": "250 ms target",
+    "color": "--s2",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "y": [
+     1.0,
+     1.88,
+     2.53,
+     2.74,
+     2.88,
+     2.86
+    ],
+    "hover": [
+     "250 ms target, k = 1: 274 tx/s (1.00×), interval 1,092 ms, consensus 712 ms, apply 375 ms, latency p50 1,309 ms (+0%), runs 1",
+     "250 ms target, k = 2: 516 tx/s (1.88×), interval 578 ms, consensus 736 ms, apply 373 ms, latency p50 1,427 ms (+9%), runs 1",
+     "250 ms target, k = 3: 692 tx/s (2.53×), interval 432 ms, consensus 777 ms, apply 374 ms, latency p50 1,523 ms (+16%), runs 1",
+     "250 ms target, k = 4: 751 tx/s (2.74×), interval 395 ms, consensus 822 ms, apply 372 ms, latency p50 1,743 ms (+33%), runs 1",
+     "250 ms target, k = 5: 788 tx/s (2.88×), interval 379 ms, consensus 827 ms, apply 373 ms, latency p50 1,907 ms (+46%), runs 1",
+     "250 ms target, k = 6: 785 tx/s (2.86×), interval 379 ms, consensus 880 ms, apply 373 ms, latency p50 2,145 ms (+64%), runs 1"
+    ]
+   },
+   {
+    "name": "500 ms target",
+    "color": "--s3",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "y": [
+     1.0,
+     1.82,
+     2.09,
+     2.12,
+     2.1,
+     2.09
+    ],
+    "hover": [
+     "500 ms target, k = 1: 277 tx/s (1.00×), interval 1,082 ms, consensus 701 ms, apply 375 ms, latency p50 1,318 ms (+0%), runs 1",
+     "500 ms target, k = 2: 504 tx/s (1.82×), interval 596 ms, consensus 738 ms, apply 376 ms, latency p50 1,436 ms (+9%), runs 1",
+     "500 ms target, k = 3: 580 tx/s (2.09×), interval 518 ms, consensus 743 ms, apply 375 ms, latency p50 1,625 ms (+23%), runs 1",
+     "500 ms target, k = 4: 586 tx/s (2.12×), interval 512 ms, consensus 831 ms, apply 375 ms, latency p50 2,003 ms (+52%), runs 1",
+     "500 ms target, k = 5: 582 tx/s (2.10×), interval 515 ms, consensus 834 ms, apply 375 ms, latency p50 2,256 ms (+71%), runs 1",
+     "500 ms target, k = 6: 578 tx/s (2.09×), interval 511 ms, consensus 856 ms, apply 370 ms, latency p50 2,547 ms (+93%), runs 1"
+    ]
+   }
+  ]
+ }
+}

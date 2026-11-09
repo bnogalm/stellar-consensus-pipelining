@@ -1,0 +1,558 @@
+== ksw-pay-k1-cl-t300-r1
+run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t300-r1/s1-c200, ledgers 30 to 193; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         164      0.1 (    0/    2)    709.3 (  659/ 1497)      2.1 (    2/    7)    374.8 (  375/  378)      8.6 (    8/   13)      5.1 (    5/   14)   1089.1 ( 1038/ 1880)
+n2         164      0.1 (    0/    1)    709.2 (  659/ 1499)      2.1 (    2/    6)    374.8 (  376/  377)      8.7 (    9/   12)      5.2 (    5/   22)   1089.1 ( 1041/ 1882)
+n3         164      0.1 (    0/    2)    709.2 (  660/ 1498)      2.1 (    2/    7)    374.8 (  376/  376)      8.7 (    9/   16)      5.2 (    5/   19)   1089.2 ( 1042/ 1880)
+n4         164      0.1 (    0/    2)    708.4 (  655/ 1471)      2.5 (    2/   22)    375.0 (  376/  382)      8.6 (    8/   24)      5.1 (    5/   20)   1088.8 ( 1038/ 1854)
+n5         164      0.1 (    0/    1)    709.4 (  657/ 1474)      2.0 (    2/   11)    374.8 (  376/  378)      7.5 (    7/   17)      4.9 (    5/   14)   1088.8 ( 1040/ 1856)
+n6         164      0.2 (    0/    2)    708.9 (  651/ 1482)      2.4 (    2/   11)    375.0 (  376/  381)      8.7 (    8/   30)      4.9 (    4/   17)   1089.0 ( 1036/ 1864)
+n7         164      0.1 (    0/    1)    708.7 (  659/ 1477)      2.2 (    2/   12)    374.9 (  376/  376)      8.1 (    7/   18)      5.5 (    4/   19)   1089.1 ( 1039/ 1860)
+all       1148      0.1 (    0/    2)    709.0 (  656/ 1477)      2.2 (    2/    9)    374.9 (  376/  378)      8.4 (    8/   18)      5.1 (    5/   19)   1089.0 ( 1038/ 1860)
+ledgers 164, txs per ledger 299, ledger interval 1092 ms, throughput 274 tx/s
+tx latency (submit at node 1 to externalize): mean 1355 ms, p50 1285 ms, p90 1946 ms, p99 3189 ms, n 49059
+host cpu busy 17%
+n1: total    14%  busiest stellar-core 7%, main 6%, stellar-core 1%
+n2: total    15%  busiest stellar-core 7%, main 6%, stellar-core 1%
+n3: total    14%  busiest stellar-core 6%, main 6%, stellar-core 1%
+n4: total    14%  busiest stellar-core 6%, main 6%, stellar-core 1%
+n5: total    14%  busiest stellar-core 7%, main 6%, stellar-core 1%
+n6: total    13%  busiest main 6%, stellar-core 6%, stellar-core 1%
+n7: total    13%  busiest main 6%, stellar-core 6%, stellar-core 1%
+n8: total    25%  busiest main 16%, stellar-core 7%, stellar-core 1%
+n9: total    25%  busiest main 16%, stellar-core 7%, stellar-core 1%
+n10: total    25%  busiest main 16%, stellar-core 7%, stellar-core 2%
+n11: total    25%  busiest main 16%, stellar-core 7%, stellar-core 2%
+== ksw-pay-k1-cl-t300-r2
+run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t300-r2/s1-c200, ledgers 30 to 192; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         163      0.1 (    0/    2)    714.7 (  692/ 1419)      2.0 (    2/    5)    375.0 (  376/  376)      8.8 (    9/   14)      5.2 (    5/   14)   1095.1 ( 1072/ 1801)
+n2         163      0.1 (    0/    1)    714.7 (  691/ 1420)      2.1 (    2/    5)    375.0 (  376/  376)      8.6 (    9/   14)      5.1 (    5/   11)   1095.1 ( 1070/ 1802)
+n3         163      0.1 (    0/    1)    714.5 (  691/ 1427)      2.2 (    2/   10)    375.0 (  376/  376)      8.7 (    8/   21)      5.2 (    5/   26)   1095.1 ( 1067/ 1810)
+n4         163      0.1 (    0/    1)    714.7 (  687/ 1424)      2.1 (    2/    4)    375.0 (  376/  379)      8.2 (    8/   16)      4.9 (    5/   11)   1094.9 ( 1068/ 1807)
+n5         163      0.1 (    0/    1)    715.0 (  688/ 1422)      1.8 (    2/    5)    375.1 (  376/  379)      7.3 (    7/   12)      4.9 (    5/   20)   1094.9 ( 1067/ 1805)
+n6         163      0.1 (    0/    3)    714.4 (  684/ 1426)      2.2 (    2/    8)    375.1 (  376/  380)      8.5 (    8/   29)      5.0 (    4/   20)   1095.0 ( 1066/ 1809)
+n7         163      0.1 (    0/    2)    714.7 (  689/ 1426)      2.2 (    2/    6)    375.1 (  376/  381)      8.4 (    8/   27)      4.9 (    5/   23)   1095.1 ( 1071/ 1809)
+all       1141      0.1 (    0/    2)    714.7 (  689/ 1422)      2.1 (    2/    6)    375.0 (  376/  379)      8.4 (    8/   22)      5.0 (    5/   17)   1095.0 ( 1069/ 1805)
+ledgers 163, txs per ledger 300, ledger interval 1096 ms, throughput 273 tx/s
+tx latency (submit at node 1 to externalize): mean 1370 ms, p50 1309 ms, p90 1936 ms, p99 2903 ms, n 48782
+host cpu busy 17%
+n1: total    16%  busiest stellar-core 7%, main 7%, stellar-core 1%
+n2: total    16%  busiest stellar-core 7%, main 7%, stellar-core 1%
+n3: total    17%  busiest stellar-core 7%, main 7%, stellar-core 1%
+n4: total    16%  busiest stellar-core 7%, main 7%, stellar-core 1%
+n5: total    16%  busiest stellar-core 7%, main 7%, stellar-core 1%
+n6: total    14%  busiest main 7%, stellar-core 6%, stellar-core 1%
+n7: total    15%  busiest main 7%, stellar-core 6%, stellar-core 1%
+n8: total    26%  busiest main 16%, stellar-core 8%, stellar-core 2%
+n9: total    26%  busiest main 16%, stellar-core 7%, stellar-core 1%
+n10: total    26%  busiest main 16%, stellar-core 7%, stellar-core 2%
+n11: total    26%  busiest main 17%, stellar-core 7%, stellar-core 1%
+== ksw-pay-k1-cl-t300-r3
+run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t300-r3/s1-c200, ledgers 32 to 194; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         163      0.1 (    0/    1)    714.7 (  697/ 1421)      2.1 (    2/    8)    375.2 (  376/  376)      8.7 (    9/   12)      5.7 (    5/   20)   1095.8 ( 1082/ 1804)
+n2         163      0.1 (    0/    1)    714.3 (  696/ 1432)      2.2 (    2/   10)    375.4 (  376/  384)      8.9 (    9/   22)      5.7 (    5/   22)   1095.8 ( 1080/ 1814)
+n3         163      0.2 (    0/    1)    714.4 (  697/ 1454)      2.3 (    2/    7)    375.3 (  376/  379)      9.3 (    9/   31)      5.6 (    5/   22)   1095.8 ( 1080/ 1836)
+n4         163      0.1 (    0/    2)    714.4 (  703/ 1414)      2.3 (    2/    6)    375.4 (  376/  385)      8.6 (    8/   18)      5.5 (    5/   26)   1095.6 ( 1087/ 1799)
+n5         163      0.1 (    0/    1)    714.9 (  703/ 1419)      1.9 (    2/    8)    375.2 (  376/  378)      7.4 (    7/   12)      5.4 (    5/   22)   1095.6 ( 1086/ 1801)
+n6         163      0.1 (    0/    2)    714.9 (  695/ 1430)      2.3 (    2/   11)    375.3 (  376/  381)      8.9 (    8/   34)      5.1 (    4/   21)   1095.7 ( 1078/ 1814)
+n7         163      0.1 (    0/    2)    714.7 (  697/ 1445)      2.3 (    2/   12)    375.3 (  376/  380)      8.2 (    7/   25)      5.2 (    4/   20)   1095.7 ( 1080/ 1827)
+all       1141      0.1 (    0/    1)    714.6 (  699/ 1428)      2.2 (    2/    9)    375.3 (  376/  379)      8.6 (    8/   24)      5.4 (    5/   21)   1095.7 ( 1081/ 1811)
+ledgers 163, txs per ledger 300, ledger interval 1098 ms, throughput 273 tx/s
+tx latency (submit at node 1 to externalize): mean 1376 ms, p50 1317 ms, p90 1938 ms, p99 2962 ms, n 48803
+host cpu busy 18%
+n1: total    15%  busiest stellar-core 7%, main 6%, stellar-core 1%
+n2: total    15%  busiest stellar-core 7%, main 6%, stellar-core 1%
+n3: total    16%  busiest stellar-core 7%, main 7%, stellar-core 1%
+n4: total    17%  busiest main 7%, stellar-core 7%, stellar-core 2%
+n5: total    16%  busiest stellar-core 7%, main 6%, stellar-core 1%
+n6: total    15%  busiest main 7%, stellar-core 6%, stellar-core 1%
+n7: total    15%  busiest main 6%, stellar-core 6%, stellar-core 1%
+n8: total    26%  busiest main 16%, stellar-core 7%, stellar-core 1%
+n9: total    27%  busiest main 16%, stellar-core 8%, stellar-core 2%
+n10: total    27%  busiest main 17%, stellar-core 7%, stellar-core 1%
+n11: total    26%  busiest main 16%, stellar-core 7%, stellar-core 1%
+== ksw-pay-k2-cl-t300-r1
+run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t300-r1/s1-c200, ledgers 43 to 357; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         315    562.8 (  542/ 1302)    723.9 (  706/ 1395)     28.0 (    2/  373)    371.5 (  376/  379)      9.8 (    9/   26)  -1118.1 (-1097/ -904)    568.4 (  548/ 1304)
+n2         315    562.5 (  538/ 1313)    722.8 (  706/ 1401)     28.4 (    2/  373)    371.5 (  376/  377)     10.1 (    9/   26)  -1117.0 (-1095/ -896)    568.3 (  546/ 1315)
+n3         315    562.2 (  538/ 1325)    721.2 (  705/ 1397)     29.4 (    2/  373)    371.7 (  376/  381)     10.6 (   10/   35)  -1116.4 (-1094/ -889)    568.3 (  546/ 1332)
+n4         315    562.8 (  548/ 1241)    721.8 (  702/ 1422)     29.2 (    2/  373)    371.6 (  376/  379)     10.2 (    9/   36)  -1117.2 (-1095/ -901)    568.5 (  550/ 1264)
+n5         315    562.5 (  547/ 1240)    723.8 (  702/ 1412)     28.7 (    2/  373)    371.6 (  376/  378)      9.0 (    8/   32)  -1118.5 (-1098/ -913)    568.5 (  546/ 1274)
+n6         315    563.3 (  540/ 1279)    723.1 (  699/ 1397)     28.2 (    2/  372)    371.7 (  376/  382)     10.2 (    9/   37)  -1118.2 (-1093/ -873)    568.3 (  546/ 1285)
+n7         315    563.0 (  540/ 1288)    722.3 (  702/ 1395)     28.8 (    2/  373)    371.6 (  376/  379)     10.1 (    9/   39)  -1117.6 (-1097/ -893)    568.3 (  546/ 1298)
+all       2205    562.7 (  541/ 1313)    722.7 (  702/ 1404)     28.7 (    2/  373)    371.6 (  376/  381)     10.0 (    9/   36)  -1117.6 (-1096/ -889)    568.4 (  547/ 1323)
+ledgers 315, txs per ledger 298, ledger interval 570 ms, throughput 522 tx/s
+tx latency (submit at node 1 to externalize): mean 1489 ms, p50 1401 ms, p90 2121 ms, p99 3977 ms, n 93418
+host cpu busy 30%
+n1: total    36%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n2: total    36%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n3: total    36%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n4: total    35%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n5: total    35%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n6: total    34%  busiest main 14%, stellar-core 11%, stellar-core 3%
+n7: total    34%  busiest main 15%, stellar-core 11%, stellar-core 3%
+n8: total    48%  busiest main 26%, stellar-core 13%, stellar-core 3%
+n9: total    48%  busiest main 26%, stellar-core 12%, stellar-core 3%
+n10: total    47%  busiest main 27%, stellar-core 12%, stellar-core 3%
+n11: total    47%  busiest main 26%, stellar-core 12%, stellar-core 3%
+== ksw-pay-k2-cl-t300-r2
+run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t300-r2/s1-c200, ledgers 43 to 357; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         315    565.2 (  548/ 1239)    721.9 (  696/ 1395)     29.3 (    2/  374)    372.3 (  376/  376)     10.4 (   10/   38)  -1117.4 (-1084/ -912)    569.7 (  550/ 1201)
+n2         315    565.1 (  545/ 1246)    721.8 (  699/ 1400)     29.3 (    2/  373)    372.3 (  376/  377)     10.0 (    9/   32)  -1117.2 (-1083/ -901)    569.7 (  554/ 1202)
+n3         315    565.5 (  543/ 1261)    720.7 (  702/ 1388)     30.1 (    2/  373)    372.4 (  376/  380)     10.5 (    9/   39)  -1117.4 (-1089/ -880)    569.6 (  549/ 1215)
+n4         315    565.3 (  541/ 1230)    719.9 (  690/ 1417)     30.7 (    2/  373)    372.5 (  376/  380)     11.2 (    9/   48)  -1117.0 (-1082/ -910)    569.8 (  545/ 1226)
+n5         315    565.2 (  542/ 1243)    721.8 (  689/ 1423)     30.0 (    2/  373)    372.4 (  376/  379)      9.4 (    8/   38)  -1118.1 (-1084/ -918)    569.7 (  545/ 1224)
+n6         315    566.0 (  545/ 1244)    721.0 (  696/ 1397)     29.9 (    2/  372)    372.5 (  376/  381)     10.4 (    9/   41)  -1118.0 (-1083/ -892)    569.7 (  548/ 1204)
+n7         315    565.7 (  551/ 1272)    721.2 (  702/ 1399)     29.8 (    2/  373)    372.5 (  376/  383)     10.6 (    9/   44)  -1117.8 (-1087/ -910)    569.6 (  549/ 1214)
+all       2205    565.4 (  544/ 1261)    721.2 (  698/ 1408)     29.9 (    2/  373)    372.4 (  376/  380)     10.3 (    9/   41)  -1117.5 (-1084/ -897)    569.7 (  548/ 1224)
+ledgers 315, txs per ledger 298, ledger interval 570 ms, throughput 523 tx/s
+tx latency (submit at node 1 to externalize): mean 1489 ms, p50 1397 ms, p90 2167 ms, p99 3925 ms, n 93626
+host cpu busy 31%
+n1: total    35%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n2: total    35%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n3: total    35%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n4: total    34%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n5: total    34%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n6: total    32%  busiest main 14%, stellar-core 10%, stellar-core 3%
+n7: total    33%  busiest main 15%, stellar-core 11%, stellar-core 3%
+n8: total    49%  busiest main 27%, stellar-core 13%, stellar-core 3%
+n9: total    48%  busiest main 26%, stellar-core 13%, stellar-core 3%
+n10: total    48%  busiest main 27%, stellar-core 12%, stellar-core 3%
+n11: total    48%  busiest main 27%, stellar-core 12%, stellar-core 3%
+== ksw-pay-k2-cl-t300-r3
+run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t300-r3/s1-c200, ledgers 43 to 352; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         310    570.8 (  549/ 1341)    734.2 (  703/ 1407)     34.0 (    2/  374)    372.2 (  376/  379)     10.3 (   10/   35)  -1134.3 (-1098/ -917)    577.3 (  552/ 1366)
+n2         310    570.9 (  544/ 1360)    733.6 (  704/ 1405)     34.3 (    2/  374)    372.1 (  376/  379)     10.1 (   10/   35)  -1134.0 (-1101/ -904)    577.3 (  549/ 1363)
+n3         310    570.6 (  546/ 1370)    731.4 (  703/ 1407)     35.1 (    3/  373)    372.2 (  376/  380)     10.6 (   10/   36)  -1132.5 (-1101/ -886)    577.2 (  554/ 1366)
+n4         310    570.9 (  551/ 1325)    732.5 (  697/ 1419)     34.9 (    2/  373)    372.2 (  376/  380)     10.9 (   10/   45)  -1133.5 (-1098/ -905)    577.5 (  557/ 1323)
+n5         310    571.1 (  548/ 1318)    734.6 (  700/ 1421)     34.4 (    2/  373)    372.2 (  376/  382)      9.5 (    8/   39)  -1135.4 (-1100/ -921)    577.5 (  557/ 1325)
+n6         310    571.4 (  544/ 1333)    731.9 (  701/ 1402)     35.7 (    2/  373)    372.2 (  376/  381)     10.4 (    9/   40)  -1134.4 (-1097/ -866)    577.3 (  551/ 1360)
+n7         310    571.3 (  550/ 1358)    732.2 (  704/ 1406)     35.2 (    3/  374)    372.2 (  376/  380)     10.1 (    9/   37)  -1134.1 (-1100/ -899)    577.3 (  554/ 1363)
+all       2170    571.0 (  546/ 1370)    732.9 (  702/ 1410)     34.8 (    2/  374)    372.2 (  376/  380)     10.3 (    9/   39)  -1134.0 (-1100/ -891)    577.3 (  552/ 1366)
+ledgers 310, txs per ledger 298, ledger interval 578 ms, throughput 516 tx/s
+tx latency (submit at node 1 to externalize): mean 1513 ms, p50 1422 ms, p90 2175 ms, p99 3903 ms, n 92079
+host cpu busy 31%
+n1: total    37%  busiest main 16%, stellar-core 13%, stellar-core 4%
+n2: total    36%  busiest main 16%, stellar-core 12%, stellar-core 3%
+n3: total    36%  busiest main 16%, stellar-core 12%, stellar-core 4%
+n4: total    34%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n5: total    35%  busiest main 15%, stellar-core 12%, stellar-core 3%
+n6: total    33%  busiest main 15%, stellar-core 11%, stellar-core 3%
+n7: total    34%  busiest main 16%, stellar-core 11%, stellar-core 3%
+n8: total    47%  busiest main 26%, stellar-core 13%, stellar-core 4%
+n9: total    47%  busiest main 26%, stellar-core 13%, stellar-core 3%
+n10: total    47%  busiest main 27%, stellar-core 12%, stellar-core 3%
+n11: total    47%  busiest main 27%, stellar-core 12%, stellar-core 3%
+== ksw-pay-k3-cl-t300-r1
+run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t300-r1/s1-c200, ledgers 48 to 465; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         418    421.6 (  372/ 1041)    775.6 (  733/ 1462)    110.6 (   58/  739)    372.1 (  376/  380)     10.9 (   10/   53)  -1250.2 (-1181/-1035)    428.8 (  415/ 1174)
+n2         418    421.3 (  372/ 1052)    775.2 (  738/ 1467)    110.4 (   58/  738)    372.1 (  376/  380)     11.0 (   10/   52)  -1249.5 (-1180/-1033)    428.8 (  412/ 1172)
+n3         418    421.5 (  374/ 1041)    770.6 (  733/ 1447)    113.0 (   60/  741)    372.2 (  376/  382)     12.7 (   11/   47)  -1247.6 (-1173/-1039)    428.8 (  416/ 1156)
+n4         418    421.5 (  374/ 1068)    771.7 (  723/ 1456)    112.1 (   61/  745)    372.2 (  376/  383)     12.9 (   11/   56)  -1247.9 (-1180/ -975)    428.9 (  417/ 1163)
+n5         418    421.2 (  373/ 1056)    773.7 (  724/ 1465)    111.9 (   63/  744)    372.2 (  376/  381)     11.4 (   10/   53)  -1249.4 (-1175/-1034)    428.9 (  414/ 1172)
+n6         418    422.4 (  376/ 1042)    765.3 (  725/ 1445)    119.1 (   71/  735)    372.4 (  376/  383)     12.7 (   10/   56)  -1249.5 (-1176/-1045)    428.8 (  413/ 1180)
+n7         418    422.4 (  375/ 1053)    767.8 (  721/ 1467)    116.4 (   68/  742)    372.4 (  376/  383)     12.0 (   10/   44)  -1249.3 (-1175/-1041)    428.8 (  414/ 1161)
+all       2926    421.7 (  374/ 1056)    771.4 (  727/ 1465)    113.4 (   63/  742)    372.2 (  376/  383)     11.9 (   10/   53)  -1249.1 (-1177/-1032)    428.9 (  414/ 1172)
+ledgers 418, txs per ledger 298, ledger interval 430 ms, throughput 693 tx/s
+tx latency (submit at node 1 to externalize): mean 1668 ms, p50 1547 ms, p90 2443 ms, p99 4732 ms, n 124145
+host cpu busy 41%
+n1: total    53%  busiest main 25%, stellar-core 16%, stellar-core 4%
+n2: total    54%  busiest main 25%, stellar-core 16%, stellar-core 4%
+n3: total    54%  busiest main 26%, stellar-core 15%, stellar-core 5%
+n4: total    52%  busiest main 25%, stellar-core 15%, stellar-core 5%
+n5: total    53%  busiest main 25%, stellar-core 15%, stellar-core 4%
+n6: total    51%  busiest main 25%, stellar-core 14%, stellar-core 5%
+n7: total    52%  busiest main 26%, stellar-core 14%, stellar-core 4%
+n8: total    66%  busiest main 37%, stellar-core 16%, stellar-core 5%
+n9: total    66%  busiest main 37%, stellar-core 16%, stellar-core 5%
+n10: total    66%  busiest main 37%, stellar-core 16%, stellar-core 5%
+n11: total    65%  busiest main 37%, stellar-core 15%, stellar-core 5%
+== ksw-pay-k3-cl-t300-r2
+run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t300-r2/s1-c200, ledgers 49 to 476; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         428    409.4 (  372/ 1040)    755.3 (  712/ 1409)    100.0 (   70/  570)    372.8 (  376/  380)     10.9 (   10/   41)  -1219.8 (-1170/-1045)    418.6 (  413/ 1113)
+n2         428    409.4 (  372/ 1062)    751.1 (  708/ 1411)    102.3 (   72/  561)    372.8 (  376/  380)     11.9 (   10/   55)  -1217.8 (-1171/-1016)    418.8 (  412/ 1113)
+n3         428    409.2 (  372/ 1057)    748.8 (  704/ 1430)    102.4 (   70/  572)    373.0 (  376/  383)     12.9 (   11/   51)  -1215.6 (-1160/-1018)    418.7 (  404/ 1128)
+n4         428    409.4 (  372/ 1039)    745.3 (  702/ 1422)    105.0 (   72/  566)    373.0 (  376/  381)     12.8 (   11/   50)  -1214.8 (-1161/-1047)    418.6 (  414/ 1122)
+n5         428    408.9 (  372/ 1046)    749.0 (  704/ 1423)    104.6 (   73/  563)    372.8 (  376/  380)     11.4 (   10/   46)  -1217.6 (-1164/-1037)    418.6 (  413/ 1125)
+n6         428    410.3 (  376/ 1016)    748.4 (  697/ 1404)    102.2 (   76/  558)    373.0 (  376/  381)     12.7 (   11/   44)  -1216.1 (-1161/-1044)    418.6 (  403/ 1105)
+n7         428    410.1 (  374/ 1037)    744.0 (  707/ 1417)    107.6 (   75/  577)    373.0 (  376/  382)     12.8 (   11/   51)  -1216.9 (-1167/-1038)    418.7 (  402/ 1124)
+all       2996    409.5 (  373/ 1046)    748.8 (  706/ 1419)    103.4 (   72/  570)    372.9 (  376/  381)     12.2 (   10/   49)  -1217.0 (-1165/-1018)    418.6 (  410/ 1124)
+ledgers 428, txs per ledger 298, ledger interval 419 ms, throughput 712 tx/s
+tx latency (submit at node 1 to externalize): mean 1605 ms, p50 1502 ms, p90 2320 ms, p99 4547 ms, n 127371
+host cpu busy 42%
+n1: total    46%  busiest main 23%, stellar-core 15%, stellar-core 4%
+n2: total    47%  busiest main 24%, stellar-core 15%, stellar-core 4%
+n3: total    48%  busiest main 24%, stellar-core 15%, stellar-core 5%
+n4: total    46%  busiest main 24%, stellar-core 14%, stellar-core 5%
+n5: total    46%  busiest main 23%, stellar-core 14%, stellar-core 4%
+n6: total    44%  busiest main 23%, stellar-core 13%, stellar-core 4%
+n7: total    44%  busiest main 23%, stellar-core 13%, stellar-core 4%
+n8: total    59%  busiest main 35%, stellar-core 16%, stellar-core 4%
+n9: total    59%  busiest main 35%, stellar-core 15%, stellar-core 4%
+n10: total    57%  busiest main 34%, stellar-core 15%, stellar-core 4%
+n11: total    56%  busiest main 34%, stellar-core 14%, stellar-core 4%
+== ksw-pay-k3-cl-t300-r3
+run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t300-r3/s1-c200, ledgers 44 to 456; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         413    425.5 (  372/ 1073)    791.0 (  744/ 1485)    110.4 (   59/  711)    372.5 (  376/  382)     11.2 (   10/   50)  -1265.5 (-1184/-1060)    434.3 (  403/ 1223)
+n2         413    425.1 (  372/ 1070)    787.2 (  742/ 1478)    112.8 (   64/  707)    372.5 (  376/  381)     11.1 (   10/   40)  -1263.9 (-1182/-1072)    434.3 (  405/ 1222)
+n3         413    425.5 (  375/ 1058)    782.7 (  741/ 1479)    114.9 (   63/  703)    372.6 (  376/  381)     12.8 (   11/   43)  -1261.9 (-1177/-1055)    434.3 (  398/ 1223)
+n4         413    425.2 (  373/ 1094)    786.6 (  735/ 1489)    111.6 (   51/  716)    372.6 (  376/  381)     12.5 (   11/   44)  -1262.3 (-1178/-1055)    434.3 (  396/ 1246)
+n5         413    425.1 (  373/ 1070)    788.4 (  744/ 1476)    111.3 (   53/  710)    372.6 (  376/  382)     11.4 (   10/   46)  -1263.7 (-1179/-1072)    434.3 (  395/ 1247)
+n6         413    426.3 (  376/ 1067)    783.7 (  733/ 1473)    113.4 (   67/  711)    372.7 (  376/  380)     12.7 (   11/   49)  -1262.2 (-1176/-1050)    434.3 (  393/ 1232)
+n7         413    426.5 (  375/ 1072)    770.9 (  730/ 1477)    126.5 (   75/  714)    372.9 (  376/  387)     12.2 (   10/   38)  -1263.0 (-1170/-1052)    434.3 (  394/ 1236)
+all       2891    425.6 (  374/ 1075)    784.4 (  738/ 1479)    114.4 (   62/  716)    372.6 (  376/  382)     12.0 (   10/   45)  -1263.2 (-1178/-1059)    434.3 (  398/ 1233)
+ledgers 413, txs per ledger 298, ledger interval 435 ms, throughput 685 tx/s
+tx latency (submit at node 1 to externalize): mean 1686 ms, p50 1558 ms, p90 2500 ms, p99 4774 ms, n 122793
+host cpu busy 41%
+n1: total    49%  busiest main 23%, stellar-core 14%, stellar-core 5%
+n2: total    49%  busiest main 23%, stellar-core 15%, stellar-core 4%
+n3: total    50%  busiest main 24%, stellar-core 14%, stellar-core 5%
+n4: total    50%  busiest main 24%, stellar-core 14%, stellar-core 4%
+n5: total    49%  busiest main 24%, stellar-core 14%, stellar-core 4%
+n6: total    47%  busiest main 23%, stellar-core 13%, stellar-core 4%
+n7: total    47%  busiest main 23%, stellar-core 13%, stellar-core 4%
+n8: total    61%  busiest main 35%, stellar-core 15%, stellar-core 5%
+n9: total    61%  busiest main 35%, stellar-core 15%, stellar-core 5%
+n10: total    60%  busiest main 34%, stellar-core 15%, stellar-core 4%
+n11: total    60%  busiest main 35%, stellar-core 14%, stellar-core 4%
+== ksw-pay-k4-cl-t300-r1
+run /home/dev/src/lab-runs/wan/ksw-pay-k4-cl-t300-r1/s1-c200, ledgers 50 to 511; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         462    379.2 (  369/  779)    813.5 (  779/ 1516)    328.1 (  321/  787)    371.2 (  376/  381)     11.1 (   10/   48)  -1503.2 (-1463/ -995)    387.9 (  380/ 1115)
+n2         462    379.4 (  369/  774)    807.4 (  772/ 1505)    334.1 (  327/  780)    371.2 (  376/  382)     10.9 (   10/   45)  -1503.0 (-1463/-1003)    387.9 (  378/ 1119)
+n3         462    380.1 (  369/  765)    800.2 (  770/ 1490)    337.3 (  328/  788)    371.3 (  376/  380)     12.9 (   11/   44)  -1499.8 (-1461/-1006)    388.0 (  377/ 1108)
+n4         462    380.4 (  370/  797)    789.7 (  767/ 1517)    346.8 (  360/  796)    371.5 (  376/  383)     13.1 (   11/   44)  -1499.3 (-1462/ -968)    388.1 (  380/ 1123)
+n5         462    379.8 (  368/  771)    795.9 (  770/ 1489)    343.6 (  328/  798)    371.3 (  376/  380)     12.1 (   10/   50)  -1501.5 (-1462/ -961)    388.0 (  376/ 1121)
+n6         462    381.9 (  371/  758)    785.8 (  758/ 1497)    354.5 (  376/  803)    371.5 (  376/  381)     12.7 (   11/   38)  -1504.6 (-1468/ -979)    387.9 (  374/ 1116)
+n7         462    381.4 (  370/  765)    795.3 (  768/ 1513)    345.0 (  337/  783)    371.5 (  376/  382)     12.8 (   11/   51)  -1503.8 (-1465/ -994)    388.0 (  378/ 1113)
+all       3234    380.3 (  369/  765)    798.2 (  770/ 1505)    341.4 (  331/  790)    371.4 (  376/  382)     12.2 (   10/   45)  -1502.2 (-1463/ -995)    388.0 (  377/ 1116)
+ledgers 462, txs per ledger 297, ledger interval 389 ms, throughput 764 tx/s
+tx latency (submit at node 1 to externalize): mean 1856 ms, p50 1709 ms, p90 2540 ms, p99 5859 ms, n 136898
+host cpu busy 47%
+n1: total    56%  busiest main 30%, stellar-core 16%, stellar-core 5%
+n2: total    56%  busiest main 31%, stellar-core 16%, stellar-core 4%
+n3: total    56%  busiest main 31%, stellar-core 16%, stellar-core 5%
+n4: total    55%  busiest main 30%, stellar-core 16%, stellar-core 5%
+n5: total    56%  busiest main 30%, stellar-core 15%, stellar-core 5%
+n6: total    52%  busiest main 28%, stellar-core 14%, stellar-core 5%
+n7: total    54%  busiest main 30%, stellar-core 14%, stellar-core 5%
+n8: total    67%  busiest main 41%, stellar-core 17%, stellar-core 4%
+n9: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
+n10: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
+n11: total    67%  busiest main 41%, stellar-core 16%, stellar-core 6%
+== ksw-pay-k4-cl-t300-r2
+run /home/dev/src/lab-runs/wan/ksw-pay-k4-cl-t300-r2/s1-c200, ledgers 46 to 499; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         454    385.6 (  369/  781)    829.3 (  786/ 1504)    334.6 (  327/  784)    371.8 (  376/  379)     11.4 (   10/   47)  -1526.5 (-1464/-1092)    393.7 (  370/ 1155)
+n2         454    385.3 (  368/  780)    830.4 (  785/ 1521)    333.5 (  324/  792)    371.8 (  376/  380)     11.4 (   10/   42)  -1526.3 (-1464/-1090)    393.6 (  375/ 1141)
+n3         454    386.4 (  370/  756)    818.0 (  776/ 1479)    342.6 (  334/  800)    372.0 (  376/  382)     13.6 (   11/   57)  -1524.4 (-1465/-1090)    393.6 (  370/ 1156)
+n4         454    386.0 (  368/  792)    830.6 (  781/ 1516)    333.0 (  326/  795)    371.9 (  376/  382)     11.9 (   10/   56)  -1526.7 (-1464/-1113)    393.7 (  376/ 1155)
+n5         454    385.8 (  369/  801)    835.2 (  793/ 1518)    330.8 (  323/  790)    371.8 (  376/  381)     10.7 (    9/   42)  -1528.8 (-1465/-1114)    393.7 (  377/ 1154)
+n6         454    387.5 (  370/  776)    813.1 (  771/ 1502)    349.7 (  374/  793)    372.2 (  376/  384)     12.8 (   11/   44)  -1527.7 (-1467/-1129)    393.7 (  370/ 1154)
+n7         454    387.6 (  371/  779)    818.5 (  779/ 1495)    345.0 (  340/  799)    372.1 (  376/  383)     12.8 (   10/   48)  -1528.4 (-1469/-1114)    393.6 (  369/ 1167)
+all       3178    386.3 (  369/  780)    825.0 (  781/ 1504)    338.5 (  331/  793)    371.9 (  376/  382)     12.1 (   10/   49)  -1527.0 (-1466/-1113)    393.7 (  373/ 1155)
+ledgers 454, txs per ledger 297, ledger interval 394 ms, throughput 754 tx/s
+tx latency (submit at node 1 to externalize): mean 1931 ms, p50 1755 ms, p90 2653 ms, p99 6150 ms, n 134733
+host cpu busy 46%
+n1: total    58%  busiest main 32%, stellar-core 17%, stellar-core 4%
+n2: total    57%  busiest main 32%, stellar-core 16%, stellar-core 5%
+n3: total    58%  busiest main 32%, stellar-core 17%, stellar-core 5%
+n4: total    54%  busiest main 30%, stellar-core 16%, stellar-core 4%
+n5: total    55%  busiest main 31%, stellar-core 16%, stellar-core 4%
+n6: total    53%  busiest main 29%, stellar-core 15%, stellar-core 5%
+n7: total    54%  busiest main 30%, stellar-core 15%, stellar-core 5%
+n8: total    69%  busiest main 43%, stellar-core 17%, stellar-core 5%
+n9: total    70%  busiest main 43%, stellar-core 17%, stellar-core 5%
+n10: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
+n11: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
+== ksw-pay-k4-cl-t300-r3
+run /home/dev/src/lab-runs/wan/ksw-pay-k4-cl-t300-r3/s1-c200, ledgers 56 to 515; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         460    379.4 (  369/  772)    822.6 (  783/ 1541)    321.6 (  325/  743)    373.4 (  376/  379)     10.6 (    9/   47)  -1508.7 (-1465/-1247)    387.4 (  378/ 1094)
+n2         460    379.1 (  369/  798)    819.7 (  784/ 1535)    323.8 (  322/  741)    373.5 (  376/  383)     11.3 (    9/   61)  -1507.8 (-1465/-1237)    387.5 (  377/ 1099)
+n3         460    379.8 (  369/  806)    803.9 (  775/ 1532)    336.3 (  329/  742)    373.6 (  376/  384)     12.8 (   10/   53)  -1505.3 (-1464/-1228)    387.4 (  378/ 1095)
+n4         460    379.8 (  370/  756)    786.3 (  762/ 1502)    351.4 (  375/  749)    373.6 (  376/  382)     12.8 (   10/   49)  -1502.5 (-1463/-1262)    387.5 (  376/ 1140)
+n5         460    379.0 (  369/  743)    794.4 (  768/ 1543)    345.9 (  372/  745)    373.4 (  376/  379)     11.7 (   10/   61)  -1504.3 (-1463/-1266)    387.5 (  378/ 1125)
+n6         460    381.0 (  370/  745)    797.7 (  770/ 1520)    343.0 (  348/  744)    373.8 (  376/  384)     13.0 (   10/   60)  -1507.3 (-1468/-1270)    387.4 (  379/ 1087)
+n7         460    380.3 (  370/  757)    808.3 (  773/ 1509)    331.8 (  328/  739)    373.6 (  376/  382)     12.9 (   10/   46)  -1505.6 (-1465/-1244)    387.4 (  377/ 1095)
+all       3220    379.8 (  369/  762)    804.7 (  773/ 1520)    336.3 (  331/  742)    373.5 (  376/  382)     12.1 (   10/   53)  -1505.9 (-1465/-1262)    387.5 (  377/ 1096)
+ledgers 460, txs per ledger 299, ledger interval 388 ms, throughput 769 tx/s
+tx latency (submit at node 1 to externalize): mean 1886 ms, p50 1718 ms, p90 2561 ms, p99 6119 ms, n 137106
+host cpu busy 46%
+n1: total    56%  busiest main 31%, stellar-core 17%, stellar-core 4%
+n2: total    58%  busiest main 32%, stellar-core 17%, stellar-core 5%
+n3: total    58%  busiest main 32%, stellar-core 16%, stellar-core 5%
+n4: total    56%  busiest main 31%, stellar-core 16%, stellar-core 5%
+n5: total    58%  busiest main 32%, stellar-core 16%, stellar-core 5%
+n6: total    53%  busiest main 29%, stellar-core 14%, stellar-core 5%
+n7: total    53%  busiest main 30%, stellar-core 15%, stellar-core 5%
+n8: total    68%  busiest main 42%, stellar-core 17%, stellar-core 4%
+n9: total    69%  busiest main 43%, stellar-core 17%, stellar-core 4%
+n10: total    66%  busiest main 41%, stellar-core 16%, stellar-core 5%
+n11: total    68%  busiest main 42%, stellar-core 17%, stellar-core 5%
+== ksw-pay-k5-cl-t300-r1
+run /home/dev/src/lab-runs/wan/ksw-pay-k5-cl-t300-r1/s1-c200, ledgers 57 to 528; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         472    368.0 (  368/  559)    841.6 (  790/ 1652)    625.2 (  672/  913)    372.4 (  376/  382)     11.4 (    9/   61)  -1829.7 (-1832/-1562)    378.2 (  372/ 1119)
+n2         472    368.4 (  368/  546)    854.8 (  799/ 1692)    611.2 (  663/  874)    372.3 (  376/  381)     12.0 (   10/   48)  -1829.2 (-1831/-1567)    378.1 (  371/ 1144)
+n3         472    368.8 (  369/  589)    822.0 (  778/ 1618)    641.8 (  681/  904)    372.4 (  376/  382)     12.4 (   10/   49)  -1827.6 (-1833/-1561)    378.2 (  374/ 1183)
+n4         472    368.4 (  368/  580)    856.2 (  798/ 1614)    609.2 (  664/  881)    372.4 (  376/  380)     11.4 (   10/   45)  -1828.7 (-1831/-1520)    378.1 (  370/ 1120)
+n5         472    368.4 (  369/  537)    854.3 (  796/ 1663)    611.2 (  662/  881)    372.3 (  376/  383)     10.7 (    9/   51)  -1828.7 (-1830/-1516)    378.2 (  368/ 1161)
+n6         472    368.6 (  370/  533)    867.7 (  803/ 1795)    596.9 (  649/  890)    372.4 (  376/  382)     12.3 (   10/   50)  -1828.5 (-1832/-1497)    378.1 (  372/ 1137)
+n7         472    369.8 (  370/  572)    821.3 (  776/ 1700)    645.1 (  683/  941)    372.5 (  376/  381)     12.3 (   10/   49)  -1831.5 (-1836/-1538)    378.1 (  368/ 1142)
+all       3304    368.6 (  369/  537)    845.4 (  791/ 1683)    620.1 (  668/  897)    372.4 (  376/  381)     11.8 (   10/   49)  -1829.1 (-1832/-1559)    378.1 (  371/ 1125)
+ledgers 472, txs per ledger 298, ledger interval 378 ms, throughput 787 tx/s
+tx latency (submit at node 1 to externalize): mean 2081 ms, p50 1922 ms, p90 2869 ms, p99 6791 ms, n 140246
+host cpu busy 50%
+n1: total    59%  busiest main 34%, stellar-core 16%, stellar-core 4%
+n2: total    62%  busiest main 35%, stellar-core 16%, stellar-core 5%
+n3: total    60%  busiest main 34%, stellar-core 16%, stellar-core 5%
+n4: total    60%  busiest main 35%, stellar-core 16%, stellar-core 5%
+n5: total    60%  busiest main 35%, stellar-core 16%, stellar-core 4%
+n6: total    58%  busiest main 34%, stellar-core 14%, stellar-core 5%
+n7: total    56%  busiest main 32%, stellar-core 15%, stellar-core 5%
+n8: total    69%  busiest main 43%, stellar-core 17%, stellar-core 5%
+n9: total    72%  busiest main 45%, stellar-core 17%, stellar-core 5%
+n10: total    70%  busiest main 44%, stellar-core 17%, stellar-core 5%
+n11: total    70%  busiest main 44%, stellar-core 16%, stellar-core 5%
+== ksw-pay-k5-cl-t300-r2
+run /home/dev/src/lab-runs/wan/ksw-pay-k5-cl-t300-r2/s1-c200, ledgers 55 to 524; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         470    370.6 (  369/  531)    819.8 (  777/ 1841)    657.3 (  688/  952)    372.3 (  376/  383)     11.6 (   10/   45)  -1840.3 (-1834/-1197)    380.2 (  372/ 1111)
+n2         470    370.9 (  369/  517)    860.9 (  799/ 1958)    619.4 (  671/  889)    372.2 (  376/  381)     10.2 (    9/   43)  -1843.8 (-1836/-1193)    380.2 (  373/ 1114)
+n3         470    370.3 (  368/  520)    829.4 (  783/ 1832)    645.3 (  681/  926)    372.3 (  376/  383)     11.6 (    9/   48)  -1838.0 (-1832/-1199)    380.3 (  372/ 1113)
+n4         470    371.5 (  369/  493)    799.2 (  769/ 1921)    681.2 (  698/  987)    372.3 (  376/  383)     11.2 (    9/   47)  -1844.5 (-1836/-1222)    380.2 (  371/ 1133)
+n5         470    370.4 (  368/  546)    841.6 (  793/ 1856)    634.6 (  669/  917)    372.2 (  376/  381)     11.0 (    9/   48)  -1839.1 (-1832/-1228)    380.2 (  371/ 1129)
+n6         470    371.5 (  370/  521)    819.4 (  776/ 1848)    658.0 (  686/ 1005)    372.3 (  376/  382)     12.0 (   10/   49)  -1841.5 (-1835/-1170)    380.3 (  375/ 1113)
+n7         470    370.5 (  369/  492)    830.8 (  788/ 1836)    645.4 (  678/  926)    372.3 (  376/  382)     11.3 (    9/   48)  -1839.4 (-1834/-1198)    380.2 (  374/ 1120)
+all       3290    370.8 (  369/  511)    828.7 (  783/ 1850)    648.7 (  682/  948)    372.3 (  376/  382)     11.3 (    9/   47)  -1840.9 (-1834/-1199)    380.2 (  372/ 1114)
+ledgers 470, txs per ledger 298, ledger interval 381 ms, throughput 782 tx/s
+tx latency (submit at node 1 to externalize): mean 2088 ms, p50 1914 ms, p90 2872 ms, p99 7018 ms, n 139612
+host cpu busy 50%
+n1: total    58%  busiest main 34%, stellar-core 17%, stellar-core 4%
+n2: total    58%  busiest main 33%, stellar-core 16%, stellar-core 4%
+n3: total    58%  busiest main 33%, stellar-core 16%, stellar-core 5%
+n4: total    58%  busiest main 34%, stellar-core 16%, stellar-core 5%
+n5: total    58%  busiest main 34%, stellar-core 16%, stellar-core 4%
+n6: total    55%  busiest main 32%, stellar-core 15%, stellar-core 5%
+n7: total    57%  busiest main 33%, stellar-core 15%, stellar-core 5%
+n8: total    67%  busiest main 44%, stellar-core 17%, stellar-core 4%
+n9: total    70%  busiest main 44%, stellar-core 17%, stellar-core 5%
+n10: total    69%  busiest main 44%, stellar-core 16%, stellar-core 4%
+n11: total    68%  busiest main 43%, stellar-core 16%, stellar-core 4%
+== ksw-pay-k5-cl-t300-r3
+run /home/dev/src/lab-runs/wan/ksw-pay-k5-cl-t300-r3/s1-c200, ledgers 56 to 523; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         468    370.9 (  368/  509)    858.5 (  793/ 1973)    623.9 (  668/  911)    371.2 (  376/  381)     11.3 (   10/   45)  -1843.0 (-1831/ -823)    382.3 (  367/ 1212)
+n2         468    370.5 (  368/  583)    858.7 (  791/ 1894)    623.8 (  672/  917)    371.3 (  376/  382)     11.5 (   10/   49)  -1842.8 (-1830/ -824)    382.2 (  369/ 1227)
+n3         468    371.6 (  368/  593)    843.2 (  781/ 1892)    634.6 (  678/  924)    371.3 (  376/  383)     12.8 (   10/   53)  -1839.3 (-1829/ -821)    382.2 (  371/ 1237)
+n4         468    371.1 (  368/  525)    858.8 (  791/ 1867)    622.0 (  669/  896)    371.3 (  376/  381)     12.3 (   10/   55)  -1841.6 (-1829/ -824)    382.3 (  360/ 1180)
+n5         468    371.1 (  368/  580)    873.5 (  805/ 1869)    609.6 (  659/  895)    371.2 (  376/  382)     11.0 (    9/   43)  -1843.9 (-1832/ -825)    382.4 (  370/ 1186)
+n6         468    372.1 (  369/  619)    861.8 (  795/ 2014)    618.7 (  663/  913)    371.4 (  376/  383)     12.6 (   10/   39)  -1842.5 (-1831/ -821)    382.3 (  361/ 1193)
+n7         468    371.8 (  369/  527)    854.3 (  788/ 1936)    626.3 (  672/  925)    371.4 (  376/  383)     12.9 (   11/   47)  -1842.3 (-1833/ -828)    382.3 (  363/ 1215)
+all       3276    371.3 (  368/  558)    858.4 (  791/ 1936)    622.7 (  669/  920)    371.3 (  376/  382)     12.1 (   10/   47)  -1842.2 (-1831/ -824)    382.3 (  366/ 1205)
+ledgers 468, txs per ledger 297, ledger interval 383 ms, throughput 776 tx/s
+tx latency (submit at node 1 to externalize): mean 2150 ms, p50 1955 ms, p90 3025 ms, p99 7326 ms, n 138630
+host cpu busy 50%
+n1: total    61%  busiest main 35%, stellar-core 17%, stellar-core 5%
+n2: total    62%  busiest main 35%, stellar-core 17%, stellar-core 5%
+n3: total    61%  busiest main 35%, stellar-core 16%, stellar-core 5%
+n4: total    62%  busiest main 35%, stellar-core 16%, stellar-core 5%
+n5: total    61%  busiest main 36%, stellar-core 16%, stellar-core 5%
+n6: total    59%  busiest main 33%, stellar-core 15%, stellar-core 5%
+n7: total    58%  busiest main 33%, stellar-core 15%, stellar-core 5%
+n8: total    73%  busiest main 47%, stellar-core 17%, stellar-core 4%
+n9: total    72%  busiest main 46%, stellar-core 17%, stellar-core 5%
+n10: total    72%  busiest main 45%, stellar-core 17%, stellar-core 5%
+n11: total    71%  busiest main 44%, stellar-core 16%, stellar-core 5%
+== ksw-pay-k1-cl-t600
+run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t600/s1-c200, ledgers 30 to 149; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         120      0.3 (    0/    4)    728.6 (  711/ 1364)      4.4 (    4/   14)    749.0 (  751/  751)     21.9 (   21/   65)     10.3 (   10/   19)   1486.3 ( 1477/ 2126)
+n2         120      0.3 (    0/    4)    728.5 (  713/ 1359)      4.7 (    4/   16)    749.0 (  751/  751)     22.2 (   21/   75)     10.2 (   10/   18)   1486.3 ( 1475/ 2126)
+n3         120      0.2 (    0/    3)    727.3 (  714/ 1359)      6.1 (    5/   20)    749.0 (  751/  751)     26.5 (   24/   72)     10.0 (    9/   18)   1486.2 ( 1480/ 2126)
+n4         120      0.2 (    0/    3)    727.2 (  708/ 1380)      6.2 (    5/   30)    749.0 (  751/  752)     25.2 (   23/   74)     10.0 (   10/   17)   1486.3 ( 1467/ 2141)
+n5         120      0.2 (    0/    3)    728.7 (  705/ 1381)      5.2 (    4/   18)    749.1 (  751/  757)     24.7 (   22/   80)      9.5 (    9/   16)   1486.3 ( 1468/ 2143)
+n6         120      0.7 (    0/    7)    726.4 (  710/ 1367)      6.8 (    6/   26)    749.0 (  751/  751)     25.5 (   22/   88)      9.5 (    9/   15)   1486.1 ( 1471/ 2133)
+n7         120      0.3 (    0/    3)    726.0 (  712/ 1365)      7.8 (    6/   30)    749.1 (  751/  753)     25.0 (   22/   82)      9.4 (    9/   19)   1486.2 ( 1478/ 2142)
+all        840      0.3 (    0/    5)    727.5 (  710/ 1366)      5.9 (    5/   26)    749.0 (  751/  753)     24.4 (   22/   82)      9.8 (    9/   19)   1486.3 ( 1473/ 2130)
+ledgers 120, txs per ledger 599, ledger interval 1491 ms, throughput 402 tx/s
+tx latency (submit at node 1 to externalize): mean 1572 ms, p50 1531 ms, p90 2194 ms, p99 3465 ms, n 71819
+host cpu busy 21%
+n1: total    22%  busiest main 9%, stellar-core 8%, stellar-core 3%
+n2: total    22%  busiest main 8%, stellar-core 8%, stellar-core 3%
+n3: total    22%  busiest main 9%, stellar-core 8%, stellar-core 3%
+n4: total    22%  busiest main 9%, stellar-core 8%, stellar-core 3%
+n5: total    22%  busiest main 9%, stellar-core 8%, stellar-core 3%
+n6: total    22%  busiest main 10%, stellar-core 7%, stellar-core 3%
+n7: total    21%  busiest main 10%, stellar-core 7%, stellar-core 2%
+n8: total    32%  busiest main 19%, stellar-core 9%, stellar-core 3%
+n9: total    32%  busiest main 18%, stellar-core 9%, stellar-core 3%
+n10: total    33%  busiest main 19%, stellar-core 9%, stellar-core 3%
+n11: total    33%  busiest main 19%, stellar-core 8%, stellar-core 3%
+== ksw-pay-k2-cl-t600
+run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t600/s1-c200, ledgers 42 to 256; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         215    814.3 (  747/ 1427)    799.5 (  771/ 1422)     91.6 (   24/  648)    742.5 (  751/  753)     22.4 (   21/   49)  -1617.6 (-1571/-1202)    830.9 (  825/ 1546)
+n2         215    814.8 (  746/ 1426)    800.4 (  769/ 1427)     90.6 (   12/  636)    742.5 (  751/  753)     23.3 (   22/   69)  -1617.9 (-1557/-1216)    830.9 (  824/ 1546)
+n3         215    815.3 (  749/ 1441)    787.6 (  765/ 1440)     97.3 (   34/  645)    742.9 (  751/  757)     27.2 (   24/   64)  -1612.6 (-1547/-1224)    830.8 (  833/ 1566)
+n4         215    814.8 (  753/ 1477)    787.6 (  754/ 1438)     98.0 (   29/  702)    742.7 (  751/  754)     26.3 (   23/   62)  -1613.2 (-1546/-1150)    831.8 (  826/ 1569)
+n5         215    814.8 (  749/ 1463)    796.8 (  764/ 1441)     92.6 (   17/  696)    742.6 (  751/  755)     24.5 (   23/   59)  -1616.8 (-1552/-1154)    831.6 (  818/ 1551)
+n6         215    817.1 (  756/ 1454)    787.0 (  751/ 1432)     95.3 (   25/  621)    743.1 (  751/  758)     26.2 (   23/   60)  -1612.3 (-1563/-1195)    831.0 (  830/ 1569)
+n7         215    816.4 (  756/ 1436)    780.9 (  755/ 1429)    102.8 (   29/  661)    742.9 (  751/  761)     25.8 (   23/   69)  -1612.8 (-1548/-1199)    830.9 (  831/ 1550)
+all       1505    815.4 (  752/ 1462)    791.4 (  761/ 1437)     95.5 (   25/  669)    742.7 (  751/  757)     25.1 (   23/   62)  -1614.7 (-1553/-1154)    831.1 (  827/ 1569)
+ledgers 215, txs per ledger 596, ledger interval 833 ms, throughput 716 tx/s
+tx latency (submit at node 1 to externalize): mean 1858 ms, p50 1763 ms, p90 2682 ms, p99 5339 ms, n 127583
+host cpu busy 34%
+n1: total    44%  busiest main 20%, stellar-core 12%, stellar-core 5%
+n2: total    43%  busiest main 20%, stellar-core 12%, stellar-core 4%
+n3: total    44%  busiest main 20%, stellar-core 12%, stellar-core 5%
+n4: total    43%  busiest main 21%, stellar-core 12%, stellar-core 4%
+n5: total    44%  busiest main 21%, stellar-core 12%, stellar-core 5%
+n6: total    42%  busiest main 22%, stellar-core 11%, stellar-core 4%
+n7: total    43%  busiest main 21%, stellar-core 11%, stellar-core 4%
+n8: total    57%  busiest main 32%, stellar-core 14%, stellar-core 4%
+n9: total    58%  busiest main 33%, stellar-core 14%, stellar-core 5%
+n10: total    57%  busiest main 33%, stellar-core 13%, stellar-core 5%
+n11: total    56%  busiest main 32%, stellar-core 13%, stellar-core 4%
+== ksw-pay-k3-cl-t600
+run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t600/s1-c200, ledgers 55 to 293; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         239    725.7 (  738/  937)    888.3 (  850/ 1604)    560.6 (  600/  846)    736.1 (  751/  752)     19.8 (   17/  123)  -2168.5 (-2196/ -737)    745.6 (  754/ 1579)
+n2         239    724.7 (  736/  886)    874.0 (  835/ 1625)    573.9 (  615/  880)    736.2 (  751/  757)     21.0 (   19/   89)  -2166.7 (-2193/ -739)    745.5 (  756/ 1545)
+n3         239    726.7 (  739/  875)    835.2 (  804/ 1565)    605.8 (  642/  963)    736.4 (  751/  758)     24.1 (   21/  102)  -2161.9 (-2190/ -737)    745.4 (  759/ 1665)
+n4         239    726.2 (  737/  957)    846.5 (  807/ 1629)    595.4 (  648/  947)    736.3 (  751/  758)     22.3 (   19/   83)  -2162.6 (-2194/ -739)    746.0 (  745/ 1636)
+n5         239    725.8 (  736/  929)    868.2 (  825/ 1608)    577.6 (  618/  949)    736.2 (  751/  755)     20.4 (   19/   76)  -2165.6 (-2194/ -734)    745.7 (  745/ 1610)
+n6         239    727.5 (  739/  895)    829.9 (  811/ 1604)    612.6 (  643/  958)    736.5 (  751/  758)     22.9 (   19/   85)  -2164.6 (-2196/ -748)    745.6 (  750/ 1562)
+n7         239    727.7 (  738/  890)    815.7 (  799/ 1589)    625.1 (  653/  962)    736.4 (  751/  757)     23.7 (   20/   91)  -2163.0 (-2194/ -740)    745.5 (  757/ 1548)
+all       1673    726.3 (  738/  912)    851.1 (  818/ 1604)    593.0 (  631/  952)    736.3 (  751/  757)     22.0 (   19/   91)  -2164.7 (-2194/ -737)    745.6 (  754/ 1610)
+ledgers 239, txs per ledger 591, ledger interval 748 ms, throughput 790 tx/s
+tx latency (submit at node 1 to externalize): mean 2196 ms, p50 2090 ms, p90 3117 ms, p99 6658 ms, n 140572
+host cpu busy 40%
+/home/dev/src/stellar-pipelining-study/testbed/cpu-threads.sh: line 11: /proc/3974259/task/3985516/stat: No such file or directory
+n1: total    44%  busiest main 23%, stellar-core 13%, stellar-core 4%
+n2: total    46%  busiest main 24%, stellar-core 13%, stellar-core 5%
+n3: total    46%  busiest main 24%, stellar-core 13%, stellar-core 5%
+n4: total    46%  busiest main 24%, stellar-core 12%, stellar-core 5%
+n5: total    45%  busiest main 24%, stellar-core 13%, stellar-core 4%
+n6: total    43%  busiest main 23%, stellar-core 11%, stellar-core 5%
+n7: total    45%  busiest main 25%, stellar-core 12%, stellar-core 5%
+n8: total    58%  busiest main 35%, stellar-core 14%, stellar-core 4%
+n9: total    58%  busiest main 35%, stellar-core 14%, stellar-core 4%
+n10: total    58%  busiest main 35%, stellar-core 14%, stellar-core 5%
+n11: total    57%  busiest main 35%, stellar-core 14%, stellar-core 4%
+== ksw-pay-k1-cl-n12-t300
+run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-n12-t300/s1-c200, ledgers 25 to 147; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         123      0.2 (    0/    3)   1066.0 (  996/ 1644)      5.1 (    4/   16)    374.9 (  376/  376)     16.7 (   15/   41)      5.3 (    5/   12)   1448.5 ( 1378/ 2035)
+n2         123      0.1 (    0/    2)   1067.0 (  991/ 1643)      3.9 (    3/   17)    374.9 (  376/  376)     16.0 (   13/   43)      5.6 (    5/   11)   1448.6 ( 1369/ 2032)
+n3         123      0.1 (    0/    2)   1068.0 (  993/ 1637)      3.4 (    2/   18)    375.0 (  376/  376)     14.0 (   12/   38)      5.3 (    5/   23)   1448.7 ( 1376/ 2029)
+n4         123      0.1 (    0/    2)   1066.9 (  995/ 1638)      4.3 (    3/   16)    374.9 (  376/  376)     16.3 (   15/   35)      5.3 (    5/   22)   1448.5 ( 1375/ 2031)
+n5         123      0.1 (    0/    2)   1067.1 (  994/ 1648)      3.8 (    3/   11)    374.9 (  376/  376)     16.3 (   14/   37)      5.7 (    5/   27)   1448.5 ( 1375/ 2038)
+n6         123      0.2 (    0/    5)   1069.0 ( 1004/ 1652)      3.1 (    2/   11)    374.9 (  376/  376)     11.9 (   10/   28)      5.0 (    5/   16)   1449.1 ( 1385/ 2038)
+n7         123      0.1 (    0/    2)   1065.7 (  994/ 1646)      5.1 (    4/   16)    375.0 (  376/  376)     17.8 (   15/   43)      5.5 (    5/   26)   1448.4 ( 1379/ 2036)
+n8         123      0.2 (    0/    3)   1068.3 (  992/ 1638)      3.1 (    2/   10)    374.9 (  375/  378)     14.5 (   12/   43)      5.4 (    5/   22)   1448.7 ( 1374/ 2027)
+n9         123      0.1 (    0/    3)   1068.8 (  997/ 1652)      2.9 (    2/    9)    374.9 (  376/  376)     10.7 (    9/   37)      4.8 (    4/   17)   1448.4 ( 1376/ 2037)
+n10        123      0.1 (    0/    2)   1067.0 (  993/ 1643)      3.8 (    3/   13)    374.9 (  376/  376)     16.0 (   14/   39)      5.7 (    5/   24)   1448.6 ( 1371/ 2032)
+n11        123      0.1 (    0/    2)   1067.3 (  992/ 1647)      3.5 (    3/    8)    374.9 (  376/  376)     16.1 (   15/   38)      5.5 (    5/   12)   1448.5 ( 1374/ 2038)
+n12        123      0.1 (    0/    3)   1069.1 ( 1006/ 1653)      3.1 (    2/    9)    374.9 (  376/  376)     12.1 (   10/   29)      5.0 (    4/   17)   1449.1 ( 1387/ 2039)
+all       1476      0.1 (    0/    3)   1067.5 (  995/ 1652)      3.7 (    3/   16)    374.9 (  376/  376)     14.9 (   13/   41)      5.4 (    5/   23)   1448.6 ( 1376/ 2038)
+ledgers 123, txs per ledger 299, ledger interval 1451 ms, throughput 206 tx/s
+tx latency (submit at node 1 to externalize): mean 1980 ms, p50 1923 ms, p90 2671 ms, p99 3990 ms, n 36812
+host cpu busy 29%
+n1: total    24%  busiest stellar-core 11%, main 10%, stellar-core 2%
+n2: total    24%  busiest stellar-core 11%, main 10%, stellar-core 2%
+n3: total    23%  busiest stellar-core 10%, main 10%, stellar-core 2%
+n4: total    24%  busiest stellar-core 11%, main 9%, stellar-core 2%
+n5: total    23%  busiest stellar-core 10%, main 10%, stellar-core 2%
+n6: total    22%  busiest main 10%, stellar-core 9%, stellar-core 2%
+n7: total    24%  busiest stellar-core 11%, main 10%, stellar-core 2%
+n8: total    24%  busiest main 10%, stellar-core 10%, stellar-core 2%
+n9: total    21%  busiest main 9%, stellar-core 9%, stellar-core 1%
+n10: total    24%  busiest stellar-core 11%, main 10%, stellar-core 2%
+n11: total    24%  busiest stellar-core 10%, main 10%, stellar-core 2%
+n12: total    22%  busiest main 10%, stellar-core 9%, stellar-core 2%
+n13: total    36%  busiest main 20%, stellar-core 12%, stellar-core 2%
+n14: total    36%  busiest main 21%, stellar-core 12%, stellar-core 2%
+n15: total    36%  busiest main 20%, stellar-core 12%, stellar-core 2%
+n16: total    37%  busiest main 21%, stellar-core 12%, stellar-core 2%
+== ksw-pay-k2-cl-n12-t300
+run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-n12-t300/s1-c200, ledgers 30 to 267; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         238    745.5 (  743/ 1600)   1069.3 ( 1004/ 1759)     39.6 (    6/  363)    371.2 (  376/  382)     21.7 (   18/   73)  -1472.3 (-1402/-1196)    750.7 (  740/ 1943)
+n2         238    744.8 (  748/ 1607)   1072.1 ( 1006/ 1743)     38.3 (    4/  371)    371.2 (  376/  384)     20.3 (   16/   67)  -1473.1 (-1404/-1214)    750.7 (  738/ 1967)
+n3         238    745.0 (  745/ 1597)   1074.4 ( 1006/ 1737)     37.6 (    4/  370)    371.1 (  376/  382)     18.2 (   14/   63)  -1474.9 (-1401/-1219)    750.7 (  746/ 1935)
+n4         238    745.2 (  742/ 1629)   1071.2 ( 1007/ 1802)     38.7 (    5/  362)    371.3 (  376/  383)     22.8 (   19/   81)  -1473.1 (-1397/-1187)    750.8 (  752/ 1959)
+n5         238    744.8 (  749/ 1622)   1074.7 ( 1007/ 1778)     37.0 (    4/  363)    371.0 (  376/  381)     20.3 (   16/   82)  -1474.3 (-1407/-1200)    750.6 (  744/ 1959)
+n6         238    747.0 (  745/ 1586)   1076.7 ( 1025/ 1766)     37.2 (    4/  372)    371.2 (  376/  384)     17.1 (   13/   76)  -1478.7 (-1420/-1207)    750.9 (  749/ 1886)
+n7         238    745.2 (  751/ 1632)   1069.4 ( 1006/ 1783)     39.7 (    7/  368)    371.4 (  376/  387)     23.2 (   19/   76)  -1472.3 (-1405/-1189)    750.7 (  766/ 1962)
+n8         238    745.1 (  745/ 1598)   1073.6 ( 1005/ 1758)     37.9 (    4/  370)    371.2 (  376/  381)     19.6 (   15/   73)  -1474.5 (-1403/-1216)    750.7 (  744/ 1950)
+n9         238    747.2 (  756/ 1625)   1075.5 ( 1012/ 1802)     38.7 (    4/  371)    371.2 (  376/  382)     15.6 (   11/   70)  -1479.3 (-1410/-1207)    750.7 (  739/ 1975)
+n10        238    744.8 (  741/ 1611)   1072.7 ( 1006/ 1790)     38.0 (    4/  371)    371.1 (  376/  381)     20.9 (   17/   60)  -1473.3 (-1401/-1215)    750.7 (  744/ 1937)
+n11        238    744.7 (  745/ 1626)   1072.7 ( 1009/ 1740)     37.3 (    4/  368)    371.2 (  376/  382)     20.5 (   16/   64)  -1472.6 (-1410/-1182)    750.7 (  741/ 1966)
+n12        238    747.1 (  755/ 1574)   1077.0 ( 1031/ 1742)     36.7 (    4/  371)    371.1 (  376/  381)     18.0 (   13/   69)  -1478.4 (-1420/-1214)    750.8 (  749/ 1890)
+all       2856    745.5 (  745/ 1621)   1073.3 ( 1009/ 1778)     38.1 (    4/  370)    371.2 (  376/  382)     19.8 (   15/   75)  -1474.7 (-1409/-1200)    750.7 (  743/ 1959)
+ledgers 238, txs per ledger 297, ledger interval 752 ms, throughput 396 tx/s
+tx latency (submit at node 1 to externalize): mean 2101 ms, p50 2010 ms, p90 2871 ms, p99 5182 ms, n 70481
+host cpu busy 52%
+/home/dev/src/stellar-pipelining-study/testbed/cpu-threads.sh: line 11: /proc/4028933/task/4043504/stat: No such file or directory
+/home/dev/src/stellar-pipelining-study/testbed/cpu-threads.sh: line 11: /proc/4028933/task/4043505/stat: No such file or directory
+n1: total    46%  busiest main 21%, stellar-core 20%, stellar-core 3%
+n2: total    46%  busiest main 21%, stellar-core 19%, stellar-core 3%
+n3: total    44%  busiest main 20%, stellar-core 18%, stellar-core 3%
+n4: total    46%  busiest main 21%, stellar-core 20%, stellar-core 3%
+n5: total    45%  busiest main 21%, stellar-core 18%, stellar-core 3%
+n6: total    41%  busiest main 19%, stellar-core 17%, stellar-core 3%
+n7: total    47%  busiest main 21%, stellar-core 20%, stellar-core 4%
+n8: total    43%  busiest main 20%, stellar-core 17%, stellar-core 3%
+n9: total    43%  busiest main 20%, stellar-core 18%, stellar-core 3%
+n10: total    46%  busiest main 20%, stellar-core 19%, stellar-core 4%
+n11: total    44%  busiest main 20%, stellar-core 18%, stellar-core 3%
+n12: total    42%  busiest main 20%, stellar-core 16%, stellar-core 3%
+n13: total    62%  busiest main 35%, stellar-core 21%, stellar-core 4%
+n14: total    62%  busiest main 35%, stellar-core 21%, stellar-core 4%
+n15: total    62%  busiest main 35%, stellar-core 21%, stellar-core 4%
+n16: total    62%  busiest main 35%, stellar-core 21%, stellar-core 4%
+== ksw-pay-k3-cl-n12-t300
+run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-n12-t300/s1-c200, ledgers 40 to 369; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         330    530.2 (  462/ 1248)   1139.8 ( 1092/ 1703)     69.3 (    9/  503)    371.8 (  376/  385)     26.8 (   24/   77)  -1569.9 (-1525/-1277)    542.5 (  504/ 1437)
+n2         330    529.2 (  463/ 1316)   1145.9 ( 1095/ 1731)     65.6 (    8/  498)    371.4 (  376/  384)     22.9 (   19/   78)  -1571.0 (-1535/-1303)    542.5 (  521/ 1399)
+n3         330    529.3 (  460/ 1242)   1148.1 ( 1101/ 1749)     65.7 (    6/  495)    371.3 (  376/  383)     22.7 (   18/   61)  -1573.3 (-1537/-1275)    542.5 (  499/ 1422)
+n4         330    529.7 (  454/ 1296)   1142.8 ( 1096/ 1700)     66.6 (    7/  488)    371.9 (  376/  384)     25.5 (   22/   66)  -1569.9 (-1530/-1293)    542.5 (  497/ 1415)
+n5         330    529.3 (  458/ 1279)   1144.8 ( 1097/ 1719)     66.3 (    7/  504)    371.5 (  376/  384)     24.7 (   21/   68)  -1570.8 (-1531/-1301)    542.6 (  503/ 1416)
+n6         330    530.0 (  459/ 1205)   1146.6 ( 1107/ 1803)     66.5 (    6/  475)    371.8 (  376/  385)     21.5 (   16/   74)  -1573.6 (-1537/-1297)    542.5 (  516/ 1450)
+n7         330    529.6 (  469/ 1330)   1140.6 ( 1092/ 1734)     68.7 (    9/  485)    372.2 (  376/  389)     25.7 (   23/   70)  -1568.4 (-1526/-1297)    542.6 (  505/ 1440)
+n8         330    529.2 (  463/ 1301)   1148.0 ( 1104/ 1702)     65.7 (    6/  486)    371.3 (  376/  383)     23.0 (   18/   76)  -1573.0 (-1539/-1290)    542.5 (  509/ 1444)
+n9         330    531.8 (  460/ 1292)   1146.1 ( 1098/ 1705)     70.4 (    7/  508)    371.9 (  376/  386)     19.5 (   15/   68)  -1577.3 (-1540/-1287)    542.6 (  509/ 1419)
+n10        330    528.8 (  466/ 1321)   1144.7 ( 1091/ 1727)     66.5 (    7/  493)    371.2 (  376/  382)     24.3 (   19/   72)  -1570.1 (-1536/-1303)    542.5 (  518/ 1401)
+n11        330    529.2 (  468/ 1243)   1145.0 ( 1100/ 1717)     65.7 (    7/  504)    371.5 (  376/  384)     24.7 (   20/   72)  -1568.5 (-1530/-1288)    542.6 (  512/ 1406)
+n12        330    530.5 (  464/ 1308)   1148.6 ( 1105/ 1767)     65.6 (    8/  461)    371.6 (  376/  384)     22.1 (   18/   76)  -1575.0 (-1540/-1291)    542.5 (  523/ 1462)
+all       3960    529.7 (  462/ 1308)   1145.1 ( 1098/ 1736)     66.9 (    7/  503)    371.6 (  376/  384)     23.6 (   20/   74)  -1571.7 (-1535/-1291)    542.5 (  509/ 1433)
+ledgers 330, txs per ledger 297, ledger interval 543 ms, throughput 547 tx/s
+tx latency (submit at node 1 to externalize): mean 2285 ms, p50 2156 ms, p90 3074 ms, p99 6108 ms, n 97740
+host cpu busy 71%
+n1: total    69%  busiest main 33%, stellar-core 26%, stellar-core 5%
+n2: total    69%  busiest main 33%, stellar-core 24%, stellar-core 5%
+n3: total    68%  busiest main 33%, stellar-core 24%, stellar-core 5%
+n4: total    69%  busiest main 33%, stellar-core 25%, stellar-core 5%
+n5: total    69%  busiest main 33%, stellar-core 24%, stellar-core 5%
+n6: total    66%  busiest main 32%, stellar-core 22%, stellar-core 5%
+n7: total    68%  busiest main 32%, stellar-core 24%, stellar-core 5%
+n8: total    67%  busiest main 32%, stellar-core 24%, stellar-core 5%
+n9: total    65%  busiest main 32%, stellar-core 22%, stellar-core 4%
+n10: total    70%  busiest main 34%, stellar-core 26%, stellar-core 5%
+n11: total    66%  busiest main 32%, stellar-core 23%, stellar-core 5%
+n12: total    64%  busiest main 32%, stellar-core 22%, stellar-core 4%
+n13: total    87%  busiest main 49%, stellar-core 28%, stellar-core 5%
+n14: total    86%  busiest main 48%, stellar-core 27%, stellar-core 4%
+n15: total    86%  busiest main 48%, stellar-core 27%, stellar-core 4%
+n16: total    86%  busiest main 48%, stellar-core 28%, stellar-core 4%

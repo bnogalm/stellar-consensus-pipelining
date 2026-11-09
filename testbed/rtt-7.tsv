@@ -1,0 +1,11 @@
+# Round-trip times in ms between the regions of the WAN testbed, one validator per region.
+# Approximate medians of public-cloud inter-region pings (AWS regions named for reference);
+# good to about 10%, which is enough for a consensus latency study. Each direction gets half.
+# Columns: node, region, then RTT to nodes 1..7.
+1	us-east-1 (N. Virginia)	0	12	65	90	68	215	115
+2	us-east-2 (Ohio)	12	0	50	100	78	200	125
+3	us-west-2 (Oregon)	65	50	0	145	120	165	175
+4	eu-central-1 (Frankfurt)	90	100	145	0	25	155	200
+5	eu-west-1 (Ireland)	68	78	120	25	0	170	180
+6	ap-southeast-1 (Singapore)	215	200	165	155	170	0	325
+7	sa-east-1 (Sao Paulo)	115	125	175	200	180	325	0

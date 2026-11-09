@@ -1,0 +1,15 @@
+# Round-trip times in ms for the 12-validator testbed: 4 organizations of 3 validators,
+# each organization spread over three regions. Same-region pairs: 2 ms. Derived from rtt-7.tsv.
+# Columns: node, organization and region, then RTT to nodes 1..12.
+1	org1 us-east-1 (N. Virginia)	0	65	90	12	68	215	2	90	115	65	68	215
+2	org1 us-west-2 (Oregon)	65	0	145	50	120	165	65	145	175	2	120	165
+3	org1 eu-central-1 (Frankfurt)	90	145	0	100	25	155	90	2	200	145	25	155
+4	org2 us-east-2 (Ohio)	12	50	100	0	78	200	12	100	125	50	78	200
+5	org2 eu-west-1 (Ireland)	68	120	25	78	0	170	68	25	180	120	2	170
+6	org2 ap-southeast-1 (Singapore)	215	165	155	200	170	0	215	155	325	165	170	2
+7	org3 us-east-1 (N. Virginia)	2	65	90	12	68	215	0	90	115	65	68	215
+8	org3 eu-central-1 (Frankfurt)	90	145	2	100	25	155	90	0	200	145	25	155
+9	org3 sa-east-1 (Sao Paulo)	115	175	200	125	180	325	115	200	0	175	180	325
+10	org4 us-west-2 (Oregon)	65	2	145	50	120	165	65	145	175	0	120	165
+11	org4 eu-west-1 (Ireland)	68	120	25	78	2	170	68	25	180	120	0	170
+12	org4 ap-southeast-1 (Singapore)	215	165	155	200	170	2	215	155	325	165	170	0
