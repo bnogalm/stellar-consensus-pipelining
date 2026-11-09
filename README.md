@@ -21,7 +21,7 @@ pipelining:
 
 With twelve validators in four organizations: 1.92× at k = 2 and 2.66× at k = 3.
 
-![Throughput against k](results/figures/testbed-gain.png)
+![Throughput against k, with the 800 tx/s ceiling set by apply](results/figures/testbed-gain.png)
 
 The ledger cycle on one validator, the same 5 s of each run
 ([ledger-gantt.md](results/ledger-gantt.md)):

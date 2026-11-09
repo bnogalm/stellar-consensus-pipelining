@@ -36,7 +36,7 @@ https://github.com/bnogalm/stellar-core) and the scripts in `testbed/`, in one r
 
 ![k-gain](figures/testbed-gain.png)
 
-*Throughput against k = 1. Seven validators with 300 transactions: three runs per point. The 600-transaction line is relative to 300 transactions at k = 1, so its first point is what doubling the ledger gives without pipelining.*
+*Throughput against k. Seven validators with 300 transactions: three runs per point. The dashed line is the ceiling set by sequential apply at 1.25 ms per transaction: every line approaches it as k grows.*
 
 ![k-latency](figures/testbed-latency.png)
 

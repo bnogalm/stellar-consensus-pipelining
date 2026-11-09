@@ -48,7 +48,7 @@ def series(fmt, ks, base_key, field, name, color, unit):
             continue
         tps, base = mean(key, "tps"), mean(base_key, "tps")
         p50, base_p50 = mean(key, "p50"), mean(base_key, "p50")
-        y = tps / base if field == "gain" else p50
+        y = {"gain": tps / base, "tps": tps, "p50": p50}[field]
         xs.append(k), ys.append(round(y, 2 if field == "gain" else 0))
         hover.append(f"{name}, k = {k}: {tps:,.0f} tx/s ({tps / base:.2f}×), interval "
                      f"{mean(key, 'interval'):,.0f} ms, consensus {mean(key, 'consensus'):,.0f} ms, "
@@ -60,15 +60,16 @@ def series(fmt, ks, base_key, field, name, color, unit):
 P = "ksw-pay-k{k}-" + TAG
 B = "ksw-pay-k1-" + TAG
 core = [(P + "-t300", B + "-t300", "7 validators, 300 tx", "--s1"),
-        (P + "-t600", B + "-t300", "7 validators, 600 tx (base: 300 tx, k = 1)", "--s2"),
+        (P + "-t600", B + "-t600", "7 validators, 600 tx", "--s2"),
         (P + "-n12-t300", B + "-n12-t300", "12 validators, 300 tx", "--s3")]
 grid = [(P + "-grid-L%d" % t, B + "-grid-L%d" % t, "%d ms target" % t, c)
         for t, c in ((150, "--s1"), (250, "--s2"), (500, "--s3"))]
 K = range(1, 7)
 charts = {
-    "k-gain": dict(title="Throughput relative to k = 1, mainnet apply cost",
-                   xTitle="Ledgers in consensus at once (k)", yTitle="times k = 1", ySuffix="×",
-                   series=[series(f, K, b, "gain", n, c, "×") for f, b, n, c in core]),
+    "k-gain": dict(title="Throughput, mainnet apply cost",
+                   xTitle="Ledgers in consensus at once (k)", yTitle="tx/s", ySuffix="",
+                   series=[series(f, K, b, "tps", n, c, "tx/s") for f, b, n, c in core],
+                   refLines=[dict(y=800, label="apply ceiling, 800 tx/s (1.25 ms per tx)")]),
     "k-latency": dict(title="Median transaction latency, mainnet apply cost",
                       xTitle="Ledgers in consensus at once (k)", yTitle="ms", ySuffix=" ms",
                       series=[series(f, K, b, "p50", n, c, "ms") for f, b, n, c in core]),

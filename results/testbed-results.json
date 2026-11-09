@@ -1,9 +1,9 @@
 {
  "k-gain": {
-  "title": "Throughput relative to k = 1, mainnet apply cost",
+  "title": "Throughput, mainnet apply cost",
   "xTitle": "Ledgers in consensus at once (k)",
-  "yTitle": "times k = 1",
-  "ySuffix": "×",
+  "yTitle": "tx/s",
+  "ySuffix": "",
   "series": [
    {
     "name": "7 validators, 300 tx",
@@ -16,11 +16,11 @@
      5
     ],
     "y": [
-     1.0,
-     1.9,
-     2.55,
-     2.79,
-     2.86
+     273.0,
+     520.0,
+     697.0,
+     762.0,
+     782.0
     ],
     "hover": [
      "7 validators, 300 tx, k = 1: 273 tx/s (1.00×), interval 1,093 ms, consensus 713 ms, apply 375 ms, latency p50 1,304 ms (+0%), runs 3",
@@ -31,7 +31,7 @@
     ]
    },
    {
-    "name": "7 validators, 600 tx (base: 300 tx, k = 1)",
+    "name": "7 validators, 600 tx",
     "color": "--s2",
     "x": [
      1,
@@ -39,14 +39,14 @@
      3
     ],
     "y": [
-     1.47,
-     2.62,
-     2.89
+     402.0,
+     716.0,
+     790.0
     ],
     "hover": [
-     "7 validators, 600 tx (base: 300 tx, k = 1), k = 1: 402 tx/s (1.47×), interval 1,486 ms, consensus 728 ms, apply 749 ms, latency p50 1,531 ms (+17%), runs 1",
-     "7 validators, 600 tx (base: 300 tx, k = 1), k = 2: 716 tx/s (2.62×), interval 831 ms, consensus 791 ms, apply 743 ms, latency p50 1,763 ms (+35%), runs 1",
-     "7 validators, 600 tx (base: 300 tx, k = 1), k = 3: 790 tx/s (2.89×), interval 746 ms, consensus 851 ms, apply 736 ms, latency p50 2,090 ms (+60%), runs 1"
+     "7 validators, 600 tx, k = 1: 402 tx/s (1.00×), interval 1,486 ms, consensus 728 ms, apply 749 ms, latency p50 1,531 ms (+0%), runs 1",
+     "7 validators, 600 tx, k = 2: 716 tx/s (1.78×), interval 831 ms, consensus 791 ms, apply 743 ms, latency p50 1,763 ms (+15%), runs 1",
+     "7 validators, 600 tx, k = 3: 790 tx/s (1.97×), interval 746 ms, consensus 851 ms, apply 736 ms, latency p50 2,090 ms (+37%), runs 1"
     ]
    },
    {
@@ -58,15 +58,21 @@
      3
     ],
     "y": [
-     1.0,
-     1.92,
-     2.66
+     206.0,
+     396.0,
+     547.0
     ],
     "hover": [
      "12 validators, 300 tx, k = 1: 206 tx/s (1.00×), interval 1,449 ms, consensus 1,068 ms, apply 375 ms, latency p50 1,923 ms (+0%), runs 1",
      "12 validators, 300 tx, k = 2: 396 tx/s (1.92×), interval 751 ms, consensus 1,073 ms, apply 371 ms, latency p50 2,010 ms (+5%), runs 1",
      "12 validators, 300 tx, k = 3: 547 tx/s (2.66×), interval 542 ms, consensus 1,145 ms, apply 372 ms, latency p50 2,156 ms (+12%), runs 1"
     ]
+   }
+  ],
+  "refLines": [
+   {
+    "y": 800,
+    "label": "apply ceiling, 800 tx/s (1.25 ms per tx)"
    }
   ]
  },
@@ -102,7 +108,7 @@
     ]
    },
    {
-    "name": "7 validators, 600 tx (base: 300 tx, k = 1)",
+    "name": "7 validators, 600 tx",
     "color": "--s2",
     "x": [
      1,
@@ -115,9 +121,9 @@
      2090.0
     ],
     "hover": [
-     "7 validators, 600 tx (base: 300 tx, k = 1), k = 1: 402 tx/s (1.47×), interval 1,486 ms, consensus 728 ms, apply 749 ms, latency p50 1,531 ms (+17%), runs 1",
-     "7 validators, 600 tx (base: 300 tx, k = 1), k = 2: 716 tx/s (2.62×), interval 831 ms, consensus 791 ms, apply 743 ms, latency p50 1,763 ms (+35%), runs 1",
-     "7 validators, 600 tx (base: 300 tx, k = 1), k = 3: 790 tx/s (2.89×), interval 746 ms, consensus 851 ms, apply 736 ms, latency p50 2,090 ms (+60%), runs 1"
+     "7 validators, 600 tx, k = 1: 402 tx/s (1.00×), interval 1,486 ms, consensus 728 ms, apply 749 ms, latency p50 1,531 ms (+0%), runs 1",
+     "7 validators, 600 tx, k = 2: 716 tx/s (1.78×), interval 831 ms, consensus 791 ms, apply 743 ms, latency p50 1,763 ms (+15%), runs 1",
+     "7 validators, 600 tx, k = 3: 790 tx/s (1.97×), interval 746 ms, consensus 851 ms, apply 736 ms, latency p50 2,090 ms (+37%), runs 1"
     ]
    },
    {
