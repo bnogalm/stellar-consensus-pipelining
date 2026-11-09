@@ -6,6 +6,27 @@ ledgers. This repository has the measurements, a draft CAP and the testbed. The 
 branch `live-pipelining` of https://github.com/bnogalm/stellar-core (one commit on stellar-core
 v30, behind the option `EXPERIMENTAL_LIVE_PIPELINE_DEPTH`).
 
+## Where the idea comes from
+
+I have worked on real-time simulators, and among other things I redesigned the core that runs the
+models distributed: physics, inputs and outputs run on several machines and have to stay in sync
+and refresh with the right data. Some models took 20–30 ms and we needed to run at 100–200 Hz. We
+did it with pipelining: start the next cycle before the previous one has finished, and make each
+model wait only for the data it reads, so models that don't read each other, like the electrics
+and the hydraulics of a train, also run at the same time. An example from a train simulator (the
+numbers are only an example, and there were many more models):
+
+![Train simulator, one cycle after another](results/figures/simulator-sequential.png)
+
+![Train simulator with pipelining: the next cycle starts before the previous one ends, and the electrics and the hydraulics run at the same time](results/figures/simulator-pipelined.png)
+
+Each result took about as long as before, still below what a person can react to, but there were
+many more of them per second, so the simulator reacted sooner and ran more smoothly.
+
+A Stellar validator works like the simulator before that change: it starts nominating ledger N
+only after applying N−1, and most of the ledger interval is spent waiting for messages between
+continents. Running consensus on the next ledgers during that wait is the same idea.
+
 ## Main results
 
 On a WAN testbed of seven validators on four continents, with an apply cost taken from mainnet
