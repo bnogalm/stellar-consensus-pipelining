@@ -4,7 +4,8 @@ Validators could run consensus on several ledgers at the same time, k of them, e
 ledger N−k, so that the time spent waiting for messages between continents is used for the next
 ledgers. This repository has the measurements, a draft CAP and the testbed. The prototype is the
 branch `live-pipelining` of https://github.com/bnogalm/stellar-core (one commit on stellar-core
-v30, behind the option `EXPERIMENTAL_LIVE_PIPELINE_DEPTH`).
+v30, behind the option `EXPERIMENTAL_LIVE_PIPELINE_DEPTH`). The discussion is at
+https://github.com/orgs/stellar/discussions/2066.
 
 ## Where the idea comes from
 
