@@ -35,10 +35,12 @@ Pipelining is worth its complexity when all three of these hold:
 When they hold, pipelining at k = 3–4 gives 1.5 to 2× the throughput of the overlap at the same
 ledger size (2.5× on the testbed at 300 transactions per ledger, against the overlap's best
 case). The overlap matches it only with
-ledgers 3 to 4 times larger. Latency depends on the client. With one payer account it is higher
-than with the overlap, which shortens the wait for the next ledger for every account. With a
-payer account in every class it is lower than with the overlap, at the same throughput. If any
-of the three fails, the overlap is the better choice.
+ledgers 3 to 4 times larger. Latency depends on the client. With the same ledgers, one payer account
+waits longer than with the overlap, which shortens the wait for the next ledger for every account.
+At the same throughput the overlap needs larger ledgers, and latency grows with them: with a payer
+account in every class it is lower than with the overlap, and with one account it is 0.1 to 0.2 s
+higher up to about 1,100 tx/s, about the same at 1,700 tx/s and lower above. If any of the three
+fails, the overlap is the better choice.
 
 **For mainnet in the medium term they do not hold.** Ledgers close every 5 s (SDF's target is
 2.5 s), consensus and apply together take about 1 s of that or less, and demand is about 145

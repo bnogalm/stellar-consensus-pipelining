@@ -14,8 +14,10 @@ ledgers. This repository has the measurements, a draft CAP and the testbed.
   transaction per apply time. Pipelining only pays when validators apply a ledger in clearly less
   time than its consensus, ledger size is bounded, and the network needs more than the overlap
   gives (ledgers less than about 0.65 s apart). Then k = 3–4 gives 1.5 to 2× the overlap's
-  throughput at the same ledger size. A client with one payer account has more latency than with
-  the overlap; a client with a payer account in every class has less, at the same throughput.
+  throughput at the same ledger size. At the same throughput the overlap needs larger ledgers, and
+  latency grows with them: a client with a payer account in every class has less latency than with
+  the overlap, and a client with one payer account has 0.1 to 0.2 s more up to about 1,100 tx/s,
+  about the same at 1,700 tx/s and less above.
 - **For mainnet in the medium term,** with ledgers every 2.5 to 5 s, the overlap is enough.
   Pipelining could be a step after it, if the network ever needs ledgers closer together than
   one consensus round.
@@ -113,6 +115,11 @@ transaction. The ceiling is the same for both; pipelining reaches it with smalle
 - **At the same ledger size** k = 3–4 gives 1.5 to 2× the overlap's throughput (2.5× on the
   testbed at 300 transactions per ledger, against the overlap's best case). The overlap matches
   it only with ledgers 3 to 4 times larger.
+- **At the same throughput** the overlap needs larger ledgers, and latency grows with them. In the
+  simulation, at about 2,100 to 2,250 tx/s: 4.1 s with the overlap (4,000 transactions per ledger)
+  against 2.9 s with k = 4 and one payer account, and 2.2 s with a payer account in every class. Up
+  to about 1,100 tx/s a single account is 0.1 to 0.2 s slower than with the overlap. The table is
+  below.
 - **The variation of consensus times** costs the overlap about 15% of apply's time at its best
   ledger size. With k = 3–4 other agreed ledgers wait ahead.
 - **With ledgers several times larger the choice is open.** The overlap catches up by growing
@@ -122,6 +129,17 @@ transaction. The ceiling is the same for both; pipelining reaches it with smalle
 - **Against mainnet as it runs today,** with a ledger every 5 s and at most 1,000 operations in
   each: about 200 operations per second, against about 1,500 with the overlap run back to back
   and 2,500–3,100 with pipelining at k = 3–4. Demand is about 145.
+
+Latency until applied at the same throughput, in the simulation, with apply at 0.35 ms per
+transaction ([when-pipelining-pays.md](results/when-pipelining-pays.md#at-the-same-throughput)):
+
+| Throughput | Overlap | Pipelining | Latency with one payer account | With an account in every class |
+|---|---|---|---|---|
+| about 800 tx/s | 600 tx per ledger, 1.4 s | k = 2, 430 tx per ledger | 1.5 s | 1.3 s |
+| about 1,100 tx/s | 1,000 tx per ledger, 1.6 s | k = 3, 430 tx per ledger | 1.8 s | 1.4 s |
+| about 1,600–1,750 tx/s | 2,000 tx per ledger, 2.4 s | k = 4, 600 tx per ledger | 2.3 s | 1.7 s |
+| about 2,100–2,250 tx/s | 4,000 tx per ledger, 4.1 s | k = 4, 1,000 tx per ledger | 2.9 s | 2.2 s |
+| about 2,750 tx/s (96 % of apply's ceiling) | not reached: 92 % even at 32,000 | k = 4, 4,000 tx per ledger | | |
 
 ## Correctness under load
 
