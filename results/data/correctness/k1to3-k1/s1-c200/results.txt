@@ -1,0 +1,52 @@
+k=1, ledgers 386-1601 with published results: 1216, transactions applied 308930, successful 286606 (92.8%)
+
+kind                    queued rejected  applied   ok %  failures (top 3)   | cross-class: applied, ok %, failures
+allow_trust                 67        0       67  100.0  
+bump_seq                  3496      306     3484  100.0  
+claimable_claim           6873      579     6849   78.4  txFAILED CLAIM_CLAIMABLE_BALANCE_DOES_NOT_EXIST 1463, txFAILED CLAIM_CLAIMABLE_BALANCE_CAN
+claimable_create         10412      905    10360   87.9  txFAILED CREATE_CLAIMABLE_BALANCE_UNDERFUNDED 1246, txFAILED CREATE_CLAIMABLE_BALANCE_NO_T
+clawback                    57        0       56   89.3  txFAILED CLAWBACK_UNDERFUNDED 6
+clawback_claimable          69        0       69   63.8  txFAILED CLAWBACK_CLAIMABLE_BALANCE_DOES_NOT_EXIST 25
+create_account           10584      912    10550  100.0  
+create_contract           3511      343     2557  100.0  
+data_delete               1755      121     1747   82.5  txFAILED MANAGE_DATA_NAME_NOT_FOUND 305
+data_set                  8803      856     8781  100.0  
+extend_ttl                6902      708     4986  100.0  
+fee_bump                 10788      931    10742   87.8  txFAILED PAYMENT_UNDERFUNDED 1305, txFAILED PAYMENT_SRC_NO_TRUST 3, txFAILED PAYMENT_NO_TR
+merge                     4953        0     4936  100.0  
+merge_cross               4521      367     4512   54.0  txINSUFFICIENT_BALANCE 2075
+multi_op                  7109      659     7076   80.0  txFAILED PAYMENT_UNDERFUNDED 1403, txFAILED PAYMENT_NO_TRUST 7, txFAILED PAYMENT_SRC_NO_TR
+offer_buy                 6890      654     6871  100.0  txFAILED MANAGE_BUY_OFFER_BUY_NO_TRUST 1
+offer_passive             3516      281     3502   82.3  txFAILED MANAGE_SELL_OFFER_UNDERFUNDED 618, txFAILED MANAGE_SELL_OFFER_SELL_NO_TRUST 2
+offer_resting             3462      340     3451   88.6  txFAILED MANAGE_SELL_OFFER_UNDERFUNDED 394
+offer_sell               14057     1230    14005   87.8  txFAILED MANAGE_SELL_OFFER_UNDERFUNDED 1700, txFAILED MANAGE_SELL_OFFER_SELL_NO_TRUST 6
+op_source_other           6942      590     6917  100.0  
+path_receive             10674      940    10635   87.6  txFAILED PATH_PAYMENT_STRICT_RECEIVE_UNDERFUNDED 1319, txFAILED PATH_PAYMENT_STRICT_RECEIV
+path_send                13756     1222    13700  100.0  
+pay_eurt                 31157     2856    31052   88.1  txFAILED PAYMENT_UNDERFUNDED 3687, txFAILED PAYMENT_SRC_NO_TRUST 8, txFAILED PAYMENT_NO_TR
+pay_muxed                 6883      634     6864  100.0  
+pay_xlm                  23173     2017    23079  100.0  
+pool_deposit              6996      631     6980   78.1  txFAILED LIQUIDITY_POOL_DEPOSIT_UNDERFUNDED 1527, txFAILED LIQUIDITY_POOL_DEPOSIT_NO_TRUST
+pool_withdraw              630       38      624   70.7  txFAILED LIQUIDITY_POOL_WITHDRAW_UNDERFUNDED 182, txFAILED LIQUIDITY_POOL_WITHDRAW_NO_TRUS
+restore_live                32        2       22  100.0  
+sac_eurt                 26227     2666    18788   88.1  txFAILED INVOKE_HOST_FUNCTION_TRAPPED 2227
+sac_xlm                  27686     2732    19734  100.0  txBAD_SEQ 1
+sac_xlm_fee_bump         10414     1017     7531  100.0  txBAD_SEQ 1
+set_home_domain           7066      618     7043  100.0  
+signer_add                5994      554     5981  100.0  
+signer_remove             1057       77     1053  100.0  
+sponsor                   6311      554     6299  100.0  
+sponsor_revoke            3013      230     3007   86.4  txFAILED REVOKE_SPONSORSHIP_DOES_NOT_EXIST 337, txFAILED REVOKE_SPONSORSHIP_NOT_SPONSOR 73
+swap                     27458     2766    19815   88.2  txFAILED INVOKE_HOST_FUNCTION_TRAPPED 2333
+token_transfer           15122     1459    10771  100.0  
+trust_add                 3236      289     3230  100.0  
+trust_flags                 71        0       71  100.0  
+trust_remove               293       22      292   88.4  txFAILED CHANGE_TRUST_INVALID_LIMIT 34
+upload_wasm               1875     5703      841  100.0  
+
+Queue rejections by code:
+  txBAD_SEQ: 19036
+  txINSUFFICIENT_FEE: 12318
+  txINSUFFICIENT_BALANCE: 4460
+  txFEE_BUMP_INNER_FAILED: 932
+  txSOROBAN_INVALID: 63

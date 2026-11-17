@@ -1,0 +1,27 @@
+run ksw-pay-k2-sz-a350-n1000/s1-c100, ledgers 44 to 297; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1         254    674.3 (  664/ 1525)    972.6 (  958/ 1509)     46.0 (    8/  350)    325.8 (  351/  357)     51.2 (   46/  167)  -1316.7 (-1309/ -657)    703.7 (  679/ 1768)
+n2         254    674.5 (  658/ 1547)    971.6 (  959/ 1536)     45.8 (    9/  351)    325.8 (  351/  355)     51.8 (   47/  195)  -1315.8 (-1311/ -671)    703.6 (  690/ 1795)
+n3         254    675.4 (  646/ 1593)    964.7 (  943/ 1538)     49.3 (   12/  351)    325.9 (  351/  355)     57.3 (   52/  161)  -1313.5 (-1313/ -652)    703.7 (  686/ 1810)
+n4         254    676.7 (  647/ 1541)    965.2 (  946/ 1491)     49.1 (   11/  343)    325.8 (  351/  357)     57.8 (   52/  179)  -1314.8 (-1311/ -613)    703.9 (  687/ 1736)
+n5         254    676.2 (  649/ 1546)    969.7 (  955/ 1505)     47.5 (   10/  349)    325.7 (  351/  355)     53.2 (   48/  121)  -1316.9 (-1304/ -593)    703.9 (  682/ 1737)
+n6         254    679.4 (  636/ 1574)    959.4 (  939/ 1463)     51.8 (   15/  348)    326.3 (  351/  357)     56.9 (   52/  161)  -1314.7 (-1302/ -638)    703.9 (  669/ 1765)
+n7         254    678.0 (  644/ 1568)    961.9 (  944/ 1496)     52.1 (   15/  353)    326.2 (  351/  360)     58.8 (   52/  152)  -1316.2 (-1313/ -636)    703.7 (  685/ 1811)
+all       1778    676.4 (  646/ 1547)    966.4 (  945/ 1503)     48.8 (   11/  349)    325.9 (  351/  356)     55.3 (   49/  159)  -1315.5 (-1309/ -638)    703.8 (  680/ 1768)
+ledgers 254, txs per ledger 932, ledger interval 705 ms, throughput 1321 tx/s
+tx latency (submit at node 1 to externalize): mean 2028 ms, p50 1900 ms, p90 2980 ms, p99 5108 ms, n 234777
+host cpu busy 69%
+testbed/cpu-threads.sh: line 11: /proc/1878837/task/1890061/stat: No such file or directory
+testbed/cpu-threads.sh: line 11: /proc/1878837/task/1890062/stat: No such file or directory
+testbed/cpu-threads.sh: line 11: /proc/1878837/task/1890064/stat: No such file or directory
+n1: total    95%  busiest main 44%, stellar-core 28%, stellar-core 12%
+n2: total    95%  busiest main 44%, stellar-core 28%, stellar-core 12%
+n3: total    93%  busiest main 45%, stellar-core 27%, stellar-core 12%
+n4: total    93%  busiest main 45%, stellar-core 26%, stellar-core 11%
+n5: total    89%  busiest main 44%, stellar-core 26%, stellar-core 11%
+n6: total    89%  busiest main 45%, stellar-core 23%, stellar-core 11%
+n7: total    89%  busiest main 44%, stellar-core 24%, stellar-core 11%
+n8: total   134%  busiest main 87%, stellar-core 22%, stellar-core 12%
+n9: total   130%  busiest main 88%, stellar-core 22%, stellar-core 12%
+n10: total   128%  busiest main 88%, stellar-core 21%, stellar-core 10%
+n11: total   128%  busiest main 89%, stellar-core 19%, stellar-core 11%

@@ -1,0 +1,23 @@
+k=2 ledgers 730-1861
+nodes not running at the end: none
+crashes: 0
+invariant failures: 0
+partition violations: 0
+after the upgrade: protocol 30 base fee 200 max tx set size 1200
+drained ledgers (n1): 1
+restarted: last ledgers 1975 1975 1975 1975 1975 1975 1975 , n1 last ledger 1975, state at the end: n1 Synced! at ledger 1861;n2 Synced! at ledger 1862;n3 Synced! at ledger 1862;n4 Synced! at ledger 1862;n5 Synced! at ledger 1862;n6 Synced! at ledger 1862;n7 Synced! at ledger 1862;
+catchups started per validator: 0 0 0 0 0 0 0 
+k changes (n1): k changes from 1 to 2 at ledger 13;
+"considers invalid": 0
+"locally-invalid": 0
+"Inconsistent txSet validity": 0
+"buckets of ledger": 0
+"Got an exception": 0
+"moved to a bad state": 0
+"Invalid close time selected": 0
+"Lost track of consensus": 0
+"processing a future message while tracking": 0
+setup:  1 2026-11-16T01:19:21.292 GARVX [LoadGen INFO] FullWorkload setup complete; 1 2026-11-16T01:19:21.315 GC76W [LoadGen INFO] FullWorkload setup complete; 1 2026-11-16T01:19:21.340 GAKIP [LoadGen INFO] FullWorkload setup complete; 1 2026-11-16T01:19:21.364 GA7HC [LoadGen INFO] FullWorkload setup complete;
+ledger checkpoints on all 7 validators: 30, identical 30, different 0
+results checkpoints on all 7 validators: 30, identical 30, different 0
+transactions checkpoints on all 7 validators: 30, identical 30, different 0

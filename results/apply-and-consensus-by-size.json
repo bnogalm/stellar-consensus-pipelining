@@ -1,0 +1,77 @@
+{
+ "size": {
+  "title": "Consensus and apply against ledger size: the testbed, payments, k = 1",
+  "xTitle": "Transactions per ledger",
+  "xType": "linear",
+  "yTitle": "ms per ledger",
+  "series": [
+   {
+    "name": "Consensus",
+    "color": "--s1",
+    "x": [
+     1000,
+     3000,
+     6000,
+     10000
+    ],
+    "y": [
+     808,
+     1063,
+     1673,
+     2669
+    ],
+    "hover": [
+     "1,000 tx per ledger: 808 ms",
+     "3,000 tx per ledger: 1,063 ms",
+     "6,000 tx per ledger: 1,673 ms",
+     "10,000 tx per ledger: 2,669 ms"
+    ]
+   },
+   {
+    "name": "Consensus, ledgers with one tx set nominated",
+    "color": "--s1",
+    "x": [
+     1000,
+     3000,
+     6000,
+     10000
+    ],
+    "y": [
+     768,
+     996,
+     1497,
+     1780
+    ],
+    "hover": [
+     "1,000 tx per ledger: 768 ms",
+     "3,000 tx per ledger: 996 ms",
+     "6,000 tx per ledger: 1,497 ms",
+     "10,000 tx per ledger: 1,780 ms"
+    ],
+    "dash": "dot"
+   },
+   {
+    "name": "Apply",
+    "color": "--s2",
+    "x": [
+     1000,
+     3000,
+     6000,
+     10000
+    ],
+    "y": [
+     75,
+     263,
+     513,
+     880
+    ],
+    "hover": [
+     "1,000 tx per ledger: 75 ms",
+     "3,000 tx per ledger: 263 ms",
+     "6,000 tx per ledger: 513 ms",
+     "10,000 tx per ledger: 880 ms"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,91 @@
+diff --git a/src/ledger/LedgerManagerImpl.cpp b/src/ledger/LedgerManagerImpl.cpp
+index f8c7cfd35..106aff958 100644
+--- a/src/ledger/LedgerManagerImpl.cpp
++++ b/src/ledger/LedgerManagerImpl.cpp
+@@ -1676,6 +1676,8 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+     JITTER_INJECT_DELAY();
+ 
+     auto ledgerTime = mApplyState.getMetrics().mLedgerClose.TimeScope();
++    // Pipelining study instrumentation: segment boundaries of applyLedger.
++    auto const studyStart = std::chrono::steady_clock::now();
+     LogSlowExecution applyLedgerTime{"applyLedger",
+                                      LogSlowExecution::Mode::MANUAL, "",
+                                      std::chrono::milliseconds::max()};
+@@ -1830,6 +1832,10 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+     // we merge all the metric containers together without worrying about their
+     // order or origin.
+     std::vector<SorobanApplyMetrics> sorobanApplyMetricsPerThread(1);
++    // Pipelining study instrumentation: per-ledger execution time.
++    std::chrono::nanoseconds totalTxApplyDuration{0};
++    auto const studyPrepared = std::chrono::steady_clock::now();
++    auto studyPrefetched = studyPrepared;
+ #ifdef BUILD_TESTS
+     if (mApp.getRunInOverlayOnlyMode())
+     {
+@@ -1861,6 +1867,7 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+         // first, prefetch source accounts for txset, then charge fees
+         prefetchTxSourceIds(mApp.getLedgerTxnRoot(), *applicableTxSet,
+                             mApp.getConfig());
++        studyPrefetched = std::chrono::steady_clock::now();
+ 
+         // Time the entire transaction processing phase from fee processing
+         // through transaction application
+@@ -1874,6 +1881,7 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+         txResultSet =
+             applyTransactions(*applicableTxSet, mutableTxResults, ltx,
+                               ledgerCloseMeta, sorobanApplyMetricsPerThread);
++        totalTxApplyDuration = totalTxApplyTime.Stop();
+     }
+ 
+     auto ledgerSeq = ltx.loadHeader().current().ledgerSeq;
+@@ -1942,8 +1950,10 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+     ledgerSeq = ltx.loadHeader().current().ledgerSeq;
+ 
+     auto lclApplyView = mApplyState.copyApplyLedgerView();
++    auto const sealStart = std::chrono::steady_clock::now();
+     auto appliedLedgerState = sealLedgerTxnAndStoreInBucketsAndDB(
+         lclApplyView, ltx, ledgerCloseMeta, initialLedgerVers);
++    auto const sealEnd = std::chrono::steady_clock::now();
+ 
+     // NB: from now on, the ledger state may not change, but LCL still hasn't
+     // advanced properly. Hence when requesting the ledger state data (such as
+@@ -2001,6 +2011,7 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+         mNextMetaToEmit = std::move(ledgerCloseMeta);
+         emitNextMeta();
+     }
++    auto const studyMetaEmitted = std::chrono::steady_clock::now();
+ 
+     // The next 8 steps happen in a relatively non-obvious, subtle order.
+     // This is unfortunate and it would be nice if we could make it not
+@@ -2059,6 +2070,7 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+     // step 3
+     hm.maybeCheckpointComplete(ledgerSeq);
+     JITTER_INJECT_DELAY();
++    auto const studyCommitted = std::chrono::steady_clock::now();
+ 
+     // Step 4
+     if (protocolVersionStartsFrom(
+@@ -2116,8 +2128,23 @@ LedgerManagerImpl::applyLedger(LedgerCloseData const& ledgerData,
+     }
+ 
+     std::chrono::duration<double> ledgerTimeSeconds = ledgerTime.Stop();
++    auto const studyEnd = std::chrono::steady_clock::now();
+     CLOG_DEBUG(Perf, "Applied ledger {} in {} seconds", ledgerSeq,
+                ledgerTimeSeconds.count());
++    auto const ns = [](auto d) {
++        return std::chrono::duration_cast<std::chrono::nanoseconds>(d).count();
++    };
++    CLOG_INFO(Perf,
++              "PipelineStudy ledger={} close_ns={} total_apply_ns={} "
++              "seal_ns={} prepare_ns={} prefetch_ns={} post_apply_ns={} "
++              "meta_ns={} commit_ns={} complete_ns={}",
++              ledgerSeq, ns(ledgerTimeSeconds), totalTxApplyDuration.count(),
++              ns(sealEnd - sealStart), ns(studyPrepared - studyStart),
++              ns(studyPrefetched - studyPrepared),
++              ns(sealStart - studyPrefetched) - totalTxApplyDuration.count(),
++              ns(studyMetaEmitted - sealEnd),
++              ns(studyCommitted - studyMetaEmitted),
++              ns(studyEnd - studyCommitted));
+     FrameMark;
+ }
+ 

@@ -4,6 +4,11 @@ The testbed results are only useful if each step of the ledger cycle has a reali
 report gives the two that come from mainnet: how long a validator takes to apply and commit a
 ledger, and how long consensus takes.
 
+- **Apply and commit:** about 1.25 ms per transaction in a replay on a desktop (394 ms per
+  ledger), and 149 ms per ledger on a node with its state in RAM.
+- **Consensus:** about 0.5–0.6 s, and over 1.7 s for 1% of ledgers.
+- **The timer:** about 4.4 s of each 5 s interval is the wait for the next ledger.
+
 ## Apply and commit: replay of 10,000 ledgers
 
 Catchup of mainnet ledgers 65244992 to 65255039 (10,048 ledgers, 3,154,626 transactions, about
@@ -63,18 +68,12 @@ Limits:
 
 ## What it means for pipelining
 
-With C ≈ 541 ms, S ≈ 5 ms and E between 149 and 394 ms, the rule
-`interval ≈ max((C + E + S) / k, E)` gives these estimates, against SDF's planned overlap of
-consensus and apply, whose interval would be about max(C, E) ≈ 541 ms. They come from the formula,
-not from runs on mainnet:
+With C ≈ 541 ms (median) and E between 149 and 394 ms, consensus takes about 1.4 to 3.6 times
+apply on mainnet; on the testbed it is about 1.9 times at 300 transactions. What pipelining would
+add over SDF's planned overlap of consensus and apply depends mostly on that ratio, that is, on
+how fast validators apply.
 
-| | E = 149 ms (fast machine, RAM) | E = 394 ms (desktop, SSD) |
-|---|---|---|
-| Today (C + E + S) | 695 ms | 940 ms |
-| Overlap of consensus and apply, max(C, E) | 541 ms | 541 ms |
-| k = 2 | 348 ms (1.55× the overlap) | 470 ms (1.15×) |
-| k = 3 | 232 ms (2.3×) | 394 ms, apply-bound (1.37×) |
-
-The gain over the overlap depends mostly on how fast validators apply: with apply at a quarter of
-consensus, k = 2 and 3 would give 1.5–2.3×; with apply close to consensus, little. On the testbed,
-C/E is about 1.9 at 300 transactions; on mainnet it is about 1.4–3.6.
+[when-pipelining-pays.md](when-pipelining-pays.md) works it out from these times, with their
+variation from ledger to ledger and mainnet's ledger sizes.
+[apply-and-consensus-by-size.md](apply-and-consensus-by-size.md) measures how apply and consensus
+grow with the ledger.

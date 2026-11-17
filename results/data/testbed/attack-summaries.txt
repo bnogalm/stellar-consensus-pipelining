@@ -1,5 +1,5 @@
 == ksw-pay-k1-cl-atk
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-atk/s1-c200, ledgers 20 to 103; mean ms (p50 / p99)
+run ksw-pay-k1-cl-atk/s1-c200, ledgers 20 to 103; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1          84      0.1 (    0/    3)   1712.2 ( 1644/ 2789)      2.0 (    2/    5)    375.2 (  376/  376)      8.4 (    8/   14)      5.2 (    5/   26)   2094.6 ( 2025/ 3170)
 n2          84      0.1 (    0/    3)   1711.9 ( 1644/ 2786)      2.0 (    2/    6)    375.3 (  376/  377)      8.5 (    8/   12)      5.3 (    5/   25)   2094.7 ( 2029/ 3170)
@@ -24,7 +24,7 @@ n9: total    20%  busiest main 13%, stellar-core 6%, stellar-core 1%
 n10: total    21%  busiest main 13%, stellar-core 5%, stellar-core 1%
 n11: total    20%  busiest main 13%, stellar-core 5%, stellar-core 1%
 == ksw-pay-k2-cl-atk
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-atk/s1-c200, ledgers 26 to 192; mean ms (p50 / p99)
+run ksw-pay-k2-cl-atk/s1-c200, ledgers 26 to 192; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         167   1060.1 ( 1111/ 2682)   1720.4 ( 1638/ 2785)     24.5 (    2/  375)    374.1 (  375/  376)      9.3 (    9/   16)  -2114.7 (-2015/-1913)   1066.1 ( 1306/ 2780)
 n2         167   1060.0 ( 1114/ 2682)   1720.1 ( 1639/ 2778)     24.7 (    2/  375)    374.1 (  376/  377)      9.3 (    9/   20)  -2114.5 (-2021/-1903)   1066.1 ( 1300/ 2783)
@@ -49,7 +49,7 @@ n9: total    31%  busiest main 19%, stellar-core 9%, stellar-core 2%
 n10: total    32%  busiest main 20%, stellar-core 9%, stellar-core 2%
 n11: total    32%  busiest main 19%, stellar-core 9%, stellar-core 2%
 == ksw-pay-k1-cl-atk-mit
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-atk-mit/s1-c200, ledgers 29 to 184; mean ms (p50 / p99)
+run ksw-pay-k1-cl-atk-mit/s1-c200, ledgers 29 to 184; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         156      0.1 (    0/    1)    755.5 (  726/ 1820)      2.1 (    2/    6)    375.1 (  376/  379)      8.8 (    9/   16)      5.1 (    5/   12)   1138.0 ( 1107/ 2199)
 n2         156      0.1 (    0/    2)    755.4 (  727/ 1822)      2.2 (    2/    6)    375.2 (  376/  379)      8.9 (    9/   17)      5.3 (    5/   19)   1138.0 ( 1109/ 2200)
@@ -74,7 +74,7 @@ n9: total    25%  busiest main 16%, stellar-core 7%, stellar-core 1%
 n10: total    25%  busiest main 16%, stellar-core 7%, stellar-core 1%
 n11: total    25%  busiest main 16%, stellar-core 7%, stellar-core 1%
 == ksw-pay-k2-cl-atk-mit
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-atk-mit/s1-c200, ledgers 38 to 322; mean ms (p50 / p99)
+run ksw-pay-k2-cl-atk-mit/s1-c200, ledgers 38 to 322; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         285    622.6 (  589/ 1824)    843.9 (  791/ 1974)     27.8 (    2/  373)    372.5 (  376/  385)      9.5 (    9/   40)  -1238.4 (-1180/ -909)    629.3 (  593/ 1877)
 n2         285    622.2 (  588/ 1843)    843.6 (  792/ 1970)     27.9 (    2/  373)    372.5 (  376/  381)      9.9 (   10/   29)  -1237.9 (-1179/ -912)    629.3 (  593/ 1875)
@@ -99,7 +99,7 @@ n9: total    45%  busiest main 26%, stellar-core 13%, stellar-core 3%
 n10: total    45%  busiest main 26%, stellar-core 12%, stellar-core 3%
 n11: total    46%  busiest main 27%, stellar-core 12%, stellar-core 3%
 == ksw-pay-k1-cl-mit
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-mit/s1-c200, ledgers 27 to 190; mean ms (p50 / p99)
+run ksw-pay-k1-cl-mit/s1-c200, ledgers 27 to 190; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         164      0.1 (    0/    1)    707.7 (  657/ 1778)      2.1 (    2/    6)    375.3 (  376/  376)      8.9 (    9/   15)      5.2 (    5/   19)   1088.0 ( 1037/ 2162)
 n2         164      0.1 (    0/    1)    707.4 (  656/ 1789)      2.1 (    2/    4)    375.4 (  376/  381)      8.9 (    9/   15)      5.2 (    5/   12)   1088.0 ( 1039/ 2172)
@@ -124,7 +124,7 @@ n9: total    29%  busiest main 18%, stellar-core 9%, stellar-core 2%
 n10: total    29%  busiest main 18%, stellar-core 9%, stellar-core 2%
 n11: total    29%  busiest main 18%, stellar-core 8%, stellar-core 2%
 == ksw-pay-k2-cl-mit
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-mit/s1-c200, ledgers 37 to 337; mean ms (p50 / p99)
+run ksw-pay-k2-cl-mit/s1-c200, ledgers 37 to 337; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         301    588.4 (  537/ 1704)    768.8 (  669/ 1851)     33.7 (    2/  373)    374.0 (  376/  382)     10.8 (   10/   45)  -1170.5 (-1054/ -911)    595.4 (  545/ 1817)
 n2         301    588.5 (  537/ 1723)    767.7 (  672/ 1855)     34.5 (    2/  373)    374.0 (  376/  380)     10.7 (   10/   45)  -1170.4 (-1052/ -910)    595.3 (  545/ 1809)

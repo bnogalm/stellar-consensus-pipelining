@@ -1,0 +1,52 @@
+k=4, ledgers 1268-3358 with published results: 2088, transactions applied 364179, successful 353156 (97.0%)
+
+kind                    queued rejected  applied   ok %  failures (top 3)   | cross-class: applied, ok %, failures
+allow_trust                 67        1       67  100.0  
+bump_seq                  3729       35     3716  100.0  
+claimable_claim           7657       66     7625   95.1  txFAILED CLAIM_CLAIMABLE_BALANCE_DOES_NOT_EXIST 370, txFAILED CLAIM_CLAIMABLE_BALANCE_CANN
+claimable_create         11405      122    11358   96.3  txFAILED CREATE_CLAIMABLE_BALANCE_UNDERFUNDED 415
+clawback                    69        0       68   98.5  txFAILED CLAWBACK_UNDERFUNDED 1
+clawback_claimable          60        0       59   72.9  txFAILED CLAWBACK_CLAIMABLE_BALANCE_DOES_NOT_EXIST 16
+create_account           11289      104    11240  100.0  
+create_contract           3849        0     3720  100.0  
+data_delete               1872       29     1860   96.5  txFAILED MANAGE_DATA_NAME_NOT_FOUND 66
+data_set                  9343       96     9301  100.0  
+extend_ttl                7597        3     7316  100.0  
+fee_bump                 11199      116    11167   96.3  txFAILED PAYMENT_UNDERFUNDED 417 | 8366, 96%, txFAILED PAYMENT_UNDERFUNDED 305
+merge                     5398        0     5380  100.0  
+merge_cross               5504       54     5486   24.9  txINSUFFICIENT_BALANCE 4120 | 4120, 0%, txINSUFFICIENT_BALANCE 4120
+multi_op                  7576       68     7546   93.5  txFAILED PAYMENT_UNDERFUNDED 493
+offer_buy                 7449       79     7409  100.0  
+offer_passive             3744       32     3733   94.3  txFAILED MANAGE_SELL_OFFER_UNDERFUNDED 214
+offer_resting             3709       50     3692   96.6  txFAILED MANAGE_SELL_OFFER_UNDERFUNDED 126
+offer_sell               15246      173    15174   96.8  txFAILED MANAGE_SELL_OFFER_UNDERFUNDED 485
+op_source_other           7624       83     7590  100.0   | 5725, 100%, 
+path_receive             11337      114    11299   96.3  txFAILED PATH_PAYMENT_STRICT_RECEIVE_UNDERFUNDED 423
+path_send                15074      165    15000  100.0  
+pay_eurt                 33584      365    33446   96.5  txFAILED PAYMENT_UNDERFUNDED 1173
+pay_muxed                 7669      102     7641  100.0  
+pay_xlm                  23858      261    23758  100.0  
+pool_deposit              7652       82     7628   93.2  txFAILED LIQUIDITY_POOL_DEPOSIT_UNDERFUNDED 518
+pool_withdraw              623       11      614   92.5  txFAILED LIQUIDITY_POOL_WITHDRAW_UNDERFUNDED 46
+restore_live                17        0       17  100.0  
+sac_eurt                 30496       14    29048   96.6  txFAILED INVOKE_HOST_FUNCTION_TRAPPED 985
+sac_xlm                  30694        6    29455  100.0  
+sac_xlm_fee_bump         11289        3    10528  100.0   | 7856, 100%, 
+set_home_domain           7513      101     7478  100.0  
+signer_add                6415       59     6386  100.0  
+signer_remove             1168       18     1158  100.0  
+sponsor                   6781       61     6758  100.0   | 5117, 100%, 
+sponsor_revoke            3042       33     3031   96.0  txFAILED REVOKE_SPONSORSHIP_NOT_SPONSOR 109, txFAILED REVOKE_SPONSORSHIP_DOES_NOT_EXIST 13
+swap                     30357        9    29086   96.5  txFAILED INVOKE_HOST_FUNCTION_TRAPPED 1028
+token_transfer           15054       81    14539  100.0  
+trust_add                 3465       44     3448  100.0  
+trust_flags                 68        0       68  100.0  
+trust_remove               286        0      286   99.0  txFAILED CHANGE_TRUST_INVALID_LIMIT 3
+upload_wasm                  0     7563        0    0.0  
+
+Queue rejections by code:
+  txINSUFFICIENT_BALANCE: 7492
+  txBAD_SEQ: 2478
+  txFEE_BUMP_INNER_FAILED: 117
+  txSOROBAN_INVALID: 80
+  txINSUFFICIENT_FEE: 36

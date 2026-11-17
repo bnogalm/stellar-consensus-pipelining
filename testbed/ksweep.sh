@@ -57,6 +57,19 @@ for k in $2; do
     $NODES upgrade "${KSWEEP_TXSET:-$([ "$load" = pay ] && echo 200 || echo 1000)}" > /dev/null
     sleep 20
     $NODES http 1 info | grep -E "maxTxSetSize|\"version\""
+    # KSWEEP_K_UPGRADE=1: k is a network parameter in the ledger, set by a flags upgrade; the
+    # setting at the restart below only sizes the queues.
+    if [ "${KSWEEP_K_UPGRADE:-0}" = 1 ] && [ "$k" -gt 1 ]; then
+        UPGRADE_EXTRA="&flags=$((k << 16))" $NODES upgrade \
+            "${KSWEEP_TXSET:-$([ "$load" = pay ] && echo 200 || echo 1000)}" > /dev/null
+        for _ in $(seq 1 60); do
+            grep -q "k changes from 1 to $k" /ram/wan/n1/node.log && break
+            sleep 1
+        done
+        grep -q "k changes from 1 to $k" /ram/wan/n1/node.log ||
+            { echo "k=$k: the upgrade of k did not apply"; $NODES stop; continue; }
+        sleep $((5 * k + 5))
+    fi
     # Switch the rules like an upgrade would, at a ledger boundary: stop all nodes shortly after
     # a ledger closes, when every node has applied it and no slot is in consensus yet.
     l0=$(ledger_num)

@@ -1,0 +1,247 @@
+{
+ "interval": {
+  "title": "Mean ledger interval",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "ms",
+  "series": [
+   {
+    "name": "Payments",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "y": [
+     706,
+     390,
+     283,
+     242,
+     209,
+     202,
+     200,
+     198
+    ],
+    "hover": [
+     "706 ms mean, 669 p50, 1421 p99; consensus 692 ms, apply 8 ms",
+     "390 ms mean, 361 p50, 1280 p99; consensus 737 ms, apply 10 ms",
+     "283 ms mean, 246 p50, 1073 p99; consensus 770 ms, apply 12 ms",
+     "242 ms mean, 188 p50, 1093 p99; consensus 841 ms, apply 14 ms",
+     "209 ms mean, 168 p50, 912 p99; consensus 862 ms, apply 15 ms",
+     "202 ms mean, 149 p50, 929 p99; consensus 926 ms, apply 15 ms",
+     "200 ms mean, 113 p50, 992 p99; consensus 1019 ms, apply 16 ms",
+     "198 ms mean, 48 p50, 1069 p99; consensus 1111 ms, apply 18 ms"
+    ]
+   },
+   {
+    "name": "Soroban calls",
+    "color": "--s2",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "y": [
+     820,
+     449,
+     330,
+     276,
+     244,
+     228,
+     214,
+     211
+    ],
+    "hover": [
+     "820 ms mean, 781 p50, 1524 p99; consensus 731 ms, apply 83 ms",
+     "449 ms mean, 439 p50, 1431 p99; consensus 767 ms, apply 92 ms",
+     "330 ms mean, 290 p50, 1093 p99; consensus 815 ms, apply 101 ms",
+     "276 ms mean, 243 p50, 994 p99; consensus 876 ms, apply 109 ms",
+     "244 ms mean, 207 p50, 1007 p99; consensus 938 ms, apply 114 ms",
+     "228 ms mean, 182 p50, 908 p99; consensus 1033 ms, apply 120 ms",
+     "214 ms mean, 180 p50, 834 p99; consensus 1121 ms, apply 122 ms",
+     "211 ms mean, 123 p50, 1001 p99; consensus 1216 ms, apply 122 ms"
+    ]
+   }
+  ],
+  "refLines": [
+   {
+    "y": 150,
+    "label": "target 150 ms"
+   }
+  ]
+ },
+ "throughput": {
+  "title": "Throughput relative to no pipelining (k = 1)",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "times k = 1",
+  "ySuffix": "×",
+  "series": [
+   {
+    "name": "Payments",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "y": [
+     1.0,
+     1.73,
+     2.24,
+     2.62,
+     2.94,
+     2.97,
+     2.92,
+     2.94
+    ],
+    "hover": [
+     "263 tx/s, 1.00× k = 1, 185 tx per ledger",
+     "454 tx/s, 1.73× k = 1, 176 tx per ledger",
+     "590 tx/s, 2.24× k = 1, 167 tx per ledger",
+     "688 tx/s, 2.62× k = 1, 167 tx per ledger",
+     "772 tx/s, 2.94× k = 1, 161 tx per ledger",
+     "780 tx/s, 2.97× k = 1, 157 tx per ledger",
+     "768 tx/s, 2.92× k = 1, 154 tx per ledger",
+     "773 tx/s, 2.94× k = 1, 153 tx per ledger"
+    ]
+   },
+   {
+    "name": "Soroban calls",
+    "color": "--s2",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "y": [
+     1.0,
+     1.79,
+     2.45,
+     2.95,
+     3.33,
+     3.53,
+     3.71,
+     3.71
+    ],
+    "hover": [
+     "120 tx/s, 1.00× k = 1, 98 tx per ledger",
+     "215 tx/s, 1.79× k = 1, 97 tx per ledger",
+     "294 tx/s, 2.45× k = 1, 97 tx per ledger",
+     "354 tx/s, 2.95× k = 1, 98 tx per ledger",
+     "399 tx/s, 3.33× k = 1, 97 tx per ledger",
+     "424 tx/s, 3.53× k = 1, 97 tx per ledger",
+     "445 tx/s, 3.71× k = 1, 95 tx per ledger",
+     "445 tx/s, 3.71× k = 1, 94 tx per ledger"
+    ]
+   }
+  ],
+  "refLines": [
+   {
+    "y": 1,
+    "label": "no pipelining"
+   }
+  ]
+ },
+ "tps-pay": {
+  "title": "Throughput, payments",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "tx/s",
+  "series": [
+   {
+    "name": "Payments",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "y": [
+     263,
+     454,
+     590,
+     688,
+     772,
+     780,
+     768,
+     773
+    ],
+    "hover": [
+     "263 tx/s, 185 tx per ledger",
+     "454 tx/s, 176 tx per ledger",
+     "590 tx/s, 167 tx per ledger",
+     "688 tx/s, 167 tx per ledger",
+     "772 tx/s, 161 tx per ledger",
+     "780 tx/s, 157 tx per ledger",
+     "768 tx/s, 154 tx per ledger",
+     "773 tx/s, 153 tx per ledger"
+    ]
+   }
+  ]
+ },
+ "tps-soroban": {
+  "title": "Throughput, soroban calls",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "tx/s",
+  "series": [
+   {
+    "name": "Soroban calls",
+    "color": "--s2",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8
+    ],
+    "y": [
+     120,
+     215,
+     294,
+     354,
+     399,
+     424,
+     445,
+     445
+    ],
+    "hover": [
+     "120 tx/s, 98 tx per ledger",
+     "215 tx/s, 97 tx per ledger",
+     "294 tx/s, 97 tx per ledger",
+     "354 tx/s, 98 tx per ledger",
+     "399 tx/s, 97 tx per ledger",
+     "424 tx/s, 97 tx per ledger",
+     "445 tx/s, 95 tx per ledger",
+     "445 tx/s, 94 tx per ledger"
+    ]
+   }
+  ]
+ }
+}

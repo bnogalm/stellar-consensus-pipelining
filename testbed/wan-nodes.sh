@@ -12,8 +12,9 @@
 #                                  (quorum: 67% of organizations, 67% inside each)
 #        wan-nodes.sh upgrade [max_tx_set_ops]
 #                                  vote on every node for the current protocol and the limit
+#                                  (UPGRADE_EXTRA adds parameters, e.g. "&basefee=200")
 #        wan-nodes.sh set <KEY> <value>   set a config entry on every node (restart to apply)
-#        wan-nodes.sh start | stop | status
+#        wan-nodes.sh start | stop [i ...] | status   (all nodes, or the ones listed)
 #        wan-nodes.sh http <i> <command>   e.g. http 1 'info'
 set -euo pipefail
 BIN="${BIN:-$HOME/src/stellar-core-pipeline/src/stellar-core}"
@@ -97,23 +98,27 @@ EOF
     echo "initialized $n validators and $((total - n)) watchers in $W (target close $close_ms ms, $accounts accounts)"
     ;;
 start)
-    for i in $(nodes); do
+    list="${*:2}"
+    list="${list:-$(nodes)}"
+    for i in $list; do
         d="$W/n$i"
         setsid nohup sudo -n /usr/sbin/ip netns exec "st-n$i" setpriv --reuid="$ME_UID" \
             --regid="$ME_GID" --init-groups env HOME="$HOME" PATH="$PATH" \
             bash -c "cd '$d' && echo \$\$ > pid && exec '$BIN' run --conf stellar.cfg" \
-            > "$d/stdout.log" 2>&1 < /dev/null &
+            >> "$d/stdout.log" 2>&1 < /dev/null &
     done
     sleep 1
     bash "$0" status
     ;;
 stop)
-    for i in $(nodes); do
+    list="${*:2}"
+    list="${list:-$(nodes)}"
+    for i in $list; do
         f="$W/n$i/pid"
         [ -f "$f" ] && kill "$(cat "$f")" 2>/dev/null || true
     done
     sleep 2
-    for i in $(nodes); do
+    for i in $list; do
         f="$W/n$i/pid"
         [ -f "$f" ] && kill -9 "$(cat "$f")" 2>/dev/null || true
         rm -f "$f"
@@ -138,7 +143,7 @@ upgrade)
     proto=$("$BIN" version 2>/dev/null | awk '!p && /ledger protocol version/ { print $NF; p = 1 }')
     proto="${UPGRADE_PROTOCOL:-$proto}"
     for i in $(nodes); do
-        nsrun "$i" curl -s -m 10 "http://127.0.0.1:11626/upgrades?mode=set&upgradetime=$(date -u +%Y-%m-%dT%H:%M:%SZ)&protocolversion=$proto&maxtxsetsize=${2:-10000}"
+        nsrun "$i" curl -s -m 10 "http://127.0.0.1:11626/upgrades?mode=set&upgradetime=$(date -u +%Y-%m-%dT%H:%M:%SZ)&protocolversion=$proto&maxtxsetsize=${2:-10000}${UPGRADE_EXTRA:-}"
         echo
     done
     ;;
@@ -154,7 +159,7 @@ set)
     grep -h "^$2=" "$W"/n*/stellar.cfg | sort | uniq -c
     ;;
 http)
-    nsrun "$2" curl -s -m 10 "http://127.0.0.1:11626/$3"
+    nsrun "$2" curl -s -m "${HTTP_TIMEOUT:-10}" "http://127.0.0.1:11626/$3"
     echo
     ;;
 *)

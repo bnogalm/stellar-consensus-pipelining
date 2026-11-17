@@ -33,7 +33,8 @@ def load(path):
             m = LIVE.search(line)
             if m:
                 kind, seq, t = m.group(1), int(m.group(2)), int(m.group(3))
-                ev[kind].setdefault(seq, t)
+                if kind in ev:  # other PipelineLive events (tx set timings) are not used here
+                    ev[kind].setdefault(seq, t)
                 continue
             m = STUDY.search(line)
             if m:

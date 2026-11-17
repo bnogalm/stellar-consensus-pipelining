@@ -1,0 +1,124 @@
+diff --git a/src/herder/HerderImpl.cpp b/src/herder/HerderImpl.cpp
+index 342ae5639..c3eab49da 100644
+--- a/src/herder/HerderImpl.cpp
++++ b/src/herder/HerderImpl.cpp
+@@ -1993,8 +1993,15 @@ HerderImpl::triggerNextLedger(uint32_t ledgerSeqToTrigger,
+                                            : std::nullopt,
+             ledgerSeqToTrigger);
+     }
++    auto const studyBuildStart = pipelineLogNs();
+     auto [proposedSet, applicableProposedSet] = makeTxSetFromTransactions(
+         txPhases, mApp, closeTimeOffset, invalidTxPhases);
++    CLOG_INFO(Herder,
++              "PipelineLive event=txset_build ledger={} hash={} txs={} bytes={} "
++              "t_ns={} dur_ns={}",
++              ledgerSeqToTrigger, hexAbbrev(proposedSet->getContentsHash()),
++              proposedSet->sizeTxTotal(), proposedSet->encodedSize(),
++              studyBuildStart, pipelineLogNs() - studyBuildStart);
+     validationBase.reset();
+ 
+     if (pipeline && baseSeq < lcl.header.ledgerSeq)
+diff --git a/src/herder/HerderSCPDriver.cpp b/src/herder/HerderSCPDriver.cpp
+index c20af68c3..36a05044f 100644
+--- a/src/herder/HerderSCPDriver.cpp
++++ b/src/herder/HerderSCPDriver.cpp
+@@ -24,6 +24,7 @@
+ #include "util/ProtocolVersion.h"
+ #include "xdr/Stellar-SCP.h"
+ #include "xdr/Stellar-ledger-entries.h"
++#include <chrono>
+ #include "xdr/Stellar-ledger.h"
+ #include <Tracy.hpp>
+ #include <algorithm>
+@@ -2235,6 +2236,15 @@ HerderSCPDriver::cacheValidTxSet(ApplicableTxSetFrame const& txSet,
+     }
+ }
+ 
++// Pipelining study: steady-clock time for the tx set log lines.
++static int64_t
++txSetLogNs()
++{
++    return std::chrono::duration_cast<std::chrono::nanoseconds>(
++               std::chrono::steady_clock::now().time_since_epoch())
++        .count();
++}
++
+ bool
+ HerderSCPDriver::checkAndCacheTxSetValid(TxSetXDRFrame const& txSet,
+                                          LedgerHeaderHistoryEntry const& lcl,
+@@ -2251,6 +2261,7 @@ HerderSCPDriver::checkAndCacheTxSetValid(TxSetXDRFrame const& txSet,
+     {
+         ZoneNamedN(txSetValidityMissZone, "txset validity cache miss", true);
+         auto validationTime = mSCPMetrics.mTxSetValidation.TimeScope();
++        auto const studyStart = txSetLogNs();
+ 
+         // The invariant here is that we only validate tx sets nominated
+         // to be applied to the current ledger state. However, in case
+@@ -2311,6 +2322,12 @@ HerderSCPDriver::checkAndCacheTxSetValid(TxSetXDRFrame const& txSet,
+         {
+             mTxSetValidCache.put(key, res);
+         }
++        auto const studyEnd = txSetLogNs();
++        CLOG_INFO(Herder,
++                  "PipelineLive event=txset_check ledger={} hash={} txs={} "
++                  "valid={} t_ns={} dur_ns={}",
++                  ledgerSeq, hexAbbrev(txSet.getContentsHash()),
++                  txSet.sizeTxTotal(), res, studyStart, studyEnd - studyStart);
+         return res;
+     }
+     else
+diff --git a/src/herder/PendingEnvelopes.cpp b/src/herder/PendingEnvelopes.cpp
+index 38ce4f1b7..c1959460e 100644
+--- a/src/herder/PendingEnvelopes.cpp
++++ b/src/herder/PendingEnvelopes.cpp
+@@ -16,6 +16,7 @@
+ #include "util/UnorderedSet.h"
+ #include <Tracy.hpp>
+ #include <xdrpp/marshal.h>
++#include <chrono>
+ 
+ using namespace std;
+ 
+@@ -257,6 +258,15 @@ PendingEnvelopes::addTxSet(Hash const& hash, uint64 lastSeenSlotIndex,
+     mTxSetFetcher.recv(hash, mFetchTxSetTimer);
+ }
+ 
++// Pipelining study: steady-clock time for the tx set log lines.
++static int64_t
++txSetLogNs()
++{
++    return std::chrono::duration_cast<std::chrono::nanoseconds>(
++               std::chrono::steady_clock::now().time_since_epoch())
++        .count();
++}
++
+ bool
+ PendingEnvelopes::recvTxSet(Hash const& hash, TxSetXDRFrameConstPtr txset)
+ {
+@@ -269,6 +279,11 @@ PendingEnvelopes::recvTxSet(Hash const& hash, TxSetXDRFrameConstPtr txset)
+         return false;
+     }
+ 
++    CLOG_INFO(Herder,
++              "PipelineLive event=txset_recv slot={} hash={} txs={} bytes={} "
++              "t_ns={}",
++              lastSeenSlotIndex, hexAbbrev(hash), txset->sizeTxTotal(),
++              txset->encodedSize(), txSetLogNs());
+     addTxSet(hash, lastSeenSlotIndex, txset);
+ 
+     // Update any ValueWrappers that were created before this tx set was
+@@ -676,6 +691,14 @@ PendingEnvelopes::startFetch(SCPEnvelope const& envelope)
+     {
+         if (!hasTxSet(h2))
+         {
++            if (mTxSetFetcher.getLastSeenSlotIndex(h2) == 0)
++            {
++                CLOG_INFO(Herder,
++                          "PipelineLive event=txset_fetch slot={} hash={} "
++                          "t_ns={}",
++                          envelope.statement.slotIndex, hexAbbrev(h2),
++                          txSetLogNs());
++            }
+             mTxSetFetcher.fetch(h2, envelope);
+             needSomething = true;
+         }

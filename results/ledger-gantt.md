@@ -1,6 +1,7 @@
 # The ledger cycle as a Gantt chart
 
-One row per ledger, one bar per stage, measured on validator 1 of the seven-validator testbed
+Where does the time of each ledger go on a validator, and what changes with k? The charts have
+one row per ledger and one bar per stage, measured on validator 1 of the seven-validator testbed
 ([testbed-results.md](testbed-results.md)): payments, links with 10% jitter, 0.1% loss and
 100 Mbit/s, a 200 ms target close time, and apply stretched to the mainnet cost of 1.25 ms per
 transaction. Every chart shows the same 5 s from the middle of a run, so the number of ledgers
@@ -21,6 +22,8 @@ and **post**, completion on the main thread until the next ledger is armed (with
 ![k = 3 (300 tx)](figures/gantt-k3.png)
 
 *k = 3: ledgers now come about as fast as one apply (about 375 ms), so some wait to be applied (queue). 697 tx/s.*
+
+And with ledgers twice as big, without pipelining and with k = 2:
 
 ![A ledger twice as big, k = 1 (600 tx)](figures/gantt-600-k1.png)
 

@@ -1,0 +1,120 @@
+{
+ "interval": {
+  "title": "Mean ledger interval",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "ms",
+  "series": [
+   {
+    "name": "Payments",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "y": [
+     1093,
+     582,
+     428,
+     396,
+     378,
+     374
+    ],
+    "hover": [
+     "1093 ms mean, 1055 p50, 1813 p99; consensus 713 ms, apply 375 ms",
+     "582 ms mean, 568 p50, 1311 p99; consensus 740 ms, apply 375 ms",
+     "428 ms mean, 396 p50, 1187 p99; consensus 762 ms, apply 372 ms",
+     "396 ms mean, 365 p50, 1218 p99; consensus 806 ms, apply 374 ms",
+     "378 ms mean, 370 p50, 1157 p99; consensus 826 ms, apply 372 ms",
+     "374 ms mean, 368 p50, 1280 p99; consensus 832 ms, apply 372 ms"
+    ]
+   }
+  ],
+  "refLines": [
+   {
+    "y": 200,
+    "label": "target 200 ms"
+   }
+  ]
+ },
+ "throughput": {
+  "title": "Throughput relative to no pipelining (k = 1)",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "times k = 1",
+  "ySuffix": "×",
+  "series": [
+   {
+    "name": "Payments",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "y": [
+     1.0,
+     1.89,
+     2.55,
+     2.77,
+     2.88,
+     2.91
+    ],
+    "hover": [
+     "273 tx/s, 1.00× k = 1, 299 tx per ledger",
+     "515 tx/s, 1.89× k = 1, 299 tx per ledger",
+     "695 tx/s, 2.55× k = 1, 298 tx per ledger",
+     "755 tx/s, 2.77× k = 1, 299 tx per ledger",
+     "787 tx/s, 2.88× k = 1, 297 tx per ledger",
+     "794 tx/s, 2.91× k = 1, 297 tx per ledger"
+    ]
+   }
+  ],
+  "refLines": [
+   {
+    "y": 1,
+    "label": "no pipelining"
+   }
+  ]
+ },
+ "tps-pay": {
+  "title": "Throughput, payments",
+  "xTitle": "Ledgers in consensus at once (k)",
+  "yTitle": "tx/s",
+  "series": [
+   {
+    "name": "Payments",
+    "color": "--s1",
+    "x": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "y": [
+     273,
+     515,
+     695,
+     755,
+     787,
+     794
+    ],
+    "hover": [
+     "273 tx/s, 299 tx per ledger",
+     "515 tx/s, 299 tx per ledger",
+     "695 tx/s, 298 tx per ledger",
+     "755 tx/s, 299 tx per ledger",
+     "787 tx/s, 297 tx per ledger",
+     "794 tx/s, 297 tx per ledger"
+    ]
+   }
+  ]
+ }
+}

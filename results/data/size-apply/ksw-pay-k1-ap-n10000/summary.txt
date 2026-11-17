@@ -1,0 +1,24 @@
+run ksw-pay-k1-ap-n10000/s1-c8000, ledgers 17 to 43; mean ms (p50 / p99)
+node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
+n1          27   4272.3 ( 4416/ 5286)   2358.4 ( 2281/ 3687)     76.0 (   69/  166)    896.9 (  862/ 1337)    514.7 (  490/  894)    398.4 (  365/  727)   7997.8 ( 7864/ 9823)
+n2          27   4237.9 ( 4376/ 5295)   2424.5 ( 2305/ 3690)     83.1 (   79/  145)    908.4 (  866/ 1516)    534.6 (  480/ 1127)    343.8 (  339/  559)   7997.6 ( 7857/ 9828)
+n3          27   4114.4 ( 4358/ 5273)   2617.5 ( 2398/ 6965)    102.0 (  100/  172)    860.7 (  856/ 1570)    500.6 (  482/ 1127)    310.9 (  312/  490)   7997.6 ( 7861/12988)
+n4          27   4270.1 ( 4504/ 5252)   2351.5 ( 2292/ 3727)    109.2 (  114/  145)    931.6 (  876/ 1382)    535.1 (  491/ 1017)    341.0 (  343/  478)   7997.8 ( 7863/ 9822)
+n5          27   4214.5 ( 4399/ 5255)   2439.1 ( 2326/ 3752)     99.5 (  100/  137)    894.9 (  845/ 1485)    517.7 (  499/ 1091)    344.1 (  355/  483)   7992.2 ( 7859/ 9831)
+n6          27   4131.9 ( 4398/ 5101)   2505.2 ( 2296/ 6487)     99.5 (   93/  171)    912.3 (  855/ 1886)    552.6 (  482/ 1425)    358.2 (  322/  866)   7997.6 ( 7962/12643)
+n7          27   4228.0 ( 4471/ 5231)   2400.5 ( 2316/ 4236)    115.5 (  113/  186)    913.8 (  879/ 1437)    535.5 (  497/ 1096)    336.6 (  324/  644)   7998.1 ( 7883/ 9846)
+all        189   4209.9 ( 4405/ 5286)   2442.4 ( 2301/ 6487)     97.8 (   95/  177)    902.6 (  862/ 1570)    527.2 (  488/ 1127)    347.6 (  332/  727)   7997.0 ( 7864/12643)
+ledgers 27, txs per ledger 10000, ledger interval 8025 ms, throughput 1246 tx/s
+tx latency (submit at node 1 to externalize): mean 6487 ms, p50 6248 ms, p90 9653 ms, p99 13573 ms, n 269690
+host cpu busy 39%
+n1: total    43%  busiest main 24%, stellar-core 12%, stellar-core 8%
+n2: total    52%  busiest main 25%, stellar-core 12%, stellar-core 12%
+n3: total    42%  busiest main 22%, stellar-core 12%, stellar-core 8%
+n4: total    46%  busiest main 24%, stellar-core 13%, stellar-core 8%
+n5: total    44%  busiest main 24%, stellar-core 13%, stellar-core 7%
+n6: total    43%  busiest main 25%, stellar-core 11%, stellar-core 8%
+n7: total    42%  busiest main 23%, stellar-core 12%, stellar-core 7%
+n8: total    57%  busiest main 33%, stellar-core 14%, stellar-core 8%
+n9: total    47%  busiest main 28%, stellar-core 14%, stellar-core 5%
+n10: total    48%  busiest main 29%, stellar-core 14%, stellar-core 5%
+n11: total    52%  busiest main 31%, stellar-core 14%, stellar-core 8%

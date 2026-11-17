@@ -1,5 +1,5 @@
 == ksw-pay-k1-cl-t300-r1
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t300-r1/s1-c200, ledgers 30 to 193; mean ms (p50 / p99)
+run ksw-pay-k1-cl-t300-r1/s1-c200, ledgers 30 to 193; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         164      0.1 (    0/    2)    709.3 (  659/ 1497)      2.1 (    2/    7)    374.8 (  375/  378)      8.6 (    8/   13)      5.1 (    5/   14)   1089.1 ( 1038/ 1880)
 n2         164      0.1 (    0/    1)    709.2 (  659/ 1499)      2.1 (    2/    6)    374.8 (  376/  377)      8.7 (    9/   12)      5.2 (    5/   22)   1089.1 ( 1041/ 1882)
@@ -24,7 +24,7 @@ n9: total    25%  busiest main 16%, stellar-core 7%, stellar-core 1%
 n10: total    25%  busiest main 16%, stellar-core 7%, stellar-core 2%
 n11: total    25%  busiest main 16%, stellar-core 7%, stellar-core 2%
 == ksw-pay-k1-cl-t300-r2
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t300-r2/s1-c200, ledgers 30 to 192; mean ms (p50 / p99)
+run ksw-pay-k1-cl-t300-r2/s1-c200, ledgers 30 to 192; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         163      0.1 (    0/    2)    714.7 (  692/ 1419)      2.0 (    2/    5)    375.0 (  376/  376)      8.8 (    9/   14)      5.2 (    5/   14)   1095.1 ( 1072/ 1801)
 n2         163      0.1 (    0/    1)    714.7 (  691/ 1420)      2.1 (    2/    5)    375.0 (  376/  376)      8.6 (    9/   14)      5.1 (    5/   11)   1095.1 ( 1070/ 1802)
@@ -49,7 +49,7 @@ n9: total    26%  busiest main 16%, stellar-core 7%, stellar-core 1%
 n10: total    26%  busiest main 16%, stellar-core 7%, stellar-core 2%
 n11: total    26%  busiest main 17%, stellar-core 7%, stellar-core 1%
 == ksw-pay-k1-cl-t300-r3
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t300-r3/s1-c200, ledgers 32 to 194; mean ms (p50 / p99)
+run ksw-pay-k1-cl-t300-r3/s1-c200, ledgers 32 to 194; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         163      0.1 (    0/    1)    714.7 (  697/ 1421)      2.1 (    2/    8)    375.2 (  376/  376)      8.7 (    9/   12)      5.7 (    5/   20)   1095.8 ( 1082/ 1804)
 n2         163      0.1 (    0/    1)    714.3 (  696/ 1432)      2.2 (    2/   10)    375.4 (  376/  384)      8.9 (    9/   22)      5.7 (    5/   22)   1095.8 ( 1080/ 1814)
@@ -74,7 +74,7 @@ n9: total    27%  busiest main 16%, stellar-core 8%, stellar-core 2%
 n10: total    27%  busiest main 17%, stellar-core 7%, stellar-core 1%
 n11: total    26%  busiest main 16%, stellar-core 7%, stellar-core 1%
 == ksw-pay-k2-cl-t300-r1
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t300-r1/s1-c200, ledgers 43 to 357; mean ms (p50 / p99)
+run ksw-pay-k2-cl-t300-r1/s1-c200, ledgers 43 to 357; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         315    562.8 (  542/ 1302)    723.9 (  706/ 1395)     28.0 (    2/  373)    371.5 (  376/  379)      9.8 (    9/   26)  -1118.1 (-1097/ -904)    568.4 (  548/ 1304)
 n2         315    562.5 (  538/ 1313)    722.8 (  706/ 1401)     28.4 (    2/  373)    371.5 (  376/  377)     10.1 (    9/   26)  -1117.0 (-1095/ -896)    568.3 (  546/ 1315)
@@ -99,7 +99,7 @@ n9: total    48%  busiest main 26%, stellar-core 12%, stellar-core 3%
 n10: total    47%  busiest main 27%, stellar-core 12%, stellar-core 3%
 n11: total    47%  busiest main 26%, stellar-core 12%, stellar-core 3%
 == ksw-pay-k2-cl-t300-r2
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t300-r2/s1-c200, ledgers 43 to 357; mean ms (p50 / p99)
+run ksw-pay-k2-cl-t300-r2/s1-c200, ledgers 43 to 357; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         315    565.2 (  548/ 1239)    721.9 (  696/ 1395)     29.3 (    2/  374)    372.3 (  376/  376)     10.4 (   10/   38)  -1117.4 (-1084/ -912)    569.7 (  550/ 1201)
 n2         315    565.1 (  545/ 1246)    721.8 (  699/ 1400)     29.3 (    2/  373)    372.3 (  376/  377)     10.0 (    9/   32)  -1117.2 (-1083/ -901)    569.7 (  554/ 1202)
@@ -124,7 +124,7 @@ n9: total    48%  busiest main 26%, stellar-core 13%, stellar-core 3%
 n10: total    48%  busiest main 27%, stellar-core 12%, stellar-core 3%
 n11: total    48%  busiest main 27%, stellar-core 12%, stellar-core 3%
 == ksw-pay-k2-cl-t300-r3
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t300-r3/s1-c200, ledgers 43 to 352; mean ms (p50 / p99)
+run ksw-pay-k2-cl-t300-r3/s1-c200, ledgers 43 to 352; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         310    570.8 (  549/ 1341)    734.2 (  703/ 1407)     34.0 (    2/  374)    372.2 (  376/  379)     10.3 (   10/   35)  -1134.3 (-1098/ -917)    577.3 (  552/ 1366)
 n2         310    570.9 (  544/ 1360)    733.6 (  704/ 1405)     34.3 (    2/  374)    372.1 (  376/  379)     10.1 (   10/   35)  -1134.0 (-1101/ -904)    577.3 (  549/ 1363)
@@ -149,7 +149,7 @@ n9: total    47%  busiest main 26%, stellar-core 13%, stellar-core 3%
 n10: total    47%  busiest main 27%, stellar-core 12%, stellar-core 3%
 n11: total    47%  busiest main 27%, stellar-core 12%, stellar-core 3%
 == ksw-pay-k3-cl-t300-r1
-run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t300-r1/s1-c200, ledgers 48 to 465; mean ms (p50 / p99)
+run ksw-pay-k3-cl-t300-r1/s1-c200, ledgers 48 to 465; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         418    421.6 (  372/ 1041)    775.6 (  733/ 1462)    110.6 (   58/  739)    372.1 (  376/  380)     10.9 (   10/   53)  -1250.2 (-1181/-1035)    428.8 (  415/ 1174)
 n2         418    421.3 (  372/ 1052)    775.2 (  738/ 1467)    110.4 (   58/  738)    372.1 (  376/  380)     11.0 (   10/   52)  -1249.5 (-1180/-1033)    428.8 (  412/ 1172)
@@ -174,7 +174,7 @@ n9: total    66%  busiest main 37%, stellar-core 16%, stellar-core 5%
 n10: total    66%  busiest main 37%, stellar-core 16%, stellar-core 5%
 n11: total    65%  busiest main 37%, stellar-core 15%, stellar-core 5%
 == ksw-pay-k3-cl-t300-r2
-run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t300-r2/s1-c200, ledgers 49 to 476; mean ms (p50 / p99)
+run ksw-pay-k3-cl-t300-r2/s1-c200, ledgers 49 to 476; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         428    409.4 (  372/ 1040)    755.3 (  712/ 1409)    100.0 (   70/  570)    372.8 (  376/  380)     10.9 (   10/   41)  -1219.8 (-1170/-1045)    418.6 (  413/ 1113)
 n2         428    409.4 (  372/ 1062)    751.1 (  708/ 1411)    102.3 (   72/  561)    372.8 (  376/  380)     11.9 (   10/   55)  -1217.8 (-1171/-1016)    418.8 (  412/ 1113)
@@ -199,7 +199,7 @@ n9: total    59%  busiest main 35%, stellar-core 15%, stellar-core 4%
 n10: total    57%  busiest main 34%, stellar-core 15%, stellar-core 4%
 n11: total    56%  busiest main 34%, stellar-core 14%, stellar-core 4%
 == ksw-pay-k3-cl-t300-r3
-run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t300-r3/s1-c200, ledgers 44 to 456; mean ms (p50 / p99)
+run ksw-pay-k3-cl-t300-r3/s1-c200, ledgers 44 to 456; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         413    425.5 (  372/ 1073)    791.0 (  744/ 1485)    110.4 (   59/  711)    372.5 (  376/  382)     11.2 (   10/   50)  -1265.5 (-1184/-1060)    434.3 (  403/ 1223)
 n2         413    425.1 (  372/ 1070)    787.2 (  742/ 1478)    112.8 (   64/  707)    372.5 (  376/  381)     11.1 (   10/   40)  -1263.9 (-1182/-1072)    434.3 (  405/ 1222)
@@ -224,7 +224,7 @@ n9: total    61%  busiest main 35%, stellar-core 15%, stellar-core 5%
 n10: total    60%  busiest main 34%, stellar-core 15%, stellar-core 4%
 n11: total    60%  busiest main 35%, stellar-core 14%, stellar-core 4%
 == ksw-pay-k4-cl-t300-r1
-run /home/dev/src/lab-runs/wan/ksw-pay-k4-cl-t300-r1/s1-c200, ledgers 50 to 511; mean ms (p50 / p99)
+run ksw-pay-k4-cl-t300-r1/s1-c200, ledgers 50 to 511; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         462    379.2 (  369/  779)    813.5 (  779/ 1516)    328.1 (  321/  787)    371.2 (  376/  381)     11.1 (   10/   48)  -1503.2 (-1463/ -995)    387.9 (  380/ 1115)
 n2         462    379.4 (  369/  774)    807.4 (  772/ 1505)    334.1 (  327/  780)    371.2 (  376/  382)     10.9 (   10/   45)  -1503.0 (-1463/-1003)    387.9 (  378/ 1119)
@@ -249,7 +249,7 @@ n9: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
 n10: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
 n11: total    67%  busiest main 41%, stellar-core 16%, stellar-core 6%
 == ksw-pay-k4-cl-t300-r2
-run /home/dev/src/lab-runs/wan/ksw-pay-k4-cl-t300-r2/s1-c200, ledgers 46 to 499; mean ms (p50 / p99)
+run ksw-pay-k4-cl-t300-r2/s1-c200, ledgers 46 to 499; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         454    385.6 (  369/  781)    829.3 (  786/ 1504)    334.6 (  327/  784)    371.8 (  376/  379)     11.4 (   10/   47)  -1526.5 (-1464/-1092)    393.7 (  370/ 1155)
 n2         454    385.3 (  368/  780)    830.4 (  785/ 1521)    333.5 (  324/  792)    371.8 (  376/  380)     11.4 (   10/   42)  -1526.3 (-1464/-1090)    393.6 (  375/ 1141)
@@ -274,7 +274,7 @@ n9: total    70%  busiest main 43%, stellar-core 17%, stellar-core 5%
 n10: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
 n11: total    68%  busiest main 42%, stellar-core 16%, stellar-core 5%
 == ksw-pay-k4-cl-t300-r3
-run /home/dev/src/lab-runs/wan/ksw-pay-k4-cl-t300-r3/s1-c200, ledgers 56 to 515; mean ms (p50 / p99)
+run ksw-pay-k4-cl-t300-r3/s1-c200, ledgers 56 to 515; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         460    379.4 (  369/  772)    822.6 (  783/ 1541)    321.6 (  325/  743)    373.4 (  376/  379)     10.6 (    9/   47)  -1508.7 (-1465/-1247)    387.4 (  378/ 1094)
 n2         460    379.1 (  369/  798)    819.7 (  784/ 1535)    323.8 (  322/  741)    373.5 (  376/  383)     11.3 (    9/   61)  -1507.8 (-1465/-1237)    387.5 (  377/ 1099)
@@ -299,7 +299,7 @@ n9: total    69%  busiest main 43%, stellar-core 17%, stellar-core 4%
 n10: total    66%  busiest main 41%, stellar-core 16%, stellar-core 5%
 n11: total    68%  busiest main 42%, stellar-core 17%, stellar-core 5%
 == ksw-pay-k5-cl-t300-r1
-run /home/dev/src/lab-runs/wan/ksw-pay-k5-cl-t300-r1/s1-c200, ledgers 57 to 528; mean ms (p50 / p99)
+run ksw-pay-k5-cl-t300-r1/s1-c200, ledgers 57 to 528; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         472    368.0 (  368/  559)    841.6 (  790/ 1652)    625.2 (  672/  913)    372.4 (  376/  382)     11.4 (    9/   61)  -1829.7 (-1832/-1562)    378.2 (  372/ 1119)
 n2         472    368.4 (  368/  546)    854.8 (  799/ 1692)    611.2 (  663/  874)    372.3 (  376/  381)     12.0 (   10/   48)  -1829.2 (-1831/-1567)    378.1 (  371/ 1144)
@@ -324,7 +324,7 @@ n9: total    72%  busiest main 45%, stellar-core 17%, stellar-core 5%
 n10: total    70%  busiest main 44%, stellar-core 17%, stellar-core 5%
 n11: total    70%  busiest main 44%, stellar-core 16%, stellar-core 5%
 == ksw-pay-k5-cl-t300-r2
-run /home/dev/src/lab-runs/wan/ksw-pay-k5-cl-t300-r2/s1-c200, ledgers 55 to 524; mean ms (p50 / p99)
+run ksw-pay-k5-cl-t300-r2/s1-c200, ledgers 55 to 524; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         470    370.6 (  369/  531)    819.8 (  777/ 1841)    657.3 (  688/  952)    372.3 (  376/  383)     11.6 (   10/   45)  -1840.3 (-1834/-1197)    380.2 (  372/ 1111)
 n2         470    370.9 (  369/  517)    860.9 (  799/ 1958)    619.4 (  671/  889)    372.2 (  376/  381)     10.2 (    9/   43)  -1843.8 (-1836/-1193)    380.2 (  373/ 1114)
@@ -349,7 +349,7 @@ n9: total    70%  busiest main 44%, stellar-core 17%, stellar-core 5%
 n10: total    69%  busiest main 44%, stellar-core 16%, stellar-core 4%
 n11: total    68%  busiest main 43%, stellar-core 16%, stellar-core 4%
 == ksw-pay-k5-cl-t300-r3
-run /home/dev/src/lab-runs/wan/ksw-pay-k5-cl-t300-r3/s1-c200, ledgers 56 to 523; mean ms (p50 / p99)
+run ksw-pay-k5-cl-t300-r3/s1-c200, ledgers 56 to 523; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         468    370.9 (  368/  509)    858.5 (  793/ 1973)    623.9 (  668/  911)    371.2 (  376/  381)     11.3 (   10/   45)  -1843.0 (-1831/ -823)    382.3 (  367/ 1212)
 n2         468    370.5 (  368/  583)    858.7 (  791/ 1894)    623.8 (  672/  917)    371.3 (  376/  382)     11.5 (   10/   49)  -1842.8 (-1830/ -824)    382.2 (  369/ 1227)
@@ -374,7 +374,7 @@ n9: total    72%  busiest main 46%, stellar-core 17%, stellar-core 5%
 n10: total    72%  busiest main 45%, stellar-core 17%, stellar-core 5%
 n11: total    71%  busiest main 44%, stellar-core 16%, stellar-core 5%
 == ksw-pay-k1-cl-t600
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-t600/s1-c200, ledgers 30 to 149; mean ms (p50 / p99)
+run ksw-pay-k1-cl-t600/s1-c200, ledgers 30 to 149; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         120      0.3 (    0/    4)    728.6 (  711/ 1364)      4.4 (    4/   14)    749.0 (  751/  751)     21.9 (   21/   65)     10.3 (   10/   19)   1486.3 ( 1477/ 2126)
 n2         120      0.3 (    0/    4)    728.5 (  713/ 1359)      4.7 (    4/   16)    749.0 (  751/  751)     22.2 (   21/   75)     10.2 (   10/   18)   1486.3 ( 1475/ 2126)
@@ -399,7 +399,7 @@ n9: total    32%  busiest main 18%, stellar-core 9%, stellar-core 3%
 n10: total    33%  busiest main 19%, stellar-core 9%, stellar-core 3%
 n11: total    33%  busiest main 19%, stellar-core 8%, stellar-core 3%
 == ksw-pay-k2-cl-t600
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-t600/s1-c200, ledgers 42 to 256; mean ms (p50 / p99)
+run ksw-pay-k2-cl-t600/s1-c200, ledgers 42 to 256; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         215    814.3 (  747/ 1427)    799.5 (  771/ 1422)     91.6 (   24/  648)    742.5 (  751/  753)     22.4 (   21/   49)  -1617.6 (-1571/-1202)    830.9 (  825/ 1546)
 n2         215    814.8 (  746/ 1426)    800.4 (  769/ 1427)     90.6 (   12/  636)    742.5 (  751/  753)     23.3 (   22/   69)  -1617.9 (-1557/-1216)    830.9 (  824/ 1546)
@@ -424,7 +424,7 @@ n9: total    58%  busiest main 33%, stellar-core 14%, stellar-core 5%
 n10: total    57%  busiest main 33%, stellar-core 13%, stellar-core 5%
 n11: total    56%  busiest main 32%, stellar-core 13%, stellar-core 4%
 == ksw-pay-k3-cl-t600
-run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-t600/s1-c200, ledgers 55 to 293; mean ms (p50 / p99)
+run ksw-pay-k3-cl-t600/s1-c200, ledgers 55 to 293; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         239    725.7 (  738/  937)    888.3 (  850/ 1604)    560.6 (  600/  846)    736.1 (  751/  752)     19.8 (   17/  123)  -2168.5 (-2196/ -737)    745.6 (  754/ 1579)
 n2         239    724.7 (  736/  886)    874.0 (  835/ 1625)    573.9 (  615/  880)    736.2 (  751/  757)     21.0 (   19/   89)  -2166.7 (-2193/ -739)    745.5 (  756/ 1545)
@@ -437,7 +437,7 @@ all       1673    726.3 (  738/  912)    851.1 (  818/ 1604)    593.0 (  631/  9
 ledgers 239, txs per ledger 591, ledger interval 748 ms, throughput 790 tx/s
 tx latency (submit at node 1 to externalize): mean 2196 ms, p50 2090 ms, p90 3117 ms, p99 6658 ms, n 140572
 host cpu busy 40%
-/home/dev/src/stellar-pipelining-study/testbed/cpu-threads.sh: line 11: /proc/3974259/task/3985516/stat: No such file or directory
+testbed/cpu-threads.sh: line 11: /proc/3974259/task/3985516/stat: No such file or directory
 n1: total    44%  busiest main 23%, stellar-core 13%, stellar-core 4%
 n2: total    46%  busiest main 24%, stellar-core 13%, stellar-core 5%
 n3: total    46%  busiest main 24%, stellar-core 13%, stellar-core 5%
@@ -450,7 +450,7 @@ n9: total    58%  busiest main 35%, stellar-core 14%, stellar-core 4%
 n10: total    58%  busiest main 35%, stellar-core 14%, stellar-core 5%
 n11: total    57%  busiest main 35%, stellar-core 14%, stellar-core 4%
 == ksw-pay-k1-cl-n12-t300
-run /home/dev/src/lab-runs/wan/ksw-pay-k1-cl-n12-t300/s1-c200, ledgers 25 to 147; mean ms (p50 / p99)
+run ksw-pay-k1-cl-n12-t300/s1-c200, ledgers 25 to 147; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         123      0.2 (    0/    3)   1066.0 (  996/ 1644)      5.1 (    4/   16)    374.9 (  376/  376)     16.7 (   15/   41)      5.3 (    5/   12)   1448.5 ( 1378/ 2035)
 n2         123      0.1 (    0/    2)   1067.0 (  991/ 1643)      3.9 (    3/   17)    374.9 (  376/  376)     16.0 (   13/   43)      5.6 (    5/   11)   1448.6 ( 1369/ 2032)
@@ -485,7 +485,7 @@ n14: total    36%  busiest main 21%, stellar-core 12%, stellar-core 2%
 n15: total    36%  busiest main 20%, stellar-core 12%, stellar-core 2%
 n16: total    37%  busiest main 21%, stellar-core 12%, stellar-core 2%
 == ksw-pay-k2-cl-n12-t300
-run /home/dev/src/lab-runs/wan/ksw-pay-k2-cl-n12-t300/s1-c200, ledgers 30 to 267; mean ms (p50 / p99)
+run ksw-pay-k2-cl-n12-t300/s1-c200, ledgers 30 to 267; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         238    745.5 (  743/ 1600)   1069.3 ( 1004/ 1759)     39.6 (    6/  363)    371.2 (  376/  382)     21.7 (   18/   73)  -1472.3 (-1402/-1196)    750.7 (  740/ 1943)
 n2         238    744.8 (  748/ 1607)   1072.1 ( 1006/ 1743)     38.3 (    4/  371)    371.2 (  376/  384)     20.3 (   16/   67)  -1473.1 (-1404/-1214)    750.7 (  738/ 1967)
@@ -503,8 +503,8 @@ all       2856    745.5 (  745/ 1621)   1073.3 ( 1009/ 1778)     38.1 (    4/  3
 ledgers 238, txs per ledger 297, ledger interval 752 ms, throughput 396 tx/s
 tx latency (submit at node 1 to externalize): mean 2101 ms, p50 2010 ms, p90 2871 ms, p99 5182 ms, n 70481
 host cpu busy 52%
-/home/dev/src/stellar-pipelining-study/testbed/cpu-threads.sh: line 11: /proc/4028933/task/4043504/stat: No such file or directory
-/home/dev/src/stellar-pipelining-study/testbed/cpu-threads.sh: line 11: /proc/4028933/task/4043505/stat: No such file or directory
+testbed/cpu-threads.sh: line 11: /proc/4028933/task/4043504/stat: No such file or directory
+testbed/cpu-threads.sh: line 11: /proc/4028933/task/4043505/stat: No such file or directory
 n1: total    46%  busiest main 21%, stellar-core 20%, stellar-core 3%
 n2: total    46%  busiest main 21%, stellar-core 19%, stellar-core 3%
 n3: total    44%  busiest main 20%, stellar-core 18%, stellar-core 3%
@@ -522,7 +522,7 @@ n14: total    62%  busiest main 35%, stellar-core 21%, stellar-core 4%
 n15: total    62%  busiest main 35%, stellar-core 21%, stellar-core 4%
 n16: total    62%  busiest main 35%, stellar-core 21%, stellar-core 4%
 == ksw-pay-k3-cl-n12-t300
-run /home/dev/src/lab-runs/wan/ksw-pay-k3-cl-n12-t300/s1-c200, ledgers 40 to 369; mean ms (p50 / p99)
+run ksw-pay-k3-cl-n12-t300/s1-c200, ledgers 40 to 369; mean ms (p50 / p99)
 node   ledgers                  wait             consensus                 queue                 apply             execution                  post              interval
 n1         330    530.2 (  462/ 1248)   1139.8 ( 1092/ 1703)     69.3 (    9/  503)    371.8 (  376/  385)     26.8 (   24/   77)  -1569.9 (-1525/-1277)    542.5 (  504/ 1437)
 n2         330    529.2 (  463/ 1316)   1145.9 ( 1095/ 1731)     65.6 (    8/  498)    371.4 (  376/  384)     22.9 (   19/   78)  -1571.0 (-1535/-1303)    542.5 (  521/ 1399)

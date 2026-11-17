@@ -19,10 +19,13 @@ Linux machine, each in its own network namespace, with `netem` delays between th
 | `wan-net.sh` | Creates one namespace per node and the delays between them from an RTT matrix (`rtt-7.tsv`, `rtt-12-orgs.tsv`), with optional jitter, loss and rate (`WAN_JITTER_PCT`, `WAN_LOSS_PCT`, `WAN_RATE`) |
 | `wan-nodes.sh` | Creates the validators and watchers (configs, databases, quorum sets), starts and stops them, and sets config options on all of them |
 | `wan-sweep.sh` | Runs the load for one point and keeps the timing lines of every node |
-| `ksweep.sh` | One point per k: a fresh network, upgrades with 5 s ledgers, then the rules switched at a ledger boundary (restart with the target close time and `EXPERIMENTAL_LIVE_PIPELINE_DEPTH`), and the load |
+| `ksweep.sh` | One point per k: a fresh network, upgrades with 5 s ledgers, then the rules switched at a ledger boundary (restart with the target close time and `EXPERIMENTAL_LIVE_PIPELINE_DEPTH`), and the load. With `KSWEEP_K_UPGRADE=1`, k is set by a network upgrade first |
 | `wan-analyze.py` | Per-ledger timeline from the logs: wait, consensus, queue, apply, completion, interval, throughput and transaction latency |
 | `cpu-threads.sh` | Host CPU use during a run |
-| `runs/core.sh`, `runs/attack.sh`, `runs/grid.sh` | The runs in the reports (k sweep, leader DoS, target × k) |
+| `runs/core.sh`, `runs/attack.sh`, `runs/grid.sh` | The runs of `results/testbed-results.md` (k sweep, leader DoS, target × k) |
+| `full-round.sh` | A correctness round (`results/correctness-rounds.md`): every kind of transaction on a fresh network per k, with an upgrade and restarts of one or every validator during the load, and the checks at the end |
+| `full-analyze.py` | The results of a round by kind of transaction, from the history a validator published and the transaction logs of the load nodes |
+| `full-hashes.py` | Whether every validator published the same checkpoint files |
 
 ## Why it is set up this way
 
@@ -39,5 +42,7 @@ Linux machine, each in its own network namespace, with `netem` delays between th
   would take the late externalize as clock drift and fall back to a different trigger time. The
   node clocks agree here (one machine), so the fallback is turned off in every run, with and
   without pipelining.
-- **Switching rules at a ledger boundary.** Pipelining changes which values are valid, so it is
-  switched on with all nodes stopped right after a ledger closes, when no ledger is in consensus.
+- **Switching rules at a ledger boundary.** Pipelining changes which values are valid. k is in
+  the ledger, and a network upgrade changes it (`KSWEEP_K_UPGRADE=1`). The runs of 2026-11-09
+  switched it on by configuration instead, with all nodes stopped right after a ledger closes,
+  when no ledger is in consensus.
