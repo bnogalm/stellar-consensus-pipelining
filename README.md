@@ -17,7 +17,8 @@ ledgers. This repository has the measurements, a draft CAP and the testbed.
   throughput at the same ledger size. A client with one payer account has more latency than with
   the overlap; a client with a payer account in every class has less, at the same throughput.
 - **For mainnet in the medium term,** with ledgers every 2.5 to 5 s, the overlap is enough.
-  Pipelining is the step after it.
+  Pipelining could be a step after it, if the network ever needs ledgers closer together than
+  one consensus round.
 - **The rules hold together under load:** in 31 rounds with restarts, upgrades and changes of k,
   every validator agreed on every checkpoint.
 
@@ -97,9 +98,10 @@ SDF is working on overlapping the consensus of ledger N+1 with the apply of N
 so that a ledger closes every max(consensus, apply) instead of their sum. Its
 [roadmap](https://stellar.org/foundation/roadmap) calls that step pipelining consensus and
 execution; here it is called the overlap, and "pipelining" means k ledgers in consensus at once,
-which closes a ledger about every (consensus + apply) / k. The full comparison, measured on the
-testbed and simulated with mainnet's consensus times and ledger sizes, is in
-[when-pipelining-pays.md](results/when-pipelining-pays.md).
+which closes a ledger about every (consensus + apply) / k. The overlap is not implemented
+anywhere, so it is not measured here: it is estimated at its best case from the runs without
+pipelining, and both are simulated with mainnet's consensus times and ledger sizes. The
+comparison is in [when-pipelining-pays.md](results/when-pipelining-pays.md).
 
 The conditions under which it pays are in the summary above. What the report adds:
 
@@ -108,8 +110,9 @@ The conditions under which it pays are in the summary above. What the report add
 *Simulation calibrated on the testbed and mainnet's consensus times, apply 0.35 ms per
 transaction. The ceiling is the same for both; pipelining reaches it with smaller ledgers.*
 
-- **At the same ledger size** k = 3–4 gives 1.5 to 2× the overlap's throughput (2.5× measured at
-  300 transactions per ledger). The overlap matches it only with ledgers 3 to 4 times larger.
+- **At the same ledger size** k = 3–4 gives 1.5 to 2× the overlap's throughput (2.5× on the
+  testbed at 300 transactions per ledger, against the overlap's best case). The overlap matches
+  it only with ledgers 3 to 4 times larger.
 - **The variation of consensus times** costs the overlap about 15% of apply's time at its best
   ledger size. With k = 3–4 other agreed ledgers wait ahead.
 - **With ledgers several times larger the choice is open.** The overlap catches up by growing

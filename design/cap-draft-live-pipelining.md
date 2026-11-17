@@ -78,7 +78,8 @@ transaction per apply time, and pipelining pays only when all three of these hol
 Then k = 3–4 gives 1.5 to 2× the overlap's throughput at the same ledger size. A client with one
 payer account has more latency than with the overlap; a client with a payer account in every
 class has less, at the same throughput. For mainnet in the medium term, with ledgers every 2.5
-to 5 s, they do not hold and the overlap is enough. This draft is for the step after it.
+to 5 s, they do not hold and the overlap is enough. This draft is for a possible step after
+it.
 
 With ledgers several times larger the choice is open: the overlap catches up by growing ledgers
 only while a transaction adds more to apply than to consensus, and the measured cases fall on

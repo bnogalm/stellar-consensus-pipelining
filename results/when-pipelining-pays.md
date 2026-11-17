@@ -7,7 +7,8 @@ Its [roadmap](https://stellar.org/foundation/roadmap) calls that step pipelining
 execution, and aims at ledgers every 2.5 s. This report calls it the overlap, and keeps
 "pipelining" for what goes further: k ledgers in consensus at once. It asks when that extra
 complexity buys something the overlap cannot, with a model of both whose constants are measured
-on the testbed and on mainnet.
+on the testbed and on mainnet. The overlap is not implemented anywhere: it is taken at its best
+case.
 
 ## Short answer
 
@@ -32,7 +33,8 @@ Pipelining is worth its complexity when all three of these hold:
    with today's cap, more than about 1,500 operations per second.
 
 When they hold, pipelining at k = 3–4 gives 1.5 to 2× the throughput of the overlap at the same
-ledger size (2.5× measured at 300 transactions per ledger). The overlap matches it only with
+ledger size (2.5× on the testbed at 300 transactions per ledger, against the overlap's best
+case). The overlap matches it only with
 ledgers 3 to 4 times larger. Latency depends on the client. With one payer account it is higher
 than with the overlap, which shortens the wait for the next ledger for every account. With a
 payer account in every class it is lower than with the overlap, at the same throughput. If any
@@ -40,8 +42,8 @@ of the three fails, the overlap is the better choice.
 
 **For mainnet in the medium term they do not hold.** Ledgers close every 5 s (SDF's target is
 2.5 s), consensus and apply together take about 1 s of that or less, and demand is about 145
-operations per second. The timer bounds throughput, not consensus or apply. Pipelining is the
-step after the overlap, for when the network wants sub-second ledgers or a few thousand
+operations per second. The timer bounds throughput, not consensus or apply. Pipelining could be
+a step after the overlap, if the network ever wants sub-second ledgers or a few thousand
 operations per second.
 
 **With ledgers several times larger the choice is open.** The overlap catches up by growing
