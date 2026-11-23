@@ -1,0 +1,301 @@
+
+######## 23:52 rep 1, flooding normal, k=1, ledgers of 1000, client one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal k=1 client=one: ledgers 287, txs per ledger 337, ledger interval 831 ms, throughput 406 tx/s host cpu busy 18% 
+LAT rep=1 flood=normal k=1 client=one: ledgers 286, 337 tx per ledger, a ledger every 881 ms, 356 tx/s latency to applied, ms: min 667, mean 1555, max 3827; p10 1038, p50 1473, p90 2192, p99 2978 (n 96407)   of the mean: receipt to externalize 1416 ms, externalize to applied 121 ms 
+BUD rep=1 flood=normal k=1 client=one: gap between two slots opened 834 ms; transactions 93806 receipt to the opening of its slot: mean 711  p10 299  p50 674  p90 1161 ms opening to externalize: mean 709 ms; externalize to applied: mean 139 ms; total 1559 ms 
+
+######## 23:57 rep 1, flooding normal, k=2, ledgers of 400, client one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal k=2 client=one: ledgers 624, txs per ledger 155, ledger interval 382 ms, throughput 406 tx/s host cpu busy 26% 
+LAT rep=1 flood=normal k=2 client=one: ledgers 623, 155 tx per ledger, a ledger every 450 ms, 327 tx/s latency to applied, ms: min 577, mean 1439, max 3091; p10 969, p50 1388, p90 1995, p99 2550 (n 96696)   of the mean: receipt to externalize 1367 ms, externalize to applied 62 ms 
+BUD rep=1 flood=normal k=2 client=one: gap between two slots opened 383 ms; transactions 96696 receipt to the opening of its slot: mean 686  p10 303  p50 652  p90 1122 ms opening to externalize: mean 681 ms; externalize to applied: mean 72 ms; total 1439 ms 
+
+######## 00:03 rep 1, flooding normal, k=2, ledgers of 400, client k
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 114 skipped low fee: 0
+RUN rep=1 flood=normal k=2 client=k: ledgers 632, txs per ledger 153, ledger interval 376 ms, throughput 406 tx/s host cpu busy 26% 
+LAT rep=1 flood=normal k=2 client=k: ledgers 624, 155 tx per ledger, a ledger every 440 ms, 327 tx/s latency to applied, ms: min 574, mean 1463, max 5154; p10 988, p50 1345, p90 2059, p99 2998 (n 96643)   of the mean: receipt to externalize 1377 ms, externalize to applied 61 ms 
+BUD rep=1 flood=normal k=2 client=k: gap between two slots opened 382 ms; transactions 96643 receipt to the opening of its slot: mean 701  p10 320  p50 587  p90 1195 ms opening to externalize: mean 676 ms; externalize to applied: mean 86 ms; total 1463 ms 
+
+######## 00:09 rep 1, flooding normal, k=3, ledgers of 270, client one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal k=3 client=one: ledgers 906, txs per ledger 107, ledger interval 263 ms, throughput 406 tx/s host cpu busy 32% 
+LAT rep=1 flood=normal k=3 client=one: ledgers 898, 108 tx per ledger, a ledger every 312 ms, 322 tx/s latency to applied, ms: min 580, mean 1470, max 4513; p10 964, p50 1404, p90 2047, p99 3036 (n 96763)   of the mean: receipt to externalize 1413 ms, externalize to applied 49 ms 
+BUD rep=1 flood=normal k=3 client=one: gap between two slots opened 265 ms; transactions 96763 receipt to the opening of its slot: mean 717  p10 299  p50 670  p90 1187 ms opening to externalize: mean 696 ms; externalize to applied: mean 57 ms; total 1470 ms 
+
+######## 00:15 rep 1, flooding normal, k=3, ledgers of 270, client k
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 66 skipped low fee: 0
+RUN rep=1 flood=normal k=3 client=k: ledgers 929, txs per ledger 104, ledger interval 258 ms, throughput 404 tx/s host cpu busy 33% 
+LAT rep=1 flood=normal k=3 client=k: ledgers 902, 107 tx per ledger, a ledger every 307 ms, 322 tx/s latency to applied, ms: min 575, mean 1495, max 5261; p10 975, p50 1349, p90 2162, p99 3282 (n 96560)   of the mean: receipt to externalize 1432 ms, externalize to applied 47 ms 
+BUD rep=1 flood=normal k=3 client=k: gap between two slots opened 264 ms; transactions 96560 receipt to the opening of its slot: mean 744  p10 324  p50 572  p90 1283 ms opening to externalize: mean 688 ms; externalize to applied: mean 64 ms; total 1495 ms 
+
+######## 00:21 rep 1, flooding normal, k=4, ledgers of 210, client one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 6
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal k=4 client=one: ledgers 1154, txs per ledger 84, ledger interval 207 ms, throughput 405 tx/s host cpu busy 36% 
+LAT rep=1 flood=normal k=4 client=one: ledgers 1149, 84 tx per ledger, a ledger every 250 ms, 317 tx/s latency to applied, ms: min 567, mean 1516, max 4428; p10 981, p50 1440, p90 2142, p99 3102 (n 96830)   of the mean: receipt to externalize 1466 ms, externalize to applied 43 ms 
+BUD rep=1 flood=normal k=4 client=one: gap between two slots opened 208 ms; transactions 96830 receipt to the opening of its slot: mean 751  p10 311  p50 691  p90 1262 ms opening to externalize: mean 715 ms; externalize to applied: mean 50 ms; total 1516 ms 
+
+######## 00:27 rep 1, flooding normal, k=4, ledgers of 210, client k
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 83 skipped low fee: 0
+RUN rep=1 flood=normal k=4 client=k: ledgers 1160, txs per ledger 83, ledger interval 206 ms, throughput 402 tx/s host cpu busy 37% 
+LAT rep=1 flood=normal k=4 client=k: Traceback (most recent call last):   File "~/src/lab-runs/latency-dist.py", line 90, in <module>     main()   File "~/src/lab-runs/latency-dist.py", line 36, in main     lat[int(m.group(1))] = [int(x) for x in m.group(3).split(",")]                             ^^^^^^ ValueError: invalid literal for int() with base 10: '' 
+Traceback (most recent call last):
+  File "~/src/lab-runs/tx-budget.py", line 19, in <module>
+    lat[seq] = [int(x) for x in t.group(1).split(",")]
+                ^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+BUD rep=1 flood=normal k=4 client=k: 
+
+######## 00:34 rep 1, flooding fast, k=1, ledgers of 1000, client one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast k=1 client=one: ledgers 270, txs per ledger 360, ledger interval 886 ms, throughput 406 tx/s host cpu busy 23% 
+LAT rep=1 flood=fast k=1 client=one: ledgers 270, 359 tx per ledger, a ledger every 932 ms, 358 tx/s latency to applied, ms: min 659, mean 1497, max 3544; p10 1009, p50 1450, p90 2046, p99 2645 (n 96899)   of the mean: receipt to externalize 1357 ms, externalize to applied 129 ms 
+BUD rep=1 flood=fast k=1 client=one: gap between two slots opened 883 ms; transactions 93594 receipt to the opening of its slot: mean 608  p10 206  p50 583  p90 1035 ms opening to externalize: mean 744 ms; externalize to applied: mean 140 ms; total 1492 ms 
+
+######## 00:39 rep 1, flooding fast, k=2, ledgers of 400, client one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast k=2 client=one: ledgers 580, txs per ledger 167, ledger interval 412 ms, throughput 406 tx/s host cpu busy 30% 
+LAT rep=1 flood=fast k=2 client=one: ledgers 579, 167 tx per ledger, a ledger every 478 ms, 328 tx/s latency to applied, ms: min 599, mean 1413, max 4537; p10 921, p50 1335, p90 1977, p99 3168 (n 96821)   of the mean: receipt to externalize 1334 ms, externalize to applied 70 ms 
+BUD rep=1 flood=fast k=2 client=one: gap between two slots opened 413 ms; transactions 96821 receipt to the opening of its slot: mean 607  p10 203  p50 558  p90 1034 ms opening to externalize: mean 727 ms; externalize to applied: mean 79 ms; total 1413 ms 
+
+######## 00:45 rep 1, flooding fast, k=2, ledgers of 400, client k
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast k=2 client=k: ledgers 637, txs per ledger 152, ledger interval 375 ms, throughput 404 tx/s host cpu busy 31% 
+LAT rep=1 flood=fast k=2 client=k: ledgers 635, 152 tx per ledger, a ledger every 438 ms, 327 tx/s latency to applied, ms: min 593, mean 1289, max 3577; p10 886, p50 1206, p90 1808, p99 2332 (n 96562)   of the mean: receipt to externalize 1212 ms, externalize to applied 60 ms 
+BUD rep=1 flood=fast k=2 client=k: gap between two slots opened 376 ms; transactions 96562 receipt to the opening of its slot: mean 529  p10 212  p50 454  p90 992 ms opening to externalize: mean 683 ms; externalize to applied: mean 77 ms; total 1289 ms 
+
+######## 00:51 rep 1, flooding fast, k=3, ledgers of 270, client one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 3
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast k=3 client=one: ledgers 892, txs per ledger 109, ledger interval 269 ms, throughput 405 tx/s host cpu busy 36% 
+LAT rep=1 flood=fast k=3 client=one: ledgers 890, 109 tx per ledger, a ledger every 321 ms, 322 tx/s latency to applied, ms: min 583, mean 1366, max 4566; p10 898, p50 1305, p90 1914, p99 2696 (n 96935)   of the mean: receipt to externalize 1314 ms, externalize to applied 47 ms 
+BUD rep=1 flood=fast k=3 client=one: gap between two slots opened 269 ms; transactions 96935 receipt to the opening of its slot: mean 591  p10 203  p50 551  p90 1015 ms opening to externalize: mean 723 ms; externalize to applied: mean 53 ms; total 1366 ms 
+
+######## 00:57 rep 1, flooding fast, k=3, ledgers of 270, client k
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 3
+rejected: 70 skipped low fee: 0
+RUN rep=1 flood=fast k=3 client=k: ledgers 867, txs per ledger 112, ledger interval 276 ms, throughput 404 tx/s host cpu busy 36% 
+LAT rep=1 flood=fast k=3 client=k: ledgers 852, 113 tx per ledger, a ledger every 329 ms, 322 tx/s latency to applied, ms: min 562, mean 1486, max 5422; p10 903, p50 1371, p90 2170, p99 3647 (n 96691)   of the mean: receipt to externalize 1412 ms, externalize to applied 57 ms 
+BUD rep=1 flood=fast k=3 client=k: gap between two slots opened 280 ms; transactions 96691 receipt to the opening of its slot: mean 682  p10 204  p50 517  p90 1258 ms opening to externalize: mean 729 ms; externalize to applied: mean 74 ms; total 1486 ms 
+
+######## 01:03 rep 1, flooding fast, k=4, ledgers of 210, client one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 8
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast k=4 client=one: ledgers 1126, txs per ledger 86, ledger interval 213 ms, throughput 403 tx/s host cpu busy 40% 
+LAT rep=1 flood=fast k=4 client=one: ledgers 1121, 86 tx per ledger, a ledger every 257 ms, 314 tx/s latency to applied, ms: min 563, mean 1395, max 4489; p10 900, p50 1338, p90 1972, p99 2621 (n 96153)   of the mean: receipt to externalize 1348 ms, externalize to applied 43 ms 
+BUD rep=1 flood=fast k=4 client=one: gap between two slots opened 211 ms; transactions 96153 receipt to the opening of its slot: mean 608  p10 200  p50 565  p90 1072 ms opening to externalize: mean 739 ms; externalize to applied: mean 48 ms; total 1395 ms 
+
+######## 01:09 rep 1, flooding fast, k=4, ledgers of 210, client k
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 224 skipped low fee: 0
+RUN rep=1 flood=fast k=4 client=k: ledgers 1152, txs per ledger 83, ledger interval 208 ms, throughput 401 tx/s host cpu busy 41% 
+LAT rep=1 flood=fast k=4 client=k: ledgers 1130, 85 tx per ledger, a ledger every 253 ms, 314 tx/s latency to applied, ms: min 582, mean 1423, max 5784; p10 838, p50 1262, p90 2210, p99 3656 (n 96083)   of the mean: receipt to externalize 1366 ms, externalize to applied 45 ms 
+BUD rep=1 flood=fast k=4 client=k: gap between two slots opened 212 ms; transactions 96083 receipt to the opening of its slot: mean 644  p10 184  p50 446  p90 1235 ms opening to externalize: mean 721 ms; externalize to applied: mean 57 ms; total 1423 ms 
+
+######## 01:16 rep 2, flooding normal, k=1, ledgers of 1000, client one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal k=1 client=one: ledgers 295, txs per ledger 329, ledger interval 810 ms, throughput 406 tx/s host cpu busy 18% 
+LAT rep=2 flood=normal k=1 client=one: ledgers 295, 328 tx per ledger, a ledger every 867 ms, 358 tx/s latency to applied, ms: min 635, mean 1509, max 3518; p10 1013, p50 1448, p90 2071, p99 2852 (n 96849)   of the mean: receipt to externalize 1374 ms, externalize to applied 118 ms 
+BUD rep=2 flood=normal k=1 client=one: gap between two slots opened 815 ms; transactions 93095 receipt to the opening of its slot: mean 691  p10 288  p50 659  p90 1129 ms opening to externalize: mean 684 ms; externalize to applied: mean 135 ms; total 1511 ms 
+
+######## 01:21 rep 2, flooding normal, k=2, ledgers of 400, client one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal k=2 client=one: ledgers 629, txs per ledger 154, ledger interval 380 ms, throughput 405 tx/s host cpu busy 27% 
+LAT rep=2 flood=normal k=2 client=one: ledgers 626, 155 tx per ledger, a ledger every 441 ms, 328 tx/s latency to applied, ms: min 594, mean 1425, max 4591; p10 964, p50 1368, p90 1952, p99 2730 (n 96874)   of the mean: receipt to externalize 1351 ms, externalize to applied 62 ms 
+BUD rep=2 flood=normal k=2 client=one: gap between two slots opened 381 ms; transactions 96874 receipt to the opening of its slot: mean 684  p10 294  p50 643  p90 1105 ms opening to externalize: mean 667 ms; externalize to applied: mean 73 ms; total 1425 ms 
+
+######## 01:27 rep 2, flooding normal, k=2, ledgers of 400, client k
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 9 skipped low fee: 0
+RUN rep=2 flood=normal k=2 client=k: ledgers 645, txs per ledger 150, ledger interval 371 ms, throughput 406 tx/s host cpu busy 27% 
+LAT rep=2 flood=normal k=2 client=k: ledgers 635, 153 tx per ledger, a ledger every 435 ms, 328 tx/s latency to applied, ms: min 575, mean 1457, max 5088; p10 1004, p50 1362, p90 1999, p99 2796 (n 96876)   of the mean: receipt to externalize 1372 ms, externalize to applied 61 ms 
+BUD rep=2 flood=normal k=2 client=k: gap between two slots opened 376 ms; transactions 96876 receipt to the opening of its slot: mean 698  p10 330  p50 602  p90 1183 ms opening to externalize: mean 674 ms; externalize to applied: mean 85 ms; total 1457 ms 
+
+######## 01:33 rep 2, flooding normal, k=3, ledgers of 270, client one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 3
+rejected: 40 skipped low fee: 0
+RUN rep=2 flood=normal k=3 client=one: ledgers 915, txs per ledger 106, ledger interval 262 ms, throughput 404 tx/s host cpu busy 32% 
+LAT rep=2 flood=normal k=3 client=one: ledgers 911, 106 tx per ledger, a ledger every 312 ms, 321 tx/s latency to applied, ms: min 564, mean 1470, max 4345; p10 948, p50 1398, p90 2079, p99 2991 (n 96725)   of the mean: receipt to externalize 1413 ms, externalize to applied 48 ms 
+BUD rep=2 flood=normal k=3 client=one: gap between two slots opened 262 ms; transactions 96725 receipt to the opening of its slot: mean 715  p10 290  p50 663  p90 1205 ms opening to externalize: mean 698 ms; externalize to applied: mean 57 ms; total 1470 ms 
+
+######## 01:39 rep 2, flooding normal, k=3, ledgers of 270, client k
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 4
+rejected: 141 skipped low fee: 0
+RUN rep=2 flood=normal k=3 client=k: ledgers 960, txs per ledger 100, ledger interval 250 ms, throughput 402 tx/s host cpu busy 33% 
+LAT rep=2 flood=normal k=3 client=k: ledgers 922, 104 tx per ledger, a ledger every 300 ms, 320 tx/s latency to applied, ms: min 550, mean 1445, max 5401; p10 945, p50 1299, p90 2056, p99 3236 (n 96176)   of the mean: receipt to externalize 1383 ms, externalize to applied 46 ms 
+BUD rep=2 flood=normal k=3 client=k: gap between two slots opened 259 ms; transactions 96176 receipt to the opening of its slot: mean 719  p10 321  p50 558  p90 1235 ms opening to externalize: mean 664 ms; externalize to applied: mean 61 ms; total 1445 ms 
+
+######## 01:45 rep 2, flooding normal, k=4, ledgers of 210, client one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 30 skipped low fee: 3
+RUN rep=2 flood=normal k=4 client=one: ledgers 1142, txs per ledger 85, ledger interval 210 ms, throughput 403 tx/s host cpu busy 37% 
+LAT rep=2 flood=normal k=4 client=one: ledgers 1129, 85 tx per ledger, a ledger every 256 ms, 316 tx/s latency to applied, ms: min 566, mean 1553, max 5447; p10 991, p50 1478, p90 2194, p99 3115 (n 96429)   of the mean: receipt to externalize 1503 ms, externalize to applied 44 ms 
+BUD rep=2 flood=normal k=4 client=one: gap between two slots opened 212 ms; transactions 96374 receipt to the opening of its slot: mean 772  p10 318  p50 713  p90 1296 ms opening to externalize: mean 730 ms; externalize to applied: mean 50 ms; total 1553 ms 
+
+######## 01:52 rep 2, flooding normal, k=4, ledgers of 210, client k
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 8
+rejected: 149 skipped low fee: 0
+RUN rep=2 flood=normal k=4 client=k: ledgers 1205, txs per ledger 80, ledger interval 199 ms, throughput 403 tx/s host cpu busy 38% 
+LAT rep=2 flood=normal k=4 client=k: ledgers 1140, 85 tx per ledger, a ledger every 241 ms, 315 tx/s latency to applied, ms: min 570, mean 1523, max 5688; p10 951, p50 1433, p90 2216, p99 3356 (n 96509)   of the mean: receipt to externalize 1464 ms, externalize to applied 44 ms 
+BUD rep=2 flood=normal k=4 client=k: gap between two slots opened 210 ms; transactions 96509 receipt to the opening of its slot: mean 779  p10 297  p50 616  p90 1353 ms opening to externalize: mean 685 ms; externalize to applied: mean 58 ms; total 1523 ms 
+
+######## 01:58 rep 2, flooding fast, k=1, ledgers of 1000, client one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast k=1 client=one: ledgers 271, txs per ledger 357, ledger interval 883 ms, throughput 405 tx/s host cpu busy 23% 
+LAT rep=2 flood=fast k=1 client=one: ledgers 271, 357 tx per ledger, a ledger every 929 ms, 357 tx/s latency to applied, ms: min 669, mean 1483, max 5334; p10 1013, p50 1439, p90 1979, p99 2762 (n 96672)   of the mean: receipt to externalize 1344 ms, externalize to applied 128 ms 
+BUD rep=2 flood=fast k=1 client=one: gap between two slots opened 882 ms; transactions 93606 receipt to the opening of its slot: mean 605  p10 202  p50 580  p90 1015 ms opening to externalize: mean 738 ms; externalize to applied: mean 139 ms; total 1483 ms 
+
+######## 02:03 rep 2, flooding fast, k=2, ledgers of 400, client one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast k=2 client=one: ledgers 576, txs per ledger 168, ledger interval 416 ms, throughput 404 tx/s host cpu busy 30% 
+LAT rep=2 flood=fast k=2 client=one: ledgers 574, 168 tx per ledger, a ledger every 487 ms, 326 tx/s latency to applied, ms: min 595, mean 1436, max 5077; p10 926, p50 1354, p90 2019, p99 3271 (n 96338)   of the mean: receipt to externalize 1357 ms, externalize to applied 70 ms 
+BUD rep=2 flood=fast k=2 client=one: gap between two slots opened 414 ms; transactions 96338 receipt to the opening of its slot: mean 622  p10 207  p50 570  p90 1065 ms opening to externalize: mean 735 ms; externalize to applied: mean 79 ms; total 1436 ms 
+
+######## 02:09 rep 2, flooding fast, k=2, ledgers of 400, client k
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast k=2 client=k: ledgers 610, txs per ledger 159, ledger interval 392 ms, throughput 405 tx/s host cpu busy 30% 
+LAT rep=2 flood=fast k=2 client=k: ledgers 606, 160 tx per ledger, a ledger every 462 ms, 327 tx/s latency to applied, ms: min 596, mean 1363, max 4836; p10 907, p50 1256, p90 1932, p99 2848 (n 96710)   of the mean: receipt to externalize 1281 ms, externalize to applied 64 ms 
+BUD rep=2 flood=fast k=2 client=k: gap between two slots opened 394 ms; transactions 96710 receipt to the opening of its slot: mean 569  p10 209  p50 470  p90 1068 ms opening to externalize: mean 712 ms; externalize to applied: mean 82 ms; total 1363 ms 
+
+######## 02:15 rep 2, flooding fast, k=3, ledgers of 270, client one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 2 skipped low fee: 0
+RUN rep=2 flood=fast k=3 client=one: ledgers 875, txs per ledger 111, ledger interval 274 ms, throughput 404 tx/s host cpu busy 36% 
+LAT rep=2 flood=fast k=3 client=one: ledgers 872, 111 tx per ledger, a ledger every 324 ms, 321 tx/s latency to applied, ms: min 555, mean 1389, max 5684; p10 904, p50 1329, p90 1960, p99 2613 (n 96648)   of the mean: receipt to externalize 1332 ms, externalize to applied 51 ms 
+BUD rep=2 flood=fast k=3 client=one: gap between two slots opened 274 ms; transactions 96648 receipt to the opening of its slot: mean 602  p10 201  p50 557  p90 1047 ms opening to externalize: mean 731 ms; externalize to applied: mean 57 ms; total 1389 ms 
+
+######## 02:21 rep 2, flooding fast, k=3, ledgers of 270, client k
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 163 skipped low fee: 0
+RUN rep=2 flood=fast k=3 client=k: ledgers 900, txs per ledger 107, ledger interval 266 ms, throughput 403 tx/s host cpu busy 37% 
+LAT rep=2 flood=fast k=3 client=k: ledgers 885, 109 tx per ledger, a ledger every 318 ms, 320 tx/s latency to applied, ms: min 556, mean 1426, max 5781; p10 863, p50 1234, p90 2186, p99 3998 (n 96277)   of the mean: receipt to externalize 1357 ms, externalize to applied 51 ms 
+BUD rep=2 flood=fast k=3 client=k: gap between two slots opened 270 ms; transactions 96277 receipt to the opening of its slot: mean 653  p10 191  p50 471  p90 1189 ms opening to externalize: mean 704 ms; externalize to applied: mean 69 ms; total 1426 ms 
+
+######## 02:27 rep 2, flooding fast, k=4, ledgers of 210, client one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 6
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast k=4 client=one: ledgers 1139, txs per ledger 85, ledger interval 210 ms, throughput 405 tx/s host cpu busy 41% 
+LAT rep=2 flood=fast k=4 client=one: ledgers 1138, 85 tx per ledger, a ledger every 258 ms, 316 tx/s latency to applied, ms: min 535, mean 1403, max 4485; p10 897, p50 1334, p90 1999, p99 2886 (n 96779)   of the mean: receipt to externalize 1355 ms, externalize to applied 43 ms 
+BUD rep=2 flood=fast k=4 client=one: gap between two slots opened 210 ms; transactions 96779 receipt to the opening of its slot: mean 628  p10 209  p50 576  p90 1104 ms opening to externalize: mean 727 ms; externalize to applied: mean 48 ms; total 1403 ms 
+
+######## 02:34 rep 2, flooding fast, k=4, ledgers of 210, client k
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 4
+rejected: 373 skipped low fee: 2
+RUN rep=2 flood=fast k=4 client=k: ledgers 1123, txs per ledger 85, ledger interval 213 ms, throughput 399 tx/s host cpu busy 41% 
+LAT rep=2 flood=fast k=4 client=k: ledgers 1098, 87 tx per ledger, a ledger every 260 ms, 313 tx/s latency to applied, ms: min 570, mean 1502, max 8930; p10 869, p50 1346, p90 2330, p99 4051 (n 95565)   of the mean: receipt to externalize 1443 ms, externalize to applied 47 ms 
+BUD rep=2 flood=fast k=4 client=k: gap between two slots opened 218 ms; transactions 95565 receipt to the opening of its slot: mean 703  p10 202  p50 495  p90 1348 ms opening to externalize: mean 740 ms; externalize to applied: mean 60 ms; total 1502 ms 
+
+######## 02:40 rep 3, flooding normal, k=1, ledgers of 1000, client one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=normal k=1 client=one: ledgers 286, txs per ledger 338, ledger interval 834 ms, throughput 406 tx/s host cpu busy 18% 
+LAT rep=3 flood=normal k=1 client=one: ledgers 286, 337 tx per ledger, a ledger every 897 ms, 356 tx/s latency to applied, ms: min 650, mean 1558, max 5592; p10 1062, p50 1498, p90 2109, p99 2932 (n 96484)   of the mean: receipt to externalize 1421 ms, externalize to applied 121 ms 
+BUD rep=3 flood=normal k=1 client=one: gap between two slots opened 833 ms; transactions 92278 receipt to the opening of its slot: mean 710  p10 308  p50 682  p90 1137 ms opening to externalize: mean 711 ms; externalize to applied: mean 137 ms; total 1557 ms 
+
+######## 02:45 rep 3, flooding normal, k=2, ledgers of 400, client one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=normal k=2 client=one: ledgers 612, txs per ledger 158, ledger interval 390 ms, throughput 406 tx/s host cpu busy 26% 
+LAT rep=3 flood=normal k=2 client=one: ledgers 611, 158 tx per ledger, a ledger every 455 ms, 328 tx/s latency to applied, ms: min 591, mean 1475, max 4622; p10 977, p50 1405, p90 2059, p99 3020 (n 96661)   of the mean: receipt to externalize 1399 ms, externalize to applied 65 ms 
+BUD rep=3 flood=normal k=2 client=one: gap between two slots opened 390 ms; transactions 96661 receipt to the opening of its slot: mean 710  p10 300  p50 660  p90 1166 ms opening to externalize: mean 689 ms; externalize to applied: mean 76 ms; total 1475 ms 
+
+######## 02:51 rep 3, flooding normal, k=2, ledgers of 400, client k
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 141 skipped low fee: 0
+RUN rep=3 flood=normal k=2 client=k: ledgers 612, txs per ledger 158, ledger interval 391 ms, throughput 405 tx/s host cpu busy 26% 
+LAT rep=3 flood=normal k=2 client=k: ledgers 601, 161 tx per ledger, a ledger every 459 ms, 327 tx/s latency to applied, ms: min 567, mean 1540, max 5501; p10 1001, p50 1446, p90 2162, p99 3214 (n 96723)   of the mean: receipt to externalize 1451 ms, externalize to applied 65 ms 
+BUD rep=3 flood=normal k=2 client=k: gap between two slots opened 397 ms; transactions 96723 receipt to the opening of its slot: mean 732  p10 327  p50 613  p90 1239 ms opening to externalize: mean 718 ms; externalize to applied: mean 89 ms; total 1540 ms 
+
+######## 02:57 rep 3, flooding normal, k=3, ledgers of 270, client one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=normal k=3 client=one: ledgers 921, txs per ledger 105, ledger interval 260 ms, throughput 405 tx/s host cpu busy 33% 
+LAT rep=3 flood=normal k=3 client=one: ledgers 915, 106 tx per ledger, a ledger every 312 ms, 322 tx/s latency to applied, ms: min 573, mean 1442, max 4172; p10 950, p50 1387, p90 2010, p99 2734 (n 96840)   of the mean: receipt to externalize 1387 ms, externalize to applied 47 ms 
+BUD rep=3 flood=normal k=3 client=one: gap between two slots opened 261 ms; transactions 96840 receipt to the opening of its slot: mean 698  p10 288  p50 658  p90 1157 ms opening to externalize: mean 689 ms; externalize to applied: mean 55 ms; total 1442 ms 
+
+######## 03:03 rep 3, flooding normal, k=3, ledgers of 270, client k
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 3
+rejected: 10 skipped low fee: 0
+RUN rep=3 flood=normal k=3 client=k: ledgers 944, txs per ledger 102, ledger interval 253 ms, throughput 405 tx/s host cpu busy 33% 
+LAT rep=3 flood=normal k=3 client=k: ledgers 916, 105 tx per ledger, a ledger every 306 ms, 322 tx/s latency to applied, ms: min 565, mean 1471, max 5422; p10 956, p50 1358, p90 2108, p99 3196 (n 96582)   of the mean: receipt to externalize 1409 ms, externalize to applied 47 ms 
+BUD rep=3 flood=normal k=3 client=k: gap between two slots opened 260 ms; transactions 96582 receipt to the opening of its slot: mean 737  p10 328  p50 580  p90 1256 ms opening to externalize: mean 672 ms; externalize to applied: mean 62 ms; total 1471 ms 
+
+######## 03:09 rep 3, flooding normal, k=4, ledgers of 210, client one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=normal k=4 client=one: ledgers 1175, txs per ledger 82, ledger interval 204 ms, throughput 404 tx/s host cpu busy 37% 
+LAT rep=3 flood=normal k=4 client=one: ledgers 1166, 83 tx per ledger, a ledger every 247 ms, 317 tx/s latency to applied, ms: min 570, mean 1494, max 4663; p10 966, p50 1418, p90 2086, p99 3234 (n 96601)   of the mean: receipt to externalize 1447 ms, externalize to applied 41 ms 
+BUD rep=3 flood=normal k=4 client=one: gap between two slots opened 205 ms; transactions 96601 receipt to the opening of its slot: mean 738  p10 302  p50 681  p90 1224 ms opening to externalize: mean 708 ms; externalize to applied: mean 47 ms; total 1494 ms 
+
+######## 03:16 rep 3, flooding normal, k=4, ledgers of 210, client k
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 6
+rejected: 101 skipped low fee: 0
+RUN rep=3 flood=normal k=4 client=k: ledgers 1181, txs per ledger 82, ledger interval 202 ms, throughput 404 tx/s host cpu busy 38% 
+LAT rep=3 flood=normal k=4 client=k: ledgers 1128, 85 tx per ledger, a ledger every 247 ms, 315 tx/s latency to applied, ms: min 569, mean 1567, max 5712; p10 957, p50 1467, p90 2338, p99 3829 (n 96389)   of the mean: receipt to externalize 1508 ms, externalize to applied 45 ms 
+BUD rep=3 flood=normal k=4 client=k: gap between two slots opened 211 ms; transactions 96389 receipt to the opening of its slot: mean 812  p10 302  p50 640  p90 1473 ms opening to externalize: mean 696 ms; externalize to applied: mean 59 ms; total 1567 ms 
+
+######## 03:22 rep 3, flooding fast, k=1, ledgers of 1000, client one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=fast k=1 client=one: ledgers 273, txs per ledger 354, ledger interval 873 ms, throughput 406 tx/s host cpu busy 23% 
+LAT rep=3 flood=fast k=1 client=one: ledgers 274, 353 tx per ledger, a ledger every 929 ms, 358 tx/s latency to applied, ms: min 668, mean 1468, max 2969; p10 1014, p50 1432, p90 1972, p99 2535 (n 96843)   of the mean: receipt to externalize 1332 ms, externalize to applied 127 ms 
+BUD rep=3 flood=fast k=1 client=one: gap between two slots opened 871 ms; transactions 92774 receipt to the opening of its slot: mean 596  p10 211  p50 578  p90 994 ms opening to externalize: mean 735 ms; externalize to applied: mean 136 ms; total 1467 ms 
+
+######## 03:27 rep 3, flooding fast, k=2, ledgers of 400, client one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=fast k=2 client=one: ledgers 589, txs per ledger 164, ledger interval 404 ms, throughput 406 tx/s host cpu busy 30% 
+LAT rep=3 flood=fast k=2 client=one: ledgers 589, 164 tx per ledger, a ledger every 468 ms, 327 tx/s latency to applied, ms: min 593, mean 1385, max 4588; p10 911, p50 1322, p90 1943, p99 2632 (n 96677)   of the mean: receipt to externalize 1311 ms, externalize to applied 66 ms 
+BUD rep=3 flood=fast k=2 client=one: gap between two slots opened 403 ms; transactions 96677 receipt to the opening of its slot: mean 587  p10 200  p50 548  p90 1006 ms opening to externalize: mean 725 ms; externalize to applied: mean 74 ms; total 1385 ms 
+
+######## 03:33 rep 3, flooding fast, k=2, ledgers of 400, client k
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=fast k=2 client=k: ledgers 628, txs per ledger 154, ledger interval 380 ms, throughput 405 tx/s host cpu busy 31% 
+LAT rep=3 flood=fast k=2 client=k: ledgers 623, 155 tx per ledger, a ledger every 444 ms, 327 tx/s latency to applied, ms: min 599, mean 1347, max 4878; p10 878, p50 1206, p90 1962, p99 2967 (n 96557)   of the mean: receipt to externalize 1269 ms, externalize to applied 61 ms 
+BUD rep=3 flood=fast k=2 client=k: gap between two slots opened 382 ms; transactions 96557 receipt to the opening of its slot: mean 572  p10 209  p50 453  p90 1079 ms opening to externalize: mean 697 ms; externalize to applied: mean 79 ms; total 1347 ms 
+
+######## 03:39 rep 3, flooding fast, k=3, ledgers of 270, client one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 6
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=fast k=3 client=one: ledgers 886, txs per ledger 109, ledger interval 270 ms, throughput 405 tx/s host cpu busy 36% 
+LAT rep=3 flood=fast k=3 client=one: ledgers 884, 109 tx per ledger, a ledger every 322 ms, 322 tx/s latency to applied, ms: min 585, mean 1360, max 3186; p10 904, p50 1316, p90 1887, p99 2411 (n 96717)   of the mean: receipt to externalize 1306 ms, externalize to applied 50 ms 
+BUD rep=3 flood=fast k=3 client=one: gap between two slots opened 270 ms; transactions 96717 receipt to the opening of its slot: mean 590  p10 204  p50 560  p90 1015 ms opening to externalize: mean 715 ms; externalize to applied: mean 55 ms; total 1360 ms 
+
+######## 03:45 rep 3, flooding fast, k=3, ledgers of 270, client k
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 71 skipped low fee: 0
+RUN rep=3 flood=fast k=3 client=k: ledgers 905, txs per ledger 107, ledger interval 264 ms, throughput 404 tx/s host cpu busy 37% 
+LAT rep=3 flood=fast k=3 client=k: ledgers 887, 109 tx per ledger, a ledger every 316 ms, 321 tx/s latency to applied, ms: min 575, mean 1408, max 5552; p10 864, p50 1255, p90 2083, p99 3717 (n 96616)   of the mean: receipt to externalize 1339 ms, externalize to applied 52 ms 
+BUD rep=3 flood=fast k=3 client=k: gap between two slots opened 270 ms; transactions 96616 receipt to the opening of its slot: mean 635  p10 190  p50 471  p90 1176 ms opening to externalize: mean 704 ms; externalize to applied: mean 69 ms; total 1408 ms 
+
+######## 03:52 rep 3, flooding fast, k=4, ledgers of 210, client one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 4
+rejected: 0 skipped low fee: 0
+RUN rep=3 flood=fast k=4 client=one: ledgers 1136, txs per ledger 85, ledger interval 211 ms, throughput 403 tx/s host cpu busy 41% 
+LAT rep=3 flood=fast k=4 client=one: ledgers 1132, 85 tx per ledger, a ledger every 256 ms, 315 tx/s latency to applied, ms: min 556, mean 1408, max 6815; p10 905, p50 1339, p90 1990, p99 2926 (n 96273)   of the mean: receipt to externalize 1360 ms, externalize to applied 43 ms 
+BUD rep=3 flood=fast k=4 client=one: gap between two slots opened 211 ms; transactions 96257 receipt to the opening of its slot: mean 620  p10 208  p50 571  p90 1074 ms opening to externalize: mean 740 ms; externalize to applied: mean 47 ms; total 1408 ms 
+
+######## 03:58 rep 3, flooding fast, k=4, ledgers of 210, client k
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 8
+rejected: 303 skipped low fee: 0
+RUN rep=3 flood=fast k=4 client=k: ledgers 1183, txs per ledger 81, ledger interval 202 ms, throughput 400 tx/s host cpu busy 42% 
+LAT rep=3 flood=fast k=4 client=k: ledgers 1156, 83 tx per ledger, a ledger every 245 ms, 313 tx/s latency to applied, ms: min 568, mean 1386, max 6314; p10 845, p50 1185, p90 2071, p99 3924 (n 95786)   of the mean: receipt to externalize 1331 ms, externalize to applied 43 ms 
+BUD rep=3 flood=fast k=4 client=k: gap between two slots opened 207 ms; transactions 95786 receipt to the opening of its slot: mean 628  p10 193  p50 430  p90 1184 ms opening to externalize: mean 703 ms; externalize to applied: mean 54 ms; total 1386 ms 
+
+######## 04:04 REPS-DONE

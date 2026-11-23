@@ -37,7 +37,7 @@ M = [random.lognormvariate(-_s * _s / 2, _s) for _ in range(N)]
 CLASS_WAIT = "--no-class-wait" not in sys.argv
 
 
-def sim(mode, k, n, e, G):
+def sim(mode, k, n, e, G, parts=False):
     kk = 1 if mode == "overlap" else k
     cbase = (A + B * n) * (1 + G * (kk - 1))
     cs, ce, ae, ast = [0.0] * N, [0.0] * N, [0.0] * N, [0.0] * N
@@ -56,6 +56,10 @@ def sim(mode, k, n, e, G):
     busy = sum(n * e * M[i] for i in range(w + 1, N)) / T
     path = sum(ae[i] - cs[i] for i in range(w, N)) / (N - w)
     lat = (kk if CLASS_WAIT else 1) * I / 2 + path
+    if parts:
+        # mean consensus, queue and apply of a ledger, for the client charts
+        mean = lambda a, b: sum(a[i] - b[i] for i in range(w, N)) / (N - w)
+        return thr, I, lat, busy, mean(ce, cs), mean(ast, ce), mean(ae, ast)
     return thr, I, lat, busy
 
 

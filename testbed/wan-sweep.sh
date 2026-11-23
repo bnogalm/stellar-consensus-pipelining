@@ -58,8 +58,17 @@ for scale in $4; do
         # LOADGEN_NODES spreads the load over several nodes, each with its own share of accounts
         gen=(${LOADGEN_NODES:-1})
         accounts=$((${LOADGEN_ACCOUNTS:-20000} / ${#gen[@]})); share=$((rate / ${#gen[@]}))
+        # LOADGEN_FIRST_RATE gives the first node of LOADGEN_NODES its own rate (and
+        # LOADGEN_FIRST_EXTRA more parameters); the other nodes share the rest of the rate.
+        if [ -n "${LOADGEN_FIRST_RATE:-}" ] && [ "${#gen[@]}" -gt 1 ]; then
+            share=$(((rate - LOADGEN_FIRST_RATE) / (${#gen[@]} - 1)))
+        fi
         for i in "${!gen[@]}"; do
-            $NODES http "${gen[$i]}" "generateload?mode=${LOADGEN_MODE:-pay}&accounts=$accounts&offset=$((i * accounts))&txs=$((share * secs))&txrate=$share${LOADGEN_EXTRA:-}" > /dev/null
+            r=$share; x=""
+            if [ "$i" = 0 ] && [ -n "${LOADGEN_FIRST_RATE:-}" ]; then
+                r=$LOADGEN_FIRST_RATE; x="${LOADGEN_FIRST_EXTRA:-}"
+            fi
+            $NODES http "${gen[$i]}" "generateload?mode=${LOADGEN_MODE:-pay}&accounts=$accounts&offset=$((i * accounts))&txs=$((r * secs))&txrate=$r${LOADGEN_EXTRA:-}$x" > /dev/null
         done
         if [ -n "${MIDWAY_CMD:-}" ]; then
             sleep $((secs / 2))

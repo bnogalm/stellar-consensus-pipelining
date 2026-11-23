@@ -30,7 +30,7 @@ In every point there was no crash and no transaction in a ledger of the wrong cl
 
 Where does throughput flatten when apply costs what it does on mainnet?
 
-![tps-pay](figures/throughput-current-apply.png)
+![Throughput, payments](figures/throughput-current-apply.png)
 
 *B, run 1: payments with the apply cost of mainnet, transactions per second against k.*
 
@@ -51,11 +51,11 @@ This repeats the k sweep of [testbed-results.md](testbed-results.md), which ran 
 
 How much does each k add when apply is cheap, and what stops the gain?
 
-![throughput](figures/throughput-current-throughput.png)
+![Throughput relative to no pipelining (k = 1)](figures/throughput-current-throughput.png)
 
 *A: throughput relative to k = 1.*
 
-![interval](figures/throughput-current-interval.png)
+![Mean ledger interval](figures/throughput-current-interval.png)
 
 *A: mean time between ledgers against k.*
 

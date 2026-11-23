@@ -39,11 +39,11 @@ Two later reports complete it:
 
 ## What it gives
 
-![k-gain](figures/testbed-gain.png)
+![Throughput, mainnet apply cost](figures/testbed-gain.png)
 
 *Throughput against k. Seven validators with 300 transactions: three runs per point. The dashed line is the ceiling set by sequential apply at 1.25 ms per transaction: every line approaches it as k grows.*
 
-![k-latency](figures/testbed-latency.png)
+![Median transaction latency, mainnet apply cost](figures/testbed-latency.png)
 
 *Median latency, from receipt to externalize.*
 
@@ -86,7 +86,7 @@ class.
 
 ## Target close time
 
-![grid-gain](figures/testbed-grid-gain.png)
+![Throughput relative to k = 1 by target close time, 300 tx](figures/testbed-grid-gain.png)
 
 *Gain against k = 1 at the same target, 300 transactions, seven validators, one run per point. At 500 ms the target becomes the limit from k = 3.*
 

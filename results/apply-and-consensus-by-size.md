@@ -33,7 +33,7 @@ with stellar-core's real apply, k = 1, 240 s of load per size. Target close time
 | Apply | 75 ms | 263 ms | 513 ms | 880 ms | 0.09 ms · n |
 | Tx set | 0.2 MB | 0.6 MB | 1.2 MB | 2.0 MB | 200 bytes · n |
 
-![size](figures/size-apply.png)
+![Consensus and apply against ledger size: the testbed, payments, k = 1](figures/size-apply.png)
 
 *Consensus grows by 0.21 ms per transaction and apply by 0.09 ms. About half of the growth of consensus comes from the ledgers where more than one tx set is nominated (the dotted line leaves them out).*
 

@@ -151,15 +151,15 @@ The overlap's other way to more throughput is larger ledgers. The three charts s
 values of e, with B = 0.24 ms and G = 8 %. Each line is one arrangement, moving right means
 bigger ledgers, and the dashed line is apply's ceiling.
 
-![size-slow](figures/pays-size-slow.png)
+![Throughput against ledger size, apply 1.25 ms per transaction](figures/pays-size-slow.png)
 
 *Slow apply (1.25 ms per transaction, the mainnet replay): from about 1,000 transactions per ledger every arrangement is at the ceiling, and pipelining only adds latency.*
 
-![size-fast](figures/pays-size-fast.png)
+![Throughput against ledger size, apply 0.35 ms per transaction](figures/pays-size-fast.png)
 
 *Fast apply (0.35 ms per transaction, the mainnet watcher): at the same ledger size pipelining is well above the overlap. The overlap closes the gap only with ledgers several times larger, and is still at 92 % of the ceiling at 32,000.*
 
-![size-faster](figures/pays-size-faster.png)
+![Throughput against ledger size, apply 0.15 ms per transaction](figures/pays-size-faster.png)
 
 *Faster apply (0.15 ms per transaction, cheaper than consensus per transaction): the overlap only reaches 57 % of the ceiling at 32,000 transactions per ledger, because consensus grows faster with the ledger than apply does. Pipelining keeps climbing.*
 
@@ -195,7 +195,7 @@ measured on mainnet as they are, and apply varying ±30 %
 ([tools/sim/apply-busy-limit.py](../tools/sim/apply-busy-limit.py)). The x axis is E over the
 mean C: growing the ledger moves right.
 
-![busy](figures/pays-busy.png)
+![Time the apply thread is busy, with mainnet's consensus times](figures/pays-busy.png)
 
 *The dotted line is the overlap if every consensus took exactly its mean. The gap between it and the solid overlap line is what variation costs: largest at 1, where the overlap would ideally sit. k = 3 and 4 stay close to 100 % from about 0.75.*
 
@@ -236,10 +236,14 @@ Against the overlap, which shortens the wait for every account to half of max(C,
   every class: 1.4 s against 1.6 s at about 1,100 tx/s, and 1.7 s against 2.4 s at about
   1,700 tx/s. With one account it is 0.1 to 0.2 s higher up to about 1,100 tx/s, about the same
   at 1,700 tx/s, and lower above, where the overlap needs ledgers several times larger.
+- **Measured against today's protocol back to back**
+  ([latency-by-depth.md](latency-by-depth.md)): with one account as the simulation says; with an
+  account in every class 0.3 to 0.4 s less, where the simulation says 0.5 s. The simulation lets
+  that client enter the next ledger always.
 
 Throughput against latency until applied, for each:
 
-![latency](figures/pays-latency.png)
+![Throughput against latency, apply 0.35 ms per transaction](figures/pays-latency.png)
 
 *Each point is one ledger size, growing to the right. For a single account, the overlap is ahead below about 2 s of latency and k = 4 above it; with one account per class (dotted), k = 4 is ahead at every latency. The network's capacity is the same for both k = 4 lines.*
 

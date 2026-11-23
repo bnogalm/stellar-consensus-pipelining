@@ -1,11 +1,12 @@
 {
  "sequential": {
   "type": "gantt",
-  "title": "One model after another: a cycle every 100 ms (10 Hz)",
+  "title": "One model after another: a cycle every 100 ms (10 Hz); an action is seen 150 ms later",
   "rows": [
    "cycle 1",
    "cycle 2",
-   "cycle 3"
+   "cycle 3",
+   "user action"
   ],
   "series": [
    {
@@ -14,17 +15,20 @@
     "base": [
      0,
      100,
-     200
+     200,
+     null
     ],
     "x": [
      5,
      5,
-     5
+     5,
+     null
     ],
     "hover": [
      "cycle 1, cab controls: 5 ms",
      "cycle 2, cab controls: 5 ms",
-     "cycle 3, cab controls: 5 ms"
+     "cycle 3, cab controls: 5 ms",
+     ""
     ]
    },
    {
@@ -33,17 +37,20 @@
     "base": [
      5,
      105,
-     205
+     205,
+     null
     ],
     "x": [
      20,
      20,
-     20
+     20,
+     null
     ],
     "hover": [
      "cycle 1, train physics, per car: 20 ms",
      "cycle 2, train physics, per car: 20 ms",
-     "cycle 3, train physics, per car: 20 ms"
+     "cycle 3, train physics, per car: 20 ms",
+     ""
     ]
    },
    {
@@ -52,17 +59,20 @@
     "base": [
      25,
      125,
-     225
+     225,
+     null
     ],
     "x": [
      15,
      15,
-     15
+     15,
+     null
     ],
     "hover": [
      "cycle 1, electrics, catenary: 15 ms",
      "cycle 2, electrics, catenary: 15 ms",
-     "cycle 3, electrics, catenary: 15 ms"
+     "cycle 3, electrics, catenary: 15 ms",
+     ""
     ]
    },
    {
@@ -71,17 +81,20 @@
     "base": [
      40,
      140,
-     240
+     240,
+     null
     ],
     "x": [
      10,
      10,
-     10
+     10,
+     null
     ],
     "hover": [
      "cycle 1, hydraulics, brakes: 10 ms",
      "cycle 2, hydraulics, brakes: 10 ms",
-     "cycle 3, hydraulics, brakes: 10 ms"
+     "cycle 3, hydraulics, brakes: 10 ms",
+     ""
     ]
    },
    {
@@ -90,17 +103,20 @@
     "base": [
      50,
      150,
-     250
+     250,
+     null
     ],
     "x": [
      25,
      25,
-     25
+     25,
+     null
     ],
     "hover": [
      "cycle 1, ERTMS, DMI, DDU: 25 ms",
      "cycle 2, ERTMS, DMI, DDU: 25 ms",
-     "cycle 3, ERTMS, DMI, DDU: 25 ms"
+     "cycle 3, ERTMS, DMI, DDU: 25 ms",
+     ""
     ]
    },
    {
@@ -109,17 +125,66 @@
     "base": [
      75,
      175,
-     275
+     275,
+     null
     ],
     "x": [
      25,
      25,
-     25
+     25,
+     null
     ],
     "hover": [
      "cycle 1, interlocking: 25 ms",
      "cycle 2, interlocking: 25 ms",
-     "cycle 3, interlocking: 25 ms"
+     "cycle 3, interlocking: 25 ms",
+     ""
+    ]
+   },
+   {
+    "name": "waits for the next cycle",
+    "color": "--muted",
+    "legend": false,
+    "base": [
+     null,
+     null,
+     null,
+     50.0
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     50.0
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "user action: waits 50 ms for the next cycle"
+    ]
+   },
+   {
+    "name": "until the user sees the result",
+    "color": "--ink-2",
+    "legend": false,
+    "base": [
+     null,
+     null,
+     null,
+     100
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     100
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "user action: the cycle takes 100 ms; seen 150 ms after it"
     ]
    }
   ],
@@ -132,7 +197,7 @@
  },
  "pipelined": {
   "type": "gantt",
-  "title": "Pipelined: a cycle starts every 10 ms (100 Hz) and takes 90 ms",
+  "title": "Pipelined: a cycle starts every 10 ms (100 Hz) and takes 90 ms; an action is seen 95 ms later",
   "rows": [
    "cycle 1",
    "cycle 2",
@@ -153,7 +218,8 @@
    "cycle 17",
    "cycle 18",
    "cycle 19",
-   "cycle 20"
+   "cycle 20",
+   "user action"
   ],
   "series": [
    {
@@ -179,7 +245,8 @@
      160,
      170,
      180,
-     190
+     190,
+     null
     ],
     "x": [
      5,
@@ -201,7 +268,8 @@
      5,
      5,
      5,
-     5
+     5,
+     null
     ],
     "hover": [
      "cycle 1, cab controls: 5 ms",
@@ -223,7 +291,8 @@
      "cycle 17, cab controls: 5 ms",
      "cycle 18, cab controls: 5 ms",
      "cycle 19, cab controls: 5 ms",
-     "cycle 20, cab controls: 5 ms"
+     "cycle 20, cab controls: 5 ms",
+     ""
     ]
    },
    {
@@ -249,7 +318,8 @@
      165,
      175,
      185,
-     195
+     195,
+     null
     ],
     "x": [
      20,
@@ -271,7 +341,8 @@
      20,
      20,
      20,
-     20
+     20,
+     null
     ],
     "hover": [
      "cycle 1, train physics, per car: 20 ms",
@@ -293,7 +364,8 @@
      "cycle 17, train physics, per car: 20 ms",
      "cycle 18, train physics, per car: 20 ms",
      "cycle 19, train physics, per car: 20 ms",
-     "cycle 20, train physics, per car: 20 ms"
+     "cycle 20, train physics, per car: 20 ms",
+     ""
     ]
    },
    {
@@ -319,7 +391,8 @@
      185,
      195,
      205,
-     215
+     215,
+     null
     ],
     "x": [
      15,
@@ -341,7 +414,8 @@
      15,
      15,
      15,
-     15
+     15,
+     null
     ],
     "hover": [
      "cycle 1, electrics, catenary: 15 ms",
@@ -363,7 +437,8 @@
      "cycle 17, electrics, catenary: 15 ms",
      "cycle 18, electrics, catenary: 15 ms",
      "cycle 19, electrics, catenary: 15 ms",
-     "cycle 20, electrics, catenary: 15 ms"
+     "cycle 20, electrics, catenary: 15 ms",
+     ""
     ],
     "lane": 0
    },
@@ -390,7 +465,8 @@
      185,
      195,
      205,
-     215
+     215,
+     null
     ],
     "x": [
      10,
@@ -412,7 +488,8 @@
      10,
      10,
      10,
-     10
+     10,
+     null
     ],
     "hover": [
      "cycle 1, hydraulics, brakes: 10 ms",
@@ -434,7 +511,8 @@
      "cycle 17, hydraulics, brakes: 10 ms",
      "cycle 18, hydraulics, brakes: 10 ms",
      "cycle 19, hydraulics, brakes: 10 ms",
-     "cycle 20, hydraulics, brakes: 10 ms"
+     "cycle 20, hydraulics, brakes: 10 ms",
+     ""
     ],
     "lane": 1
    },
@@ -461,7 +539,8 @@
      200,
      210,
      220,
-     230
+     230,
+     null
     ],
     "x": [
      25,
@@ -483,7 +562,8 @@
      25,
      25,
      25,
-     25
+     25,
+     null
     ],
     "hover": [
      "cycle 1, ERTMS, DMI, DDU: 25 ms",
@@ -505,7 +585,8 @@
      "cycle 17, ERTMS, DMI, DDU: 25 ms",
      "cycle 18, ERTMS, DMI, DDU: 25 ms",
      "cycle 19, ERTMS, DMI, DDU: 25 ms",
-     "cycle 20, ERTMS, DMI, DDU: 25 ms"
+     "cycle 20, ERTMS, DMI, DDU: 25 ms",
+     ""
     ]
    },
    {
@@ -531,7 +612,8 @@
      225,
      235,
      245,
-     255
+     255,
+     null
     ],
     "x": [
      25,
@@ -553,7 +635,8 @@
      25,
      25,
      25,
-     25
+     25,
+     null
     ],
     "hover": [
      "cycle 1, interlocking: 25 ms",
@@ -575,7 +658,156 @@
      "cycle 17, interlocking: 25 ms",
      "cycle 18, interlocking: 25 ms",
      "cycle 19, interlocking: 25 ms",
-     "cycle 20, interlocking: 25 ms"
+     "cycle 20, interlocking: 25 ms",
+     ""
+    ]
+   },
+   {
+    "name": "waits for the next cycle",
+    "color": "--muted",
+    "legend": false,
+    "base": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     5.0
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     5.0
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "user action: waits 5 ms for the next cycle"
+    ]
+   },
+   {
+    "name": "until the user sees the result",
+    "color": "--ink-2",
+    "legend": false,
+    "base": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     10
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     90
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "user action: the cycle takes 90 ms; seen 95 ms after it"
     ]
    }
   ],

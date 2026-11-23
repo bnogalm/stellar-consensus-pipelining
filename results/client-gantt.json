@@ -1,0 +1,608 @@
+{
+ "overlap-1000": {
+  "type": "gantt",
+  "title": "Overlap, ledgers of 1,000: a ledger every 862 ms, 1,160 tx/s;<br>a payment is applied 1.6 s after it arrives",
+  "rows": [
+   "N",
+   "N+1",
+   "N+2",
+   "N+3",
+   "payment"
+  ],
+  "series": [
+   {
+    "name": "waits for a ledger it can enter",
+    "color": "--s4",
+    "base": [
+     null,
+     null,
+     null,
+     null,
+     431
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     null,
+     431
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "",
+     "payment: waits 431 ms for ledger N+1, applied 1.6 s after it arrives"
+    ]
+   },
+   {
+    "name": "consensus",
+    "color": "--s1",
+    "base": [
+     0,
+     862,
+     1724,
+     2585,
+     862
+    ],
+    "x": [
+     860,
+     860,
+     860,
+     860,
+     860
+    ],
+    "hover": [
+     "N: consensus 860 ms",
+     "N+1: consensus 860 ms",
+     "N+2: consensus 860 ms",
+     "N+3: consensus 860 ms",
+     "payment: consensus 860 ms"
+    ]
+   },
+   {
+    "name": "queue",
+    "color": "--s3",
+    "base": [
+     860,
+     1722,
+     2583,
+     3445,
+     1722
+    ],
+    "x": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "hover": [
+     "N: queue 2 ms",
+     "N+1: queue 2 ms",
+     "N+2: queue 2 ms",
+     "N+3: queue 2 ms",
+     "payment: queue 2 ms"
+    ]
+   },
+   {
+    "name": "apply",
+    "color": "--s2",
+    "base": [
+     862,
+     1724,
+     2585,
+     3447,
+     1724
+    ],
+    "x": [
+     350,
+     350,
+     350,
+     350,
+     350
+    ],
+    "hover": [
+     "N: apply 350 ms",
+     "N+1: apply 350 ms",
+     "N+2: apply 350 ms",
+     "N+3: apply 350 ms",
+     "payment: apply 350 ms"
+    ]
+   }
+  ],
+  "xTitle": "ms",
+  "yTitle": "",
+  "xRange": [
+   0,
+   5600
+  ]
+ },
+ "k3-same": {
+  "type": "gantt",
+  "title": "k = 3, ledgers of 475: a ledger every 408 ms, 1,163 tx/s;<br>a payment is applied 1.8 s after it arrives with one payer account, 1.4 s with one in every class",
+  "rows": [
+   "N, class 0",
+   "N+1, class 1",
+   "N+2, class 2",
+   "N+3, class 0",
+   "N+4, class 1",
+   "N+5, class 2",
+   "N+6, class 0",
+   "N+7, class 1",
+   "N+8, class 2",
+   "one account",
+   "every class"
+  ],
+  "series": [
+   {
+    "name": "waits for a ledger it can enter",
+    "color": "--s4",
+    "base": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     204,
+     204
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     613,
+     204
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "one account: waits 613 ms for ledger N+2, applied 1.8 s after it arrives",
+     "every class: waits 204 ms for ledger N+1, applied 1.4 s after it arrives"
+    ]
+   },
+   {
+    "name": "consensus",
+    "color": "--s1",
+    "base": [
+     0,
+     408,
+     817,
+     1225,
+     1634,
+     2042,
+     2450,
+     2859,
+     3267,
+     817,
+     408
+    ],
+    "x": [
+     851,
+     851,
+     851,
+     851,
+     851,
+     851,
+     851,
+     851,
+     851,
+     851,
+     851
+    ],
+    "hover": [
+     "N, class 0: consensus 851 ms",
+     "N+1, class 1: consensus 851 ms",
+     "N+2, class 2: consensus 851 ms",
+     "N+3, class 0: consensus 851 ms",
+     "N+4, class 1: consensus 851 ms",
+     "N+5, class 2: consensus 851 ms",
+     "N+6, class 0: consensus 851 ms",
+     "N+7, class 1: consensus 851 ms",
+     "N+8, class 2: consensus 851 ms",
+     "one account: consensus 851 ms",
+     "every class: consensus 851 ms"
+    ]
+   },
+   {
+    "name": "queue",
+    "color": "--s3",
+    "base": [
+     851,
+     1260,
+     1668,
+     2076,
+     2485,
+     2893,
+     3302,
+     3710,
+     4118,
+     1668,
+     1260
+    ],
+    "x": [
+     208,
+     208,
+     208,
+     208,
+     208,
+     208,
+     208,
+     208,
+     208,
+     208,
+     208
+    ],
+    "hover": [
+     "N, class 0: queue 208 ms",
+     "N+1, class 1: queue 208 ms",
+     "N+2, class 2: queue 208 ms",
+     "N+3, class 0: queue 208 ms",
+     "N+4, class 1: queue 208 ms",
+     "N+5, class 2: queue 208 ms",
+     "N+6, class 0: queue 208 ms",
+     "N+7, class 1: queue 208 ms",
+     "N+8, class 2: queue 208 ms",
+     "one account: queue 208 ms",
+     "every class: queue 208 ms"
+    ]
+   },
+   {
+    "name": "apply",
+    "color": "--s2",
+    "base": [
+     1059,
+     1467,
+     1876,
+     2284,
+     2693,
+     3101,
+     3509,
+     3918,
+     4326,
+     1876,
+     1467
+    ],
+    "x": [
+     166,
+     166,
+     166,
+     166,
+     166,
+     166,
+     166,
+     166,
+     166,
+     166,
+     166
+    ],
+    "hover": [
+     "N, class 0: apply 166 ms",
+     "N+1, class 1: apply 166 ms",
+     "N+2, class 2: apply 166 ms",
+     "N+3, class 0: apply 166 ms",
+     "N+4, class 1: apply 166 ms",
+     "N+5, class 2: apply 166 ms",
+     "N+6, class 0: apply 166 ms",
+     "N+7, class 1: apply 166 ms",
+     "N+8, class 2: apply 166 ms",
+     "one account: apply 166 ms",
+     "every class: apply 166 ms"
+    ]
+   }
+  ],
+  "xTitle": "ms",
+  "yTitle": "",
+  "xRange": [
+   0,
+   5600
+  ]
+ },
+ "overlap-4000": {
+  "type": "gantt",
+  "title": "Overlap, ledgers of 4,000: a ledger every 1,791 ms, 2,233 tx/s;<br>a payment is applied 4.1 s after it arrives",
+  "rows": [
+   "N",
+   "N+1",
+   "N+2",
+   "payment"
+  ],
+  "series": [
+   {
+    "name": "waits for a ledger it can enter",
+    "color": "--s4",
+    "base": [
+     null,
+     null,
+     null,
+     896
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     896
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "payment: waits 896 ms for ledger N+1, applied 4.1 s after it arrives"
+    ]
+   },
+   {
+    "name": "consensus",
+    "color": "--s1",
+    "base": [
+     0,
+     1791,
+     3583,
+     1791
+    ],
+    "x": [
+     1580,
+     1580,
+     1580,
+     1580
+    ],
+    "hover": [
+     "N: consensus 1,580 ms",
+     "N+1: consensus 1,580 ms",
+     "N+2: consensus 1,580 ms",
+     "payment: consensus 1,580 ms"
+    ]
+   },
+   {
+    "name": "queue",
+    "color": "--s3",
+    "base": [
+     1580,
+     3371,
+     5162,
+     3371
+    ],
+    "x": [
+     212,
+     212,
+     212,
+     212
+    ],
+    "hover": [
+     "N: queue 212 ms",
+     "N+1: queue 212 ms",
+     "N+2: queue 212 ms",
+     "payment: queue 212 ms"
+    ]
+   },
+   {
+    "name": "apply",
+    "color": "--s2",
+    "base": [
+     1791,
+     3583,
+     5374,
+     3583
+    ],
+    "x": [
+     1399,
+     1399,
+     1399,
+     1399
+    ],
+    "hover": [
+     "N: apply 1,399 ms",
+     "N+1: apply 1,399 ms",
+     "N+2: apply 1,399 ms",
+     "payment: apply 1,399 ms"
+    ]
+   }
+  ],
+  "xTitle": "ms",
+  "yTitle": "",
+  "xRange": [
+   0,
+   5600
+  ]
+ },
+ "k4-1000": {
+  "type": "gantt",
+  "title": "k = 4, ledgers of 1,000: a ledger every 479 ms, 2,088 tx/s;<br>a payment is applied 2.9 s after it arrives with one payer account, 2.2 s with one in every class",
+  "rows": [
+   "N, class 0",
+   "N+1, class 1",
+   "N+2, class 2",
+   "N+3, class 3",
+   "N+4, class 0",
+   "N+5, class 1",
+   "N+6, class 2",
+   "N+7, class 3",
+   "one account",
+   "every class"
+  ],
+  "series": [
+   {
+    "name": "waits for a ledger it can enter",
+    "color": "--s4",
+    "base": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     479,
+     240
+    ],
+    "x": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     958,
+     240
+    ],
+    "hover": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "one account: waits 958 ms for ledger N+3, applied 2.9 s after it arrives",
+     "every class: waits 240 ms for ledger N+1, applied 2.2 s after it arrives"
+    ]
+   },
+   {
+    "name": "consensus",
+    "color": "--s1",
+    "base": [
+     0,
+     479,
+     958,
+     1437,
+     1916,
+     2395,
+     2874,
+     3353,
+     1437,
+     479
+    ],
+    "x": [
+     1066,
+     1066,
+     1066,
+     1066,
+     1066,
+     1066,
+     1066,
+     1066,
+     1066,
+     1066
+    ],
+    "hover": [
+     "N, class 0: consensus 1,066 ms",
+     "N+1, class 1: consensus 1,066 ms",
+     "N+2, class 2: consensus 1,066 ms",
+     "N+3, class 3: consensus 1,066 ms",
+     "N+4, class 0: consensus 1,066 ms",
+     "N+5, class 1: consensus 1,066 ms",
+     "N+6, class 2: consensus 1,066 ms",
+     "N+7, class 3: consensus 1,066 ms",
+     "one account: consensus 1,066 ms",
+     "every class: consensus 1,066 ms"
+    ]
+   },
+   {
+    "name": "queue",
+    "color": "--s3",
+    "base": [
+     1066,
+     1545,
+     2024,
+     2503,
+     2982,
+     3461,
+     3940,
+     4419,
+     2503,
+     1545
+    ],
+    "x": [
+     500,
+     500,
+     500,
+     500,
+     500,
+     500,
+     500,
+     500,
+     500,
+     500
+    ],
+    "hover": [
+     "N, class 0: queue 500 ms",
+     "N+1, class 1: queue 500 ms",
+     "N+2, class 2: queue 500 ms",
+     "N+3, class 3: queue 500 ms",
+     "N+4, class 0: queue 500 ms",
+     "N+5, class 1: queue 500 ms",
+     "N+6, class 2: queue 500 ms",
+     "N+7, class 3: queue 500 ms",
+     "one account: queue 500 ms",
+     "every class: queue 500 ms"
+    ]
+   },
+   {
+    "name": "apply",
+    "color": "--s2",
+    "base": [
+     1566,
+     2045,
+     2524,
+     3003,
+     3482,
+     3961,
+     4440,
+     4919,
+     3003,
+     2045
+    ],
+    "x": [
+     350,
+     350,
+     350,
+     350,
+     350,
+     350,
+     350,
+     350,
+     350,
+     350
+    ],
+    "hover": [
+     "N, class 0: apply 350 ms",
+     "N+1, class 1: apply 350 ms",
+     "N+2, class 2: apply 350 ms",
+     "N+3, class 3: apply 350 ms",
+     "N+4, class 0: apply 350 ms",
+     "N+5, class 1: apply 350 ms",
+     "N+6, class 2: apply 350 ms",
+     "N+7, class 3: apply 350 ms",
+     "one account: apply 350 ms",
+     "every class: apply 350 ms"
+    ]
+   }
+  ],
+  "xTitle": "ms",
+  "yTitle": "",
+  "xRange": [
+   0,
+   5600
+  ]
+ }
+}

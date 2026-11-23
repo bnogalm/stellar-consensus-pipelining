@@ -1,0 +1,42 @@
+
+######## 15:57 k=2, ledgers of 366
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+k=2 n=366: ledgers 513, txs per ledger 357, ledger interval 466 ms, throughput 765 tx/s host cpu busy 49% 
+
+######## 16:03 k=2, ledgers of 756
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+k=2 n=756: ledgers 389, txs per ledger 726, ledger interval 616 ms, throughput 1179 tx/s host cpu busy 64% 
+
+######## 16:09 k=3, ledgers of 230
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 3
+rejected: 0 skipped low fee: 0
+k=3 n=230: ledgers 776, txs per ledger 222, ledger interval 309 ms, throughput 720 tx/s host cpu busy 50% 
+
+######## 16:15 k=3, ledgers of 450
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+k=3 n=450: ledgers 637, txs per ledger 438, ledger interval 376 ms, throughput 1166 tx/s host cpu busy 68% 
+
+######## 16:21 k=3, ledgers of 1000
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+k=3 n=1000: ledgers 395, txs per ledger 968, ledger interval 607 ms, throughput 1594 tx/s host cpu busy 79% 
+
+######## 16:27 k=4, ledgers of 138
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 5
+rejected: 0 skipped low fee: 0
+k=4 n=138: ledgers 1090, txs per ledger 131, ledger interval 220 ms, throughput 597 tx/s host cpu busy 51% 
+
+######## 16:34 k=4, ledgers of 310
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+k=4 n=310: ledgers 883, txs per ledger 295, ledger interval 272 ms, throughput 1086 tx/s host cpu busy 69% 
+
+######## 16:40 k=1, ledgers of 2700
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+k=1 n=2700: ledgers 104, txs per ledger 2683, ledger interval 2298 ms, throughput 1168 tx/s host cpu busy 60% 
+
+######## 16:45 LATENCY-CAL-DONE

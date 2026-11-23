@@ -1,0 +1,425 @@
+758ba6034 Load generator: an option for the lower end of the generated fee rates
+make exit 0
+
+######## 15:29 rep 1, flooding normal, 406 tx/s, k=1, ledgers of 1000, target 100 ms, operators one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal rate=406 k=1 client=one: ledgers 282, txs per ledger 344, ledger interval 847 ms, throughput 406 tx/s host cpu busy 18% 
+MIX rep=1 flood=normal rate=406 k=1 client=one origin n1: txs 9107, latency mean 1551 p50 1502 p90 2112 p99 2764; wait mean 705 p50 675; consensus 712; apply 135
+MIX rep=1 flood=normal rate=406 k=1 client=one origin n2: txs 27793, latency mean 1543 p50 1498 p90 2096 p99 2715; wait mean 695 p50 667; consensus 714; apply 135
+MIX rep=1 flood=normal rate=406 k=1 client=one origin n3: txs 27810, latency mean 1587 p50 1546 p90 2103 p99 2781; wait mean 742 p50 717; consensus 711; apply 134
+MIX rep=1 flood=normal rate=406 k=1 client=one origin n4: txs 27810, latency mean 1592 p50 1543 p90 2131 p99 2846; wait mean 742 p50 716; consensus 718; apply 133
+GAP rep=1 flood=normal rate=406 k=1 client=one: trigger to trigger, ms: mean 847 p10 688 p50 802 p90 1042 ledger sizes: mean 344 p10 242 p50 328 p90 472 max 795 
+
+######## 15:34 rep 1, flooding normal, 406 tx/s, k=2, ledgers of 400, target 420 ms, operators one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal rate=406 k=2 client=one: ledgers 528, txs per ledger 183, ledger interval 452 ms, throughput 406 tx/s host cpu busy 24% 
+MIX rep=1 flood=normal rate=406 k=2 client=one origin n1: txs 9513, latency mean 1474 p50 1445 p90 1994 p99 2592; wait mean 706 p50 689; consensus 695; apply 73
+MIX rep=1 flood=normal rate=406 k=2 client=one origin n2: txs 29027, latency mean 1495 p50 1470 p90 1994 p99 2616; wait mean 724 p50 711; consensus 698; apply 73
+MIX rep=1 flood=normal rate=406 k=2 client=one origin n3: txs 28998, latency mean 1536 p50 1507 p90 2039 p99 2635; wait mean 769 p50 752; consensus 695; apply 73
+MIX rep=1 flood=normal rate=406 k=2 client=one origin n4: txs 29037, latency mean 1545 p50 1523 p90 2030 p99 2597; wait mean 771 p50 757; consensus 703; apply 71
+GAP rep=1 flood=normal rate=406 k=2 client=one: trigger to trigger, ms: mean 452 p10 422 p50 423 p90 462 ledger sizes: mean 183 p10 138 p50 175 p90 238 max 377 
+
+######## 15:40 rep 1, flooding normal, 406 tx/s, k=2, ledgers of 400, target 420 ms, operators k300
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal rate=406 k=2 client=k300: ledgers 528, txs per ledger 183, ledger interval 451 ms, throughput 407 tx/s host cpu busy 24% 
+MIX rep=1 flood=normal rate=406 k=2 client=k300 origin n1: txs 9537, latency mean 1398 p50 1311 p90 1952 p99 2319; wait mean 622 p50 555; consensus 703; apply 73
+MIX rep=1 flood=normal rate=406 k=2 client=k300 origin n2: txs 29075, latency mean 1495 p50 1480 p90 1964 p99 2485; wait mean 722 p50 710; consensus 700; apply 73
+MIX rep=1 flood=normal rate=406 k=2 client=k300 origin n3: txs 29054, latency mean 1545 p50 1527 p90 2017 p99 2565; wait mean 771 p50 758; consensus 702; apply 72
+MIX rep=1 flood=normal rate=406 k=2 client=k300 origin n4: txs 29032, latency mean 1549 p50 1527 p90 2047 p99 2623; wait mean 775 p50 762; consensus 702; apply 72
+GAP rep=1 flood=normal rate=406 k=2 client=k300: trigger to trigger, ms: mean 452 p10 422 p50 423 p90 470 ledger sizes: mean 183 p10 135 p50 176 p90 238 max 359 
+
+######## 15:46 rep 1, flooding normal, 406 tx/s, k=3, ledgers of 270, target 280 ms, operators one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal rate=406 k=3 client=one: ledgers 767, txs per ledger 126, ledger interval 311 ms, throughput 405 tx/s host cpu busy 30% 
+MIX rep=1 flood=normal rate=406 k=3 client=one origin n1: txs 9520, latency mean 1513 p50 1473 p90 2049 p99 3034; wait mean 747 p50 715; consensus 712; apply 55
+MIX rep=1 flood=normal rate=406 k=3 client=one origin n2: txs 29045, latency mean 1525 p50 1482 p90 2068 p99 3082; wait mean 760 p50 729; consensus 710; apply 55
+MIX rep=1 flood=normal rate=406 k=3 client=one origin n3: txs 29034, latency mean 1581 p50 1536 p90 2109 p99 3163; wait mean 811 p50 780; consensus 714; apply 55
+MIX rep=1 flood=normal rate=406 k=3 client=one origin n4: txs 29032, latency mean 1587 p50 1544 p90 2138 p99 3095; wait mean 812 p50 780; consensus 721; apply 54
+GAP rep=1 flood=normal rate=406 k=3 client=one: trigger to trigger, ms: mean 311 p10 282 p50 283 p90 293 ledger sizes: mean 126 p10 89 p50 120 p90 172 max 270 
+
+######## 15:53 rep 1, flooding normal, 406 tx/s, k=3, ledgers of 270, target 280 ms, operators k300
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal rate=406 k=3 client=k300: ledgers 773, txs per ledger 125, ledger interval 309 ms, throughput 405 tx/s host cpu busy 30% 
+MIX rep=1 flood=normal rate=406 k=3 client=k300 origin n1: txs 9535, latency mean 1386 p50 1219 p90 1963 p99 2905; wait mean 616 p50 482; consensus 714; apply 56
+MIX rep=1 flood=normal rate=406 k=3 client=k300 origin n2: txs 29070, latency mean 1503 p50 1461 p90 2026 p99 2919; wait mean 739 p50 710; consensus 709; apply 55
+MIX rep=1 flood=normal rate=406 k=3 client=k300 origin n3: txs 29061, latency mean 1565 p50 1522 p90 2090 p99 3042; wait mean 800 p50 772; consensus 710; apply 55
+MIX rep=1 flood=normal rate=406 k=3 client=k300 origin n4: txs 29044, latency mean 1566 p50 1531 p90 2094 p99 2818; wait mean 804 p50 778; consensus 707; apply 55
+GAP rep=1 flood=normal rate=406 k=3 client=k300: trigger to trigger, ms: mean 309 p10 282 p50 283 p90 296 ledger sizes: mean 125 p10 90 p50 119 p90 170 max 270 
+
+######## 15:59 rep 1, flooding normal, 406 tx/s, k=4, ledgers of 210, target 220 ms, operators one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal rate=406 k=4 client=one: ledgers 973, txs per ledger 99, ledger interval 246 ms, throughput 404 tx/s host cpu busy 35% 
+MIX rep=1 flood=normal rate=406 k=4 client=one origin n1: txs 9489, latency mean 1540 p50 1517 p90 2097 p99 2585; wait mean 766 p50 750; consensus 726; apply 47
+MIX rep=1 flood=normal rate=406 k=4 client=one origin n2: txs 28929, latency mean 1535 p50 1514 p90 2086 p99 2568; wait mean 763 p50 743; consensus 725; apply 48
+MIX rep=1 flood=normal rate=406 k=4 client=one origin n3: txs 28899, latency mean 1602 p50 1579 p90 2156 p99 2637; wait mean 833 p50 811; consensus 722; apply 47
+MIX rep=1 flood=normal rate=406 k=4 client=one origin n4: txs 28793, latency mean 1599 p50 1577 p90 2141 p99 2647; wait mean 823 p50 803; consensus 730; apply 47
+GAP rep=1 flood=normal rate=406 k=4 client=one: trigger to trigger, ms: mean 246 p10 222 p50 222 p90 228 ledger sizes: mean 99 p10 72 p50 95 p90 138 max 193 
+
+######## 16:05 rep 1, flooding normal, 406 tx/s, k=4, ledgers of 210, target 220 ms, operators k300
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=normal rate=406 k=4 client=k300: ledgers 972, txs per ledger 100, ledger interval 245 ms, throughput 406 tx/s host cpu busy 34% 
+MIX rep=1 flood=normal rate=406 k=4 client=k300 origin n1: txs 9531, latency mean 1414 p50 1214 p90 2050 p99 2858; wait mean 639 p50 443; consensus 728; apply 48
+MIX rep=1 flood=normal rate=406 k=4 client=k300 origin n2: txs 29056, latency mean 1556 p50 1518 p90 2102 p99 3046; wait mean 780 p50 750; consensus 730; apply 47
+MIX rep=1 flood=normal rate=406 k=4 client=k300 origin n3: txs 29042, latency mean 1605 p50 1568 p90 2137 p99 3148; wait mean 828 p50 801; consensus 731; apply 46
+MIX rep=1 flood=normal rate=406 k=4 client=k300 origin n4: txs 29037, latency mean 1621 p50 1577 p90 2189 p99 3120; wait mean 845 p50 816; consensus 729; apply 46
+GAP rep=1 flood=normal rate=406 k=4 client=k300: trigger to trigger, ms: mean 246 p10 222 p50 222 p90 229 ledger sizes: mean 100 p10 70 p50 95 p90 133 max 210 
+
+######## 16:11 rep 1, flooding fast, 650 tx/s, k=1, ledgers of 1000, target 100 ms, operators one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 57 skipped low fee: 12
+RUN rep=1 flood=fast rate=650 k=1 client=one: ledgers 191, txs per ledger 803, ledger interval 1249 ms, throughput 643 tx/s host cpu busy 33% 
+MIX rep=1 flood=fast rate=650 k=1 client=one origin n1: txs 14104, latency mean 2011 p50 1969 p90 2669 p99 3332; wait mean 789 p50 761; consensus 927; apply 296
+MIX rep=1 flood=fast rate=650 k=1 client=one origin n2: txs 42244, latency mean 2015 p50 1973 p90 2672 p99 3330; wait mean 797 p50 769; consensus 922; apply 296
+MIX rep=1 flood=fast rate=650 k=1 client=one origin n3: txs 42167, latency mean 2076 p50 2036 p90 2719 p99 3407; wait mean 858 p50 832; consensus 922; apply 296
+MIX rep=1 flood=fast rate=650 k=1 client=one origin n4: txs 41859, latency mean 2066 p50 2028 p90 2713 p99 3395; wait mean 854 p50 826; consensus 916; apply 296
+GAP rep=1 flood=fast rate=650 k=1 client=one: trigger to trigger, ms: mean 1237 p10 1024 p50 1194 p90 1517 ledger sizes: mean 801 p10 628 p50 795 p90 1000 max 1000 
+
+######## 16:17 rep 1, flooding fast, 650 tx/s, k=1, ledgers of 1000, target 100 ms, operators onefee
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=1 client=onefee: ledgers 189, txs per ledger 809, ledger interval 1261 ms, throughput 642 tx/s host cpu busy 33% 
+MIX rep=1 flood=fast rate=650 k=1 client=onefee origin n1: txs 15619, latency mean 2058 p50 2014 p90 2714 p99 3618; wait mean 804 p50 779; consensus 953; apply 301
+MIX rep=1 flood=fast rate=650 k=1 client=onefee origin n2: txs 41764, latency mean 2028 p50 1978 p90 2670 p99 3675; wait mean 800 p50 772; consensus 930; apply 297
+MIX rep=1 flood=fast rate=650 k=1 client=onefee origin n3: txs 41607, latency mean 2082 p50 2038 p90 2709 p99 3659; wait mean 857 p50 833; consensus 928; apply 297
+MIX rep=1 flood=fast rate=650 k=1 client=onefee origin n4: txs 41931, latency mean 2103 p50 2055 p90 2750 p99 3774; wait mean 876 p50 847; consensus 930; apply 298
+MIX rep=1 flood=fast rate=650 k=1 client=onefee origin n5: txs 600, latency mean 2240 p50 2218 p90 2686 p99 5237; wait mean 879 p50 876; consensus 1069; apply 292
+GAP rep=1 flood=fast rate=650 k=1 client=onefee: trigger to trigger, ms: mean 1245 p10 1001 p50 1237 p90 1489 ledger sizes: mean 806 p10 608 p50 811 p90 999 max 1000 
+
+######## 16:22 rep 1, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 79 skipped low fee: 38
+RUN rep=1 flood=fast rate=650 k=2 client=one: ledgers 474, txs per ledger 324, ledger interval 505 ms, throughput 641 tx/s host cpu busy 42% 
+MIX rep=1 flood=fast rate=650 k=2 client=one origin n1: txs 15425, latency mean 1625 p50 1546 p90 2232 p99 3612; wait mean 701 p50 640; consensus 797; apply 126
+MIX rep=1 flood=fast rate=650 k=2 client=one origin n2: txs 45466, latency mean 1627 p50 1555 p90 2241 p99 3523; wait mean 706 p50 650; consensus 796; apply 126
+MIX rep=1 flood=fast rate=650 k=2 client=one origin n3: txs 45358, latency mean 1692 p50 1620 p90 2287 p99 3559; wait mean 771 p50 719; consensus 794; apply 126
+MIX rep=1 flood=fast rate=650 k=2 client=one origin n4: txs 45556, latency mean 1696 p50 1617 p90 2309 p99 3588; wait mean 768 p50 713; consensus 801; apply 126
+GAP rep=1 flood=fast rate=650 k=2 client=one: trigger to trigger, ms: mean 505 p10 425 p50 432 p90 625 ledger sizes: mean 323 p10 249 p50 316 p90 400 max 400 
+
+######## 16:28 rep 1, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators onefee
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=2 client=onefee: ledgers 489, txs per ledger 317, ledger interval 489 ms, throughput 648 tx/s host cpu busy 43% 
+MIX rep=1 flood=fast rate=650 k=2 client=onefee origin n1: txs 15492, latency mean 1555 p50 1528 p90 2080 p99 2635; wait mean 658 p50 637; consensus 775; apply 122
+MIX rep=1 flood=fast rate=650 k=2 client=onefee origin n2: txs 46044, latency mean 1585 p50 1537 p90 2114 p99 3122; wait mean 689 p50 652; consensus 773; apply 122
+MIX rep=1 flood=fast rate=650 k=2 client=onefee origin n3: txs 46118, latency mean 1647 p50 1604 p90 2165 p99 3154; wait mean 751 p50 715; consensus 774; apply 122
+MIX rep=1 flood=fast rate=650 k=2 client=onefee origin n4: txs 46129, latency mean 1635 p50 1588 p90 2167 p99 3194; wait mean 738 p50 699; consensus 776; apply 122
+GAP rep=1 flood=fast rate=650 k=2 client=onefee: trigger to trigger, ms: mean 489 p10 425 p50 432 p90 605 ledger sizes: mean 317 p10 252 p50 307 p90 400 max 400 
+
+######## 16:34 rep 1, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators k200
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 4 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=2 client=k200: ledgers 482, txs per ledger 321, ledger interval 495 ms, throughput 649 tx/s host cpu busy 43% 
+MIX rep=1 flood=fast rate=650 k=2 client=k200 origin n1: txs 15534, latency mean 1474 p50 1367 p90 2059 p99 3016; wait mean 562 p50 470; consensus 789; apply 124
+MIX rep=1 flood=fast rate=650 k=2 client=k200 origin n2: txs 46150, latency mean 1588 p50 1546 p90 2129 p99 3029; wait mean 682 p50 647; consensus 782; apply 123
+MIX rep=1 flood=fast rate=650 k=2 client=k200 origin n3: txs 46287, latency mean 1652 p50 1612 p90 2182 p99 3039; wait mean 746 p50 712; consensus 783; apply 123
+MIX rep=1 flood=fast rate=650 k=2 client=k200 origin n4: txs 46278, latency mean 1661 p50 1620 p90 2200 p99 3048; wait mean 752 p50 717; consensus 786; apply 123
+GAP rep=1 flood=fast rate=650 k=2 client=k200: trigger to trigger, ms: mean 495 p10 425 p50 433 p90 619 ledger sizes: mean 321 p10 251 p50 316 p90 400 max 400 
+
+######## 16:40 rep 1, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators k200fee
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=2 client=k200fee: ledgers 472, txs per ledger 325, ledger interval 505 ms, throughput 644 tx/s host cpu busy 42% 
+MIX rep=1 flood=fast rate=650 k=2 client=k200fee origin n1: txs 15397, latency mean 1489 p50 1380 p90 2076 p99 2940; wait mean 555 p50 468; consensus 807; apply 128
+MIX rep=1 flood=fast rate=650 k=2 client=k200fee origin n2: txs 45559, latency mean 1661 p50 1589 p90 2251 p99 3551; wait mean 727 p50 668; consensus 808; apply 127
+MIX rep=1 flood=fast rate=650 k=2 client=k200fee origin n3: txs 45133, latency mean 1721 p50 1651 p90 2306 p99 3574; wait mean 785 p50 729; consensus 808; apply 128
+MIX rep=1 flood=fast rate=650 k=2 client=k200fee origin n4: txs 45423, latency mean 1725 p50 1648 p90 2333 p99 3692; wait mean 789 p50 728; consensus 810; apply 126
+GAP rep=1 flood=fast rate=650 k=2 client=k200fee: trigger to trigger, ms: mean 505 p10 425 p50 434 p90 629 ledger sizes: mean 325 p10 250 p50 321 p90 400 max 400 
+
+######## 16:46 rep 1, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 39 skipped low fee: 15
+RUN rep=1 flood=fast rate=650 k=3 client=one: ledgers 709, txs per ledger 217, ledger interval 337 ms, throughput 644 tx/s host cpu busy 47% 
+MIX rep=1 flood=fast rate=650 k=3 client=one origin n1: txs 15464, latency mean 1618 p50 1546 p90 2263 p99 3539; wait mean 728 p50 667; consensus 797; apply 93
+MIX rep=1 flood=fast rate=650 k=3 client=one origin n2: txs 45786, latency mean 1611 p50 1539 p90 2247 p99 3490; wait mean 725 p50 664; consensus 792; apply 94
+MIX rep=1 flood=fast rate=650 k=3 client=one origin n3: txs 45833, latency mean 1668 p50 1598 p90 2300 p99 3485; wait mean 781 p50 723; consensus 792; apply 94
+MIX rep=1 flood=fast rate=650 k=3 client=one origin n4: txs 45794, latency mean 1665 p50 1592 p90 2305 p99 3492; wait mean 779 p50 721; consensus 792; apply 93
+GAP rep=1 flood=fast rate=650 k=3 client=one: trigger to trigger, ms: mean 336 p10 283 p50 286 p90 422 ledger sizes: mean 216 p10 166 p50 212 p90 270 max 270 
+
+######## 16:52 rep 1, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators onefee
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=3 client=onefee: ledgers 725, txs per ledger 213, ledger interval 330 ms, throughput 645 tx/s host cpu busy 49% 
+MIX rep=1 flood=fast rate=650 k=3 client=onefee origin n1: txs 15517, latency mean 1529 p50 1495 p90 2087 p99 2607; wait mean 658 p50 633; consensus 781; apply 91
+MIX rep=1 flood=fast rate=650 k=3 client=onefee origin n2: txs 46369, latency mean 1570 p50 1516 p90 2164 p99 3244; wait mean 702 p50 654; consensus 777; apply 91
+MIX rep=1 flood=fast rate=650 k=3 client=onefee origin n3: txs 46232, latency mean 1624 p50 1568 p90 2206 p99 3247; wait mean 758 p50 713; consensus 776; apply 91
+MIX rep=1 flood=fast rate=650 k=3 client=onefee origin n4: txs 46302, latency mean 1644 p50 1587 p90 2225 p99 3289; wait mean 774 p50 728; consensus 780; apply 90
+GAP rep=1 flood=fast rate=650 k=3 client=onefee: trigger to trigger, ms: mean 329 p10 283 p50 286 p90 429 ledger sizes: mean 213 p10 162 p50 210 p90 270 max 270 
+
+######## 16:58 rep 1, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators k200
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 25 skipped low fee: 7
+RUN rep=1 flood=fast rate=650 k=3 client=k200: ledgers 732, txs per ledger 211, ledger interval 327 ms, throughput 645 tx/s host cpu busy 49% 
+MIX rep=1 flood=fast rate=650 k=3 client=k200 origin n1: txs 15387, latency mean 1389 p50 1216 p90 2028 p99 3358; wait mean 524 p50 377; consensus 777; apply 89
+MIX rep=1 flood=fast rate=650 k=3 client=k200 origin n2: txs 46133, latency mean 1565 p50 1503 p90 2141 p99 3332; wait mean 703 p50 648; consensus 774; apply 88
+MIX rep=1 flood=fast rate=650 k=3 client=k200 origin n3: txs 46090, latency mean 1623 p50 1562 p90 2187 p99 3437; wait mean 761 p50 709; consensus 774; apply 89
+MIX rep=1 flood=fast rate=650 k=3 client=k200 origin n4: txs 46034, latency mean 1625 p50 1562 p90 2202 p99 3428; wait mean 761 p50 706; consensus 777; apply 87
+GAP rep=1 flood=fast rate=650 k=3 client=k200: trigger to trigger, ms: mean 326 p10 283 p50 286 p90 381 ledger sizes: mean 211 p10 159 p50 206 p90 270 max 270 
+
+######## 17:05 rep 1, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators k200fee
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=3 client=k200fee: ledgers 712, txs per ledger 216, ledger interval 336 ms, throughput 642 tx/s host cpu busy 48% 
+MIX rep=1 flood=fast rate=650 k=3 client=k200fee origin n1: txs 15490, latency mean 1381 p50 1225 p90 1999 p99 2858; wait mean 505 p50 375; consensus 784; apply 92
+MIX rep=1 flood=fast rate=650 k=3 client=k200fee origin n2: txs 45527, latency mean 1619 p50 1530 p90 2280 p99 3655; wait mean 740 p50 664; consensus 789; apply 91
+MIX rep=1 flood=fast rate=650 k=3 client=k200fee origin n3: txs 45571, latency mean 1685 p50 1599 p90 2336 p99 3681; wait mean 805 p50 732; consensus 789; apply 91
+MIX rep=1 flood=fast rate=650 k=3 client=k200fee origin n4: txs 45508, latency mean 1677 p50 1590 p90 2318 p99 3662; wait mean 797 p50 725; consensus 789; apply 92
+GAP rep=1 flood=fast rate=650 k=3 client=k200fee: trigger to trigger, ms: mean 335 p10 283 p50 286 p90 403 ledger sizes: mean 216 p10 163 p50 213 p90 270 max 270 
+
+######## 17:11 rep 1, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 4
+rejected: 36 skipped low fee: 6
+RUN rep=1 flood=fast rate=650 k=4 client=one: ledgers 921, txs per ledger 168, ledger interval 260 ms, throughput 646 tx/s host cpu busy 53% 
+MIX rep=1 flood=fast rate=650 k=4 client=one origin n1: txs 15448, latency mean 1611 p50 1540 p90 2232 p99 3455; wait mean 731 p50 666; consensus 800; apply 81
+MIX rep=1 flood=fast rate=650 k=4 client=one origin n2: txs 46306, latency mean 1615 p50 1547 p90 2220 p99 3466; wait mean 738 p50 675; consensus 796; apply 81
+MIX rep=1 flood=fast rate=650 k=4 client=one origin n3: txs 46319, latency mean 1676 p50 1609 p90 2280 p99 3543; wait mean 801 p50 743; consensus 795; apply 81
+MIX rep=1 flood=fast rate=650 k=4 client=one origin n4: txs 46314, latency mean 1687 p50 1617 p90 2314 p99 3540; wait mean 814 p50 752; consensus 794; apply 79
+GAP rep=1 flood=fast rate=650 k=4 client=one: trigger to trigger, ms: mean 260 p10 223 p50 225 p90 279 ledger sizes: mean 168 p10 128 p50 163 p90 210 max 210 
+
+######## 17:17 rep 1, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators onefee
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=4 client=onefee: ledgers 935, txs per ledger 165, ledger interval 256 ms, throughput 644 tx/s host cpu busy 52% 
+MIX rep=1 flood=fast rate=650 k=4 client=onefee origin n1: txs 15440, latency mean 1545 p50 1507 p90 2121 p99 2824; wait mean 683 p50 659; consensus 786; apply 76
+MIX rep=1 flood=fast rate=650 k=4 client=onefee origin n2: txs 46061, latency mean 1587 p50 1521 p90 2188 p99 3393; wait mean 731 p50 675; consensus 779; apply 76
+MIX rep=1 flood=fast rate=650 k=4 client=onefee origin n3: txs 46007, latency mean 1651 p50 1583 p90 2255 p99 3489; wait mean 795 p50 741; consensus 781; apply 76
+MIX rep=1 flood=fast rate=650 k=4 client=onefee origin n4: txs 45961, latency mean 1641 p50 1572 p90 2250 p99 3421; wait mean 784 p50 728; consensus 782; apply 75
+GAP rep=1 flood=fast rate=650 k=4 client=onefee: trigger to trigger, ms: mean 256 p10 223 p50 225 p90 280 ledger sizes: mean 165 p10 126 p50 162 p90 210 max 210 
+
+######## 17:23 rep 1, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators k200
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 4 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=4 client=k200: ledgers 948, txs per ledger 164, ledger interval 252 ms, throughput 648 tx/s host cpu busy 53% 
+MIX rep=1 flood=fast rate=650 k=4 client=k200 origin n1: txs 15479, latency mean 1358 p50 1168 p90 2056 p99 2955; wait mean 509 p50 341; consensus 773; apply 76
+MIX rep=1 flood=fast rate=650 k=4 client=k200 origin n2: txs 46409, latency mean 1557 p50 1509 p90 2125 p99 3111; wait mean 711 p50 667; consensus 771; apply 75
+MIX rep=1 flood=fast rate=650 k=4 client=k200 origin n3: txs 46400, latency mean 1616 p50 1565 p90 2175 p99 3180; wait mean 770 p50 727; consensus 771; apply 75
+MIX rep=1 flood=fast rate=650 k=4 client=k200 origin n4: txs 46378, latency mean 1620 p50 1571 p90 2182 p99 3162; wait mean 769 p50 728; consensus 777; apply 74
+GAP rep=1 flood=fast rate=650 k=4 client=k200: trigger to trigger, ms: mean 252 p10 223 p50 224 p90 272 ledger sizes: mean 164 p10 124 p50 160 p90 210 max 210 
+
+######## 17:29 rep 1, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators k200fee
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=1 flood=fast rate=650 k=4 client=k200fee: ledgers 903, txs per ledger 171, ledger interval 265 ms, throughput 645 tx/s host cpu busy 52% 
+MIX rep=1 flood=fast rate=650 k=4 client=k200fee origin n1: txs 15465, latency mean 1370 p50 1205 p90 1999 p99 2715; wait mean 492 p50 337; consensus 797; apply 81
+MIX rep=1 flood=fast rate=650 k=4 client=k200fee origin n2: txs 46158, latency mean 1668 p50 1580 p90 2335 p99 3827; wait mean 777 p50 694; consensus 809; apply 82
+MIX rep=1 flood=fast rate=650 k=4 client=k200fee origin n3: txs 45996, latency mean 1736 p50 1647 p90 2407 p99 3875; wait mean 844 p50 764; consensus 810; apply 83
+MIX rep=1 flood=fast rate=650 k=4 client=k200fee origin n4: txs 46035, latency mean 1734 p50 1646 p90 2408 p99 3885; wait mean 841 p50 761; consensus 811; apply 82
+GAP rep=1 flood=fast rate=650 k=4 client=k200fee: trigger to trigger, ms: mean 264 p10 223 p50 225 p90 284 ledger sizes: mean 171 p10 128 p50 170 p90 210 max 210 
+
+######## 17:35 rep 2, flooding normal, 406 tx/s, k=1, ledgers of 1000, target 100 ms, operators one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal rate=406 k=1 client=one: ledgers 272, txs per ledger 355, ledger interval 874 ms, throughput 406 tx/s host cpu busy 18% 
+MIX rep=2 flood=normal rate=406 k=1 client=one origin n1: txs 9216, latency mean 1597 p50 1546 p90 2178 p99 2807; wait mean 720 p50 689; consensus 739; apply 138
+MIX rep=2 flood=normal rate=406 k=1 client=one origin n2: txs 28082, latency mean 1603 p50 1554 p90 2178 p99 2821; wait mean 729 p50 698; consensus 735; apply 139
+MIX rep=2 flood=normal rate=406 k=1 client=one origin n3: txs 28107, latency mean 1631 p50 1584 p90 2207 p99 2848; wait mean 754 p50 726; consensus 738; apply 140
+MIX rep=2 flood=normal rate=406 k=1 client=one origin n4: txs 28053, latency mean 1656 p50 1612 p90 2212 p99 2827; wait mean 775 p50 751; consensus 744; apply 136
+GAP rep=2 flood=normal rate=406 k=1 client=one: trigger to trigger, ms: mean 875 p10 704 p50 828 p90 1082 ledger sizes: mean 355 p10 245 p50 333 p90 494 max 737 
+
+######## 17:41 rep 2, flooding normal, 406 tx/s, k=2, ledgers of 400, target 420 ms, operators one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal rate=406 k=2 client=one: ledgers 514, txs per ledger 188, ledger interval 464 ms, throughput 406 tx/s host cpu busy 24% 
+MIX rep=2 flood=normal rate=406 k=2 client=one origin n1: txs 9535, latency mean 1543 p50 1496 p90 2104 p99 2985; wait mean 740 p50 711; consensus 727; apply 76
+MIX rep=2 flood=normal rate=406 k=2 client=one origin n2: txs 28983, latency mean 1549 p50 1503 p90 2108 p99 3025; wait mean 749 p50 720; consensus 725; apply 76
+MIX rep=2 flood=normal rate=406 k=2 client=one origin n3: txs 29017, latency mean 1603 p50 1559 p90 2153 p99 3026; wait mean 804 p50 775; consensus 724; apply 76
+MIX rep=2 flood=normal rate=406 k=2 client=one origin n4: txs 29039, latency mean 1597 p50 1554 p90 2151 p99 2942; wait mean 794 p50 771; consensus 727; apply 75
+GAP rep=2 flood=normal rate=406 k=2 client=one: trigger to trigger, ms: mean 464 p10 422 p50 423 p90 480 ledger sizes: mean 188 p10 136 p50 178 p90 251 max 400 
+
+######## 17:47 rep 2, flooding normal, 406 tx/s, k=2, ledgers of 400, target 420 ms, operators k300
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal rate=406 k=2 client=k300: ledgers 523, txs per ledger 185, ledger interval 457 ms, throughput 405 tx/s host cpu busy 24% 
+MIX rep=2 flood=normal rate=406 k=2 client=k300 origin n1: txs 9505, latency mean 1436 p50 1313 p90 1990 p99 2973; wait mean 653 p50 557; consensus 709; apply 74
+MIX rep=2 flood=normal rate=406 k=2 client=k300 origin n2: txs 28998, latency mean 1514 p50 1478 p90 2009 p99 2955; wait mean 735 p50 711; consensus 705; apply 74
+MIX rep=2 flood=normal rate=406 k=2 client=k300 origin n3: txs 29007, latency mean 1569 p50 1532 p90 2062 p99 3037; wait mean 789 p50 763; consensus 706; apply 74
+MIX rep=2 flood=normal rate=406 k=2 client=k300 origin n4: txs 28959, latency mean 1573 p50 1530 p90 2074 p99 3079; wait mean 793 p50 763; consensus 707; apply 73
+GAP rep=2 flood=normal rate=406 k=2 client=k300: trigger to trigger, ms: mean 457 p10 422 p50 423 p90 457 ledger sizes: mean 186 p10 138 p50 177 p90 233 max 400 
+
+######## 17:53 rep 2, flooding normal, 406 tx/s, k=3, ledgers of 270, target 280 ms, operators one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal rate=406 k=3 client=one: ledgers 777, txs per ledger 125, ledger interval 307 ms, throughput 406 tx/s host cpu busy 30% 
+MIX rep=2 flood=normal rate=406 k=3 client=one origin n1: txs 9533, latency mean 1483 p50 1458 p90 1998 p99 2542; wait mean 727 p50 706; consensus 702; apply 54
+MIX rep=2 flood=normal rate=406 k=3 client=one origin n2: txs 29071, latency mean 1478 p50 1456 p90 1994 p99 2504; wait mean 723 p50 705; consensus 702; apply 54
+MIX rep=2 flood=normal rate=406 k=3 client=one origin n3: txs 29060, latency mean 1547 p50 1520 p90 2065 p99 2604; wait mean 788 p50 771; consensus 705; apply 54
+MIX rep=2 flood=normal rate=406 k=3 client=one origin n4: txs 29076, latency mean 1544 p50 1525 p90 2037 p99 2542; wait mean 786 p50 772; consensus 705; apply 53
+GAP rep=2 flood=normal rate=406 k=3 client=one: trigger to trigger, ms: mean 308 p10 282 p50 282 p90 296 ledger sizes: mean 125 p10 91 p50 120 p90 167 max 244 
+
+######## 17:59 rep 2, flooding normal, 406 tx/s, k=3, ledgers of 270, target 280 ms, operators k300
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal rate=406 k=3 client=k300: ledgers 777, txs per ledger 125, ledger interval 308 ms, throughput 405 tx/s host cpu busy 30% 
+MIX rep=2 flood=normal rate=406 k=3 client=k300 origin n1: txs 9566, latency mean 1370 p50 1218 p90 1954 p99 2635; wait mean 605 p50 478; consensus 710; apply 55
+MIX rep=2 flood=normal rate=406 k=3 client=k300 origin n2: txs 29077, latency mean 1492 p50 1458 p90 2023 p99 2698; wait mean 737 p50 712; consensus 702; apply 54
+MIX rep=2 flood=normal rate=406 k=3 client=k300 origin n3: txs 29032, latency mean 1553 p50 1521 p90 2071 p99 2775; wait mean 791 p50 771; consensus 707; apply 54
+MIX rep=2 flood=normal rate=406 k=3 client=k300 origin n4: txs 29016, latency mean 1559 p50 1521 p90 2088 p99 2821; wait mean 791 p50 767; consensus 714; apply 54
+GAP rep=2 flood=normal rate=406 k=3 client=k300: trigger to trigger, ms: mean 308 p10 282 p50 282 p90 291 ledger sizes: mean 125 p10 90 p50 118 p90 166 max 270 
+
+######## 18:05 rep 2, flooding normal, 406 tx/s, k=4, ledgers of 210, target 220 ms, operators one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal rate=406 k=4 client=one: ledgers 962, txs per ledger 101, ledger interval 249 ms, throughput 405 tx/s host cpu busy 34% 
+MIX rep=2 flood=normal rate=406 k=4 client=one origin n1: txs 9537, latency mean 1552 p50 1517 p90 2143 p99 2921; wait mean 777 p50 749; consensus 726; apply 50
+MIX rep=2 flood=normal rate=406 k=4 client=one origin n2: txs 29064, latency mean 1549 p50 1509 p90 2138 p99 2893; wait mean 773 p50 744; consensus 726; apply 50
+MIX rep=2 flood=normal rate=406 k=4 client=one origin n3: txs 29056, latency mean 1608 p50 1568 p90 2189 p99 2929; wait mean 832 p50 803; consensus 726; apply 50
+MIX rep=2 flood=normal rate=406 k=4 client=one origin n4: txs 29071, latency mean 1609 p50 1564 p90 2214 p99 2953; wait mean 828 p50 799; consensus 731; apply 50
+GAP rep=2 flood=normal rate=406 k=4 client=one: trigger to trigger, ms: mean 248 p10 222 p50 222 p90 228 ledger sizes: mean 101 p10 72 p50 95 p90 142 max 210 
+
+######## 18:11 rep 2, flooding normal, 406 tx/s, k=4, ledgers of 210, target 220 ms, operators k300
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=normal rate=406 k=4 client=k300: ledgers 943, txs per ledger 103, ledger interval 253 ms, throughput 405 tx/s host cpu busy 33% 
+MIX rep=2 flood=normal rate=406 k=4 client=k300 origin n1: txs 9548, latency mean 1468 p50 1294 p90 2144 p99 2938; wait mean 674 p50 456; consensus 742; apply 53
+MIX rep=2 flood=normal rate=406 k=4 client=k300 origin n2: txs 29095, latency mean 1603 p50 1556 p90 2234 p99 3079; wait mean 808 p50 773; consensus 744; apply 51
+MIX rep=2 flood=normal rate=406 k=4 client=k300 origin n3: txs 29072, latency mean 1653 p50 1606 p90 2272 p99 3106; wait mean 853 p50 817; consensus 748; apply 51
+MIX rep=2 flood=normal rate=406 k=4 client=k300 origin n4: txs 29012, latency mean 1657 p50 1618 p90 2266 p99 3033; wait mean 852 p50 822; consensus 754; apply 51
+GAP rep=2 flood=normal rate=406 k=4 client=k300: trigger to trigger, ms: mean 254 p10 222 p50 222 p90 231 ledger sizes: mean 103 p10 70 p50 97 p90 148 max 210 
+
+######## 18:18 rep 2, flooding fast, 650 tx/s, k=1, ledgers of 1000, target 100 ms, operators one
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 44 skipped low fee: 21
+RUN rep=2 flood=fast rate=650 k=1 client=one: ledgers 190, txs per ledger 806, ledger interval 1251 ms, throughput 645 tx/s host cpu busy 34% 
+MIX rep=2 flood=fast rate=650 k=1 client=one origin n1: txs 14560, latency mean 2033 p50 1979 p90 2686 p99 3742; wait mean 794 p50 755; consensus 940; apply 299
+MIX rep=2 flood=fast rate=650 k=1 client=one origin n2: txs 42635, latency mean 2036 p50 1987 p90 2681 p99 3686; wait mean 795 p50 764; consensus 943; apply 298
+MIX rep=2 flood=fast rate=650 k=1 client=one origin n3: txs 42495, latency mean 2104 p50 2059 p90 2733 p99 3673; wait mean 863 p50 837; consensus 942; apply 299
+MIX rep=2 flood=fast rate=650 k=1 client=one origin n4: txs 42697, latency mean 2096 p50 2053 p90 2731 p99 3682; wait mean 860 p50 830; consensus 937; apply 299
+GAP rep=2 flood=fast rate=650 k=1 client=one: trigger to trigger, ms: mean 1254 p10 1025 p50 1212 p90 1490 ledger sizes: mean 808 p10 635 p50 804 p90 1000 max 1000 
+
+######## 18:23 rep 2, flooding fast, 650 tx/s, k=1, ledgers of 1000, target 100 ms, operators onefee
+k=1 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast rate=650 k=1 client=onefee: ledgers 194, txs per ledger 793, ledger interval 1227 ms, throughput 646 tx/s host cpu busy 33% 
+MIX rep=2 flood=fast rate=650 k=1 client=onefee origin n1: txs 14987, latency mean 2001 p50 1975 p90 2617 p99 3201; wait mean 781 p50 765; consensus 926; apply 294
+MIX rep=2 flood=fast rate=650 k=1 client=onefee origin n2: txs 45153, latency mean 2006 p50 1975 p90 2615 p99 3290; wait mean 791 p50 771; consensus 922; apply 294
+MIX rep=2 flood=fast rate=650 k=1 client=onefee origin n3: txs 43681, latency mean 2057 p50 2028 p90 2651 p99 3396; wait mean 838 p50 822; consensus 926; apply 293
+MIX rep=2 flood=fast rate=650 k=1 client=onefee origin n4: txs 44234, latency mean 2049 p50 2020 p90 2659 p99 3319; wait mean 831 p50 813; consensus 924; apply 294
+GAP rep=2 flood=fast rate=650 k=1 client=onefee: trigger to trigger, ms: mean 1235 p10 1014 p50 1215 p90 1437 ledger sizes: mean 797 p10 646 p50 794 p90 982 max 1000 
+
+######## 18:29 rep 2, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators one
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 42 skipped low fee: 12
+RUN rep=2 flood=fast rate=650 k=2 client=one: ledgers 481, txs per ledger 320, ledger interval 497 ms, throughput 644 tx/s host cpu busy 43% 
+MIX rep=2 flood=fast rate=650 k=2 client=one origin n1: txs 15314, latency mean 1607 p50 1545 p90 2178 p99 3387; wait mean 694 p50 643; consensus 790; apply 123
+MIX rep=2 flood=fast rate=650 k=2 client=one origin n2: txs 45444, latency mean 1606 p50 1550 p90 2159 p99 3354; wait mean 696 p50 651; consensus 786; apply 124
+MIX rep=2 flood=fast rate=650 k=2 client=one origin n3: txs 45367, latency mean 1667 p50 1606 p90 2225 p99 3446; wait mean 757 p50 710; consensus 785; apply 124
+MIX rep=2 flood=fast rate=650 k=2 client=one origin n4: txs 45379, latency mean 1677 p50 1617 p90 2235 p99 3480; wait mean 765 p50 715; consensus 789; apply 124
+GAP rep=2 flood=fast rate=650 k=2 client=one: trigger to trigger, ms: mean 497 p10 425 p50 434 p90 611 ledger sizes: mean 319 p10 246 p50 311 p90 400 max 400 
+
+######## 18:35 rep 2, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators onefee
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast rate=650 k=2 client=onefee: ledgers 474, txs per ledger 326, ledger interval 504 ms, throughput 646 tx/s host cpu busy 42% 
+MIX rep=2 flood=fast rate=650 k=2 client=onefee origin n1: txs 15570, latency mean 1602 p50 1561 p90 2163 p99 2842; wait mean 673 p50 644; consensus 802; apply 127
+MIX rep=2 flood=fast rate=650 k=2 client=onefee origin n2: txs 45412, latency mean 1654 p50 1585 p90 2264 p99 3477; wait mean 723 p50 666; consensus 804; apply 127
+MIX rep=2 flood=fast rate=650 k=2 client=onefee origin n3: txs 45360, latency mean 1707 p50 1642 p90 2298 p99 3489; wait mean 775 p50 726; consensus 804; apply 127
+MIX rep=2 flood=fast rate=650 k=2 client=onefee origin n4: txs 45537, latency mean 1709 p50 1644 p90 2308 p99 3503; wait mean 780 p50 727; consensus 802; apply 127
+GAP rep=2 flood=fast rate=650 k=2 client=onefee: trigger to trigger, ms: mean 503 p10 425 p50 435 p90 634 ledger sizes: mean 325 p10 253 p50 322 p90 400 max 400 
+
+######## 18:41 rep 2, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators k200
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 27 skipped low fee: 3
+RUN rep=2 flood=fast rate=650 k=2 client=k200: ledgers 472, txs per ledger 328, ledger interval 506 ms, throughput 648 tx/s host cpu busy 42% 
+MIX rep=2 flood=fast rate=650 k=2 client=k200 origin n1: txs 15489, latency mean 1538 p50 1402 p90 2142 p99 3364; wait mean 608 p50 483; consensus 802; apply 128
+MIX rep=2 flood=fast rate=650 k=2 client=k200 origin n2: txs 45858, latency mean 1643 p50 1593 p90 2227 p99 3249; wait mean 714 p50 669; consensus 803; apply 127
+MIX rep=2 flood=fast rate=650 k=2 client=k200 origin n3: txs 45757, latency mean 1703 p50 1651 p90 2289 p99 3303; wait mean 773 p50 731; consensus 803; apply 127
+MIX rep=2 flood=fast rate=650 k=2 client=k200 origin n4: txs 45760, latency mean 1688 p50 1637 p90 2264 p99 3296; wait mean 756 p50 714; consensus 805; apply 126
+GAP rep=2 flood=fast rate=650 k=2 client=k200: trigger to trigger, ms: mean 505 p10 425 p50 434 p90 638 ledger sizes: mean 327 p10 250 p50 329 p90 400 max 400 
+
+######## 18:47 rep 2, flooding fast, 650 tx/s, k=2, ledgers of 400, target 420 ms, operators k200fee
+k=2 crashes: 0 partition violations: 0 close times raised (n1): 0
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast rate=650 k=2 client=k200fee: ledgers 476, txs per ledger 320, ledger interval 503 ms, throughput 638 tx/s host cpu busy 42% 
+MIX rep=2 flood=fast rate=650 k=2 client=k200fee origin n1: txs 15631, latency mean 1475 p50 1353 p90 2083 p99 3046; wait mean 549 p50 463; consensus 800; apply 127
+MIX rep=2 flood=fast rate=650 k=2 client=k200fee origin n2: txs 45015, latency mean 1630 p50 1551 p90 2248 p99 3614; wait mean 712 p50 655; consensus 794; apply 125
+MIX rep=2 flood=fast rate=650 k=2 client=k200fee origin n3: txs 44945, latency mean 1689 p50 1611 p90 2305 p99 3603; wait mean 768 p50 714; consensus 796; apply 125
+MIX rep=2 flood=fast rate=650 k=2 client=k200fee origin n4: txs 45151, latency mean 1678 p50 1596 p90 2291 p99 3675; wait mean 761 p50 701; consensus 793; apply 125
+GAP rep=2 flood=fast rate=650 k=2 client=k200fee: trigger to trigger, ms: mean 502 p10 425 p50 431 p90 637 ledger sizes: mean 319 p10 249 p50 308 p90 400 max 400 
+
+######## 18:53 rep 2, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators one
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 23 skipped low fee: 6
+RUN rep=2 flood=fast rate=650 k=3 client=one: ledgers 714, txs per ledger 216, ledger interval 335 ms, throughput 645 tx/s host cpu busy 48% 
+MIX rep=2 flood=fast rate=650 k=3 client=one origin n1: txs 15413, latency mean 1601 p50 1533 p90 2225 p99 3347; wait mean 716 p50 657; consensus 794; apply 92
+MIX rep=2 flood=fast rate=650 k=3 client=one origin n2: txs 46229, latency mean 1604 p50 1535 p90 2222 p99 3417; wait mean 722 p50 662; consensus 789; apply 92
+MIX rep=2 flood=fast rate=650 k=3 client=one origin n3: txs 46255, latency mean 1666 p50 1596 p90 2281 p99 3477; wait mean 782 p50 723; consensus 791; apply 92
+MIX rep=2 flood=fast rate=650 k=3 client=one origin n4: txs 46040, latency mean 1660 p50 1591 p90 2289 p99 3461; wait mean 776 p50 716; consensus 792; apply 92
+GAP rep=2 flood=fast rate=650 k=3 client=one: trigger to trigger, ms: mean 334 p10 283 p50 286 p90 415 ledger sizes: mean 216 p10 165 p50 213 p90 270 max 270 
+
+######## 18:59 rep 2, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators onefee
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 3
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast rate=650 k=3 client=onefee: ledgers 716, txs per ledger 216, ledger interval 335 ms, throughput 645 tx/s host cpu busy 48% 
+MIX rep=2 flood=fast rate=650 k=3 client=onefee origin n1: txs 15696, latency mean 1552 p50 1501 p90 2137 p99 3041; wait mean 678 p50 636; consensus 782; apply 92
+MIX rep=2 flood=fast rate=650 k=3 client=onefee origin n2: txs 45894, latency mean 1600 p50 1525 p90 2232 p99 3472; wait mean 724 p50 663; consensus 785; apply 91
+MIX rep=2 flood=fast rate=650 k=3 client=onefee origin n3: txs 45435, latency mean 1664 p50 1588 p90 2292 p99 3551; wait mean 787 p50 723; consensus 786; apply 91
+MIX rep=2 flood=fast rate=650 k=3 client=onefee origin n4: txs 45736, latency mean 1659 p50 1583 p90 2285 p99 3584; wait mean 782 p50 718; consensus 787; apply 91
+GAP rep=2 flood=fast rate=650 k=3 client=onefee: trigger to trigger, ms: mean -1577157 p10 283 p50 286 p90 395 ledger sizes: mean 216 p10 165 p50 211 p90 270 max 270 
+
+######## 19:05 rep 2, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators k200
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 22 skipped low fee: 5
+RUN rep=2 flood=fast rate=650 k=3 client=k200: ledgers 729, txs per ledger 211, ledger interval 328 ms, throughput 645 tx/s host cpu busy 48% 
+MIX rep=2 flood=fast rate=650 k=3 client=k200 origin n1: txs 15343, latency mean 1380 p50 1219 p90 2032 p99 3059; wait mean 516 p50 378; consensus 774; apply 90
+MIX rep=2 flood=fast rate=650 k=3 client=k200 origin n2: txs 45863, latency mean 1546 p50 1494 p90 2127 p99 3105; wait mean 685 p50 643; consensus 771; apply 90
+MIX rep=2 flood=fast rate=650 k=3 client=k200 origin n3: txs 45872, latency mean 1606 p50 1552 p90 2176 p99 3161; wait mean 743 p50 703; consensus 774; apply 90
+MIX rep=2 flood=fast rate=650 k=3 client=k200 origin n4: txs 45864, latency mean 1605 p50 1551 p90 2170 p99 3167; wait mean 746 p50 702; consensus 770; apply 89
+GAP rep=2 flood=fast rate=650 k=3 client=k200: trigger to trigger, ms: mean 327 p10 283 p50 285 p90 397 ledger sizes: mean 211 p10 162 p50 207 p90 270 max 270 
+
+######## 19:11 rep 2, flooding fast, 650 tx/s, k=3, ledgers of 270, target 280 ms, operators k200fee
+k=3 crashes: 0 partition violations: 0 close times raised (n1): 2
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast rate=650 k=3 client=k200fee: ledgers 738, txs per ledger 210, ledger interval 323 ms, throughput 649 tx/s host cpu busy 49% 
+MIX rep=2 flood=fast rate=650 k=3 client=k200fee origin n1: txs 15582, latency mean 1321 p50 1203 p90 1896 p99 2664; wait mean 470 p50 372; consensus 764; apply 87
+MIX rep=2 flood=fast rate=650 k=3 client=k200fee origin n2: txs 45998, latency mean 1528 p50 1481 p90 2073 p99 3099; wait mean 678 p50 637; consensus 764; apply 86
+MIX rep=2 flood=fast rate=650 k=3 client=k200fee origin n3: txs 46054, latency mean 1598 p50 1548 p90 2133 p99 3235; wait mean 749 p50 705; consensus 763; apply 87
+MIX rep=2 flood=fast rate=650 k=3 client=k200fee origin n4: txs 46093, latency mean 1585 p50 1534 p90 2121 p99 3177; wait mean 736 p50 697; consensus 762; apply 86
+GAP rep=2 flood=fast rate=650 k=3 client=k200fee: trigger to trigger, ms: mean 324 p10 283 p50 286 p90 404 ledger sizes: mean 209 p10 159 p50 206 p90 270 max 270 
+
+######## 19:17 rep 2, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators one
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 55 skipped low fee: 23
+RUN rep=2 flood=fast rate=650 k=4 client=one: ledgers 926, txs per ledger 166, ledger interval 259 ms, throughput 643 tx/s host cpu busy 53% 
+MIX rep=2 flood=fast rate=650 k=4 client=one origin n1: txs 15473, latency mean 1620 p50 1533 p90 2283 p99 3839; wait mean 751 p50 674; consensus 793; apply 76
+MIX rep=2 flood=fast rate=650 k=4 client=one origin n2: txs 46155, latency mean 1617 p50 1528 p90 2278 p99 3715; wait mean 752 p50 679; consensus 788; apply 77
+MIX rep=2 flood=fast rate=650 k=4 client=one origin n3: txs 46204, latency mean 1681 p50 1597 p90 2323 p99 3769; wait mean 813 p50 743; consensus 791; apply 77
+MIX rep=2 flood=fast rate=650 k=4 client=one origin n4: txs 46187, latency mean 1686 p50 1599 p90 2332 p99 3713; wait mean 810 p50 742; consensus 800; apply 76
+GAP rep=2 flood=fast rate=650 k=4 client=one: trigger to trigger, ms: mean 259 p10 223 p50 225 p90 292 ledger sizes: mean 167 p10 126 p50 163 p90 210 max 210 
+
+######## 19:24 rep 2, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators onefee
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast rate=650 k=4 client=onefee: ledgers 922, txs per ledger 167, ledger interval 259 ms, throughput 646 tx/s host cpu busy 53% 
+MIX rep=2 flood=fast rate=650 k=4 client=onefee origin n1: txs 15647, latency mean 1570 p50 1537 p90 2146 p99 2854; wait mean 694 p50 667; consensus 796; apply 79
+MIX rep=2 flood=fast rate=650 k=4 client=onefee origin n2: txs 46042, latency mean 1621 p50 1550 p90 2233 p99 3564; wait mean 749 p50 687; consensus 792; apply 80
+MIX rep=2 flood=fast rate=650 k=4 client=onefee origin n3: txs 46123, latency mean 1677 p50 1609 p90 2287 p99 3616; wait mean 802 p50 744; consensus 795; apply 80
+MIX rep=2 flood=fast rate=650 k=4 client=onefee origin n4: txs 46164, latency mean 1681 p50 1611 p90 2295 p99 3654; wait mean 806 p50 747; consensus 797; apply 79
+GAP rep=2 flood=fast rate=650 k=4 client=onefee: trigger to trigger, ms: mean 259 p10 223 p50 225 p90 294 ledger sizes: mean 167 p10 128 p50 165 p90 210 max 210 
+
+######## 19:30 rep 2, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators k200
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 4
+rejected: 15 skipped low fee: 5
+RUN rep=2 flood=fast rate=650 k=4 client=k200: ledgers 932, txs per ledger 166, ledger interval 256 ms, throughput 648 tx/s host cpu busy 52% 
+MIX rep=2 flood=fast rate=650 k=4 client=k200 origin n1: txs 15446, latency mean 1372 p50 1183 p90 2037 p99 3198; wait mean 520 p50 341; consensus 774; apply 77
+MIX rep=2 flood=fast rate=650 k=4 client=k200 origin n2: txs 46336, latency mean 1582 p50 1528 p90 2165 p99 3284; wait mean 726 p50 674; consensus 779; apply 77
+MIX rep=2 flood=fast rate=650 k=4 client=k200 origin n3: txs 46313, latency mean 1641 p50 1585 p90 2217 p99 3314; wait mean 784 p50 736; consensus 779; apply 77
+MIX rep=2 flood=fast rate=650 k=4 client=k200 origin n4: txs 46364, latency mean 1643 p50 1584 p90 2237 p99 3351; wait mean 784 p50 733; consensus 782; apply 76
+GAP rep=2 flood=fast rate=650 k=4 client=k200: trigger to trigger, ms: mean 256 p10 223 p50 225 p90 281 ledger sizes: mean 166 p10 127 p50 162 p90 210 max 210 
+
+######## 19:36 rep 2, flooding fast, 650 tx/s, k=4, ledgers of 210, target 220 ms, operators k200fee
+k=4 crashes: 0 partition violations: 0 close times raised (n1): 1
+rejected: 0 skipped low fee: 0
+RUN rep=2 flood=fast rate=650 k=4 client=k200fee: ledgers 916, txs per ledger 169, ledger interval 262 ms, throughput 646 tx/s host cpu busy 52% 
+MIX rep=2 flood=fast rate=650 k=4 client=k200fee origin n1: txs 15487, latency mean 1368 p50 1190 p90 2022 p99 2741; wait mean 502 p50 341; consensus 785; apply 81
+MIX rep=2 flood=fast rate=650 k=4 client=k200fee origin n2: txs 46393, latency mean 1635 p50 1560 p90 2280 p99 3606; wait mean 767 p50 698; consensus 788; apply 80
+MIX rep=2 flood=fast rate=650 k=4 client=k200fee origin n3: txs 46398, latency mean 1684 p50 1610 p90 2337 p99 3570; wait mean 813 p50 745; consensus 791; apply 80
+MIX rep=2 flood=fast rate=650 k=4 client=k200fee origin n4: txs 46347, latency mean 1693 p50 1620 p90 2339 p99 3615; wait mean 824 p50 755; consensus 789; apply 80
+GAP rep=2 flood=fast rate=650 k=4 client=k200fee: trigger to trigger, ms: mean 261 p10 223 p50 225 p90 298 ledger sizes: mean 169 p10 127 p50 168 p90 210 max 210 
+
+######## 19:42 MIX2-DONE

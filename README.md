@@ -47,7 +47,9 @@ numbers are only an example, and there were many more models):
 ![Train simulator with pipelining: the next cycle starts before the previous one ends, and the electrics and the hydraulics run at the same time](results/figures/simulator-pipelined.png)
 
 Each result took about as long as before, still below what a person can react to, but there were
-many more of them per second, so the simulator reacted sooner and ran more smoothly.
+many more of them per second, so the simulator reacted sooner and ran more smoothly. Something
+the user did no longer waited up to a whole cycle to be read: in the example its result is seen
+95 ms later on average instead of 150 (the last row of each chart).
 
 A Stellar validator works like the simulator before that change: it starts nominating ledger N
 only after applying N−1, and most of the ledger interval is spent waiting for messages between
@@ -141,6 +143,34 @@ transaction ([when-pipelining-pays.md](results/when-pipelining-pays.md#at-the-sa
 | about 2,100–2,250 tx/s | 4,000 tx per ledger, 4.1 s | k = 4, 1,000 tx per ledger | 2.9 s | 2.2 s |
 | about 2,750 tx/s (96 % of apply's ceiling) | not reached: 92 % even at 32,000 | k = 4, 4,000 tx per ledger | | |
 
+The fourth row as a client sees it, from the moment it has a payment to the moment it is applied
+(means of the simulation, [ledger-gantt.md](results/ledger-gantt.md#what-a-client-sees)). The
+overlap reaches that throughput with ledgers of 4,000 transactions:
+
+![The overlap with ledgers of 4,000: a payment waits half an interval for the next ledger and is applied 4.1 s after it arrives](results/figures/client-overlap-4000.png)
+
+Pipelining reaches it with ledgers of 1,000, one starting every 0.48 s. A transaction enters only
+the ledgers of its fee payer's class, one in four:
+
+![k = 4 with ledgers of 1,000: the payment with one payer account waits for the ledger of its class, the one with an account in every class enters the next ledger](results/figures/client-k4.png)
+
+*The last two rows are a payment. With one payer account it waits two intervals on average for
+the ledger of its class and is applied in 2.9 s. A payment processor with a payer account in
+every class signs with the one whose ledger comes next, waits half an interval and is applied in
+2.2 s.*
+
+Without more capacity, for latency alone, the gain is small: the same 1,160 tx/s in ledgers of
+475 with k = 3 are applied in 1.4 s with a payer account in every class, against 1.6 s with the
+overlap, and in 1.8 s with one account.
+
+Measured on the testbed against today's protocol back to back, at the same capacity
+([latency-by-depth.md](results/latency-by-depth.md)): k = 1 and the client with one account come
+out as in the simulation, within 30 ms. The client with a payer account in every class gains 0.3
+to 0.4 s, not the 0.5 s of the simulation: its transaction has to reach the validator whose value
+wins before the ledger opens, and one that misses waits k ledgers more. It takes the ledgers
+opened at a regular cadence, and for the 0.4 s stellar-core's transaction flooding timers
+shortened.
+
 ## Correctness under load
 
 The rules were tested together under load: 31 rounds of ten minutes, with every kind of
@@ -162,6 +192,8 @@ Results:
 - [correctness-rounds.md](results/correctness-rounds.md): the rounds under load, restarts and
   upgrades.
 - [ledger-gantt.md](results/ledger-gantt.md): the ledger cycle stage by stage.
+- [latency-by-depth.md](results/latency-by-depth.md): the latency of a payment measured at
+  k = 1 to 4, for a client with one payer account and with one in every class.
 - [mainnet-steps.md](results/mainnet-steps.md): the apply and consensus times measured on mainnet.
 - [apply-and-consensus-by-size.md](results/apply-and-consensus-by-size.md): what a transaction
   adds to apply and to consensus, and what it changes against the overlap.
